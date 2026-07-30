@@ -1,13 +1,15 @@
 <?php
 // db.php - Cấu hình và kết nối CSDL MySQL (Laragon) cho DOCI Perfume
 
-$host = '127.0.0.1';
-$username = 'root';
-$password = ''; // Mặc định trong Laragon là rỗng
-$dbname = 'doci_perfume';
+// Đọc thông tin kết nối từ ENV vars (Railway) hoặc dùng giá trị mặc định (Laragon local)
+$host     = getenv('DB_HOST')     ?: (getenv('MYSQLHOST')     ?: '127.0.0.1');
+$username = getenv('DB_USER')     ?: (getenv('MYSQLUSER')     ?: 'root');
+$password = getenv('DB_PASSWORD') ?: (getenv('MYSQLPASSWORD') ?: '');
+$dbname   = getenv('DB_NAME')     ?: (getenv('MYSQLDATABASE') ?: 'doci_perfume');
+$port     = (int)(getenv('DB_PORT') ?: (getenv('MYSQLPORT') ?: 3306));
 
-// 1. Kết nối MySQL
-$conn = @new mysqli($host, $username, $password);
+// 1. Kết nối MySQL (hỗ trợ port tùy chỉnh cho Railway)
+$conn = @new mysqli($host, $username, $password, '', $port);
 
 if (!$conn->connect_error) {
     // 2. Tự động tạo Database nếu chưa có

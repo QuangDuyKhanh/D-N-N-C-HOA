@@ -7,7 +7,17 @@ const TELEGRAM_CONFIG = {
   chatId: "6171928373"
 };
 
-const API_BASE_URL = window.DOCI_API_BASE || 'backend';
+// ── Cấu hình môi trường: Local (Laragon) vs Production (Railway) ──
+const DOCI_IS_LOCAL = (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname.endsWith('.test') ||
+  window.location.hostname.endsWith('.local')
+);
+// URL Railway backend (cập nhật sau khi deploy lên Railway)
+const RAILWAY_API_URL = 'https://doci-perfume-production.up.railway.app';
+
+const API_BASE_URL = window.DOCI_API_BASE || (DOCI_IS_LOCAL ? 'backend' : `${RAILWAY_API_URL}/backend`);
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- KHỞI TẠO & TIỆN ÍCH CHUNG ---
@@ -2397,16 +2407,12 @@ function initScrollReveal() {
    CUSTOMER REGISTRATION / LOGIN & ACCOUNT MANAGEMENT SYSTEM (DOCI AUTH)
    ========================================================================== */
 
-// ── Phát hiện môi trường: Laragon (localhost) dùng MySQL API, Vercel dùng localStorage ──
-const DOCI_IS_LOCAL = (
-  window.location.hostname === 'localhost' ||
-  window.location.hostname === '127.0.0.1' ||
-  window.location.hostname.endsWith('.test') ||
-  window.location.hostname.endsWith('.local')
-);
-const DOCI_API_BASE = DOCI_IS_LOCAL ? 'backend/customers-api.php' : null;
+// ── DOCI_IS_LOCAL & RAILWAY_API_URL đã được định nghĩa ở đầu file ──
+const DOCI_API_BASE = DOCI_IS_LOCAL
+  ? 'backend/customers-api.php'
+  : `${RAILWAY_API_URL}/backend/customers-api.php`;
 
-// Gọi Customers API (chỉ hoạt động khi chạy Laragon)
+// Gọi Customers API (Laragon local hoặc Railway production)
 async function callCustomersAPI(payload) {
   if (!DOCI_API_BASE) return { success: false, offline: true };
   try {
