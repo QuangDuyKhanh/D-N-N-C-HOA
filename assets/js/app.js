@@ -2681,7 +2681,7 @@ window.fillDemoAccount = function() {
   const passInput = document.getElementById("login-password");
   if (emailInput) emailInput.value = "khachhang@gmail.com";
   if (passInput) passInput.value = "123456";
-  handleLogin("khachhang@gmail.com", "123456");
+  showNotification("Filled demo account credentials into form!", "info");
 };
 
 function handleLogin(emailOrPhone, password) {
