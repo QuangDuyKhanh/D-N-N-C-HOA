@@ -49,7 +49,7 @@ if ($method === 'POST') {
     }
     
     if (!$data) {
-        echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Dữ liệu không hợp lệ']);
+        echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Invalid data']);
         $conn->close();
         exit;
     }
@@ -61,9 +61,9 @@ if ($method === 'POST') {
         
         $sql = "UPDATE `contacts` SET `status` = '$newStatus' WHERE `id` = $contactId";
         if ($conn->query($sql)) {
-            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Cập nhật trạng thái thành công']);
+            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Status updated successfully']);
         } else {
-            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Không thể cập nhật tin nhắn: ' . $conn->error]);
+            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Could not update message: ' . $conn->error]);
         }
         $conn->close();
         exit;
@@ -74,9 +74,9 @@ if ($method === 'POST') {
         $contactId = (int)$data['contactId'];
         $sql = "DELETE FROM `contacts` WHERE `id` = $contactId";
         if ($conn->query($sql)) {
-            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Xóa tin nhắn thành công']);
+            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Message deleted successfully']);
         } else {
-            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Không thể xóa tin nhắn: ' . $conn->error]);
+            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Could not delete message: ' . $conn->error]);
         }
         $conn->close();
         exit;
@@ -85,7 +85,7 @@ if ($method === 'POST') {
     // Xóa toàn bộ tin nhắn trong MySQL Laragon
     if (isset($data['action']) && $data['action'] === 'clear_all') {
         $conn->query("TRUNCATE TABLE `contacts`");
-        echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Đã xóa toàn bộ tin nhắn']);
+        echo json_encode(['success' => true, 'status' => 'success', 'message' => 'All messages cleared successfully']);
         $conn->close();
         exit;
     }
@@ -101,7 +101,7 @@ if ($method === 'POST') {
         echo json_encode([
             'status' => 'error',
             'success' => false,
-            'message' => 'Vui lòng điền đầy đủ các trường bắt buộc: Họ tên, Email và Lời nhắn.'
+            'message' => 'Please fill in all required fields: Name, Email and Message.'
         ]);
         $conn->close();
         exit;
@@ -111,7 +111,7 @@ if ($method === 'POST') {
         echo json_encode([
             'status' => 'error',
             'success' => false,
-            'message' => 'Địa chỉ email không hợp lệ.'
+            'message' => 'Invalid email address.'
         ]);
         $conn->close();
         exit;
@@ -133,14 +133,14 @@ if ($method === 'POST') {
         echo json_encode([
             'status' => 'success',
             'success' => true,
-            'message' => "Cảm ơn $name! Thông tin liên hệ của bạn đã được gửi thành công. DOCI sẽ phản hồi trong giây lát.",
+            'message' => "Thank you $name! Your contact message has been sent successfully. DOCI will respond shortly.",
             'contactId' => $newId
         ]);
     } else {
         echo json_encode([
             'status' => 'error',
             'success' => false,
-            'message' => 'Lỗi lưu vào CSDL MySQL: ' . $conn->error
+            'message' => 'Error saving to MySQL database: ' . $conn->error
         ]);
     }
     $conn->close();
@@ -170,7 +170,7 @@ function handleJsonFallback() {
         }
         
         if (!$data) {
-            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Dữ liệu không hợp lệ']);
+            echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Invalid data']);
             exit;
         }
         
@@ -189,9 +189,9 @@ function handleJsonFallback() {
             }
             if ($updated) {
                 file_put_contents($file, json_encode($contacts, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Cập nhật trạng thái thành công (JSON)']);
+                echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Status updated successfully (JSON)']);
             } else {
-                echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Không tìm thấy tin nhắn']);
+                echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Message not found']);
             }
             exit;
         }
@@ -209,16 +209,16 @@ function handleJsonFallback() {
             }
             if ($deleted) {
                 file_put_contents($file, json_encode($filteredContacts, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Xóa tin nhắn thành công (JSON)']);
+                echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Message deleted successfully (JSON)']);
             } else {
-                echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Không tìm thấy tin nhắn']);
+                echo json_encode(['success' => false, 'status' => 'error', 'message' => 'Message not found']);
             }
             exit;
         }
         
         if (isset($data['action']) && $data['action'] === 'clear_all') {
             file_put_contents($file, json_encode([]));
-            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'Đã xóa toàn bộ tin nhắn (JSON)']);
+            echo json_encode(['success' => true, 'status' => 'success', 'message' => 'All messages cleared (JSON)']);
             exit;
         }
         
@@ -233,7 +233,7 @@ function handleJsonFallback() {
             echo json_encode([
                 'status' => 'error',
                 'success' => false,
-                'message' => 'Vui lòng điền đầy đủ các trường bắt buộc: Họ tên, Email và Lời nhắn.'
+                'message' => 'Please fill in all required fields: Name, Email and Message.'
             ]);
             exit;
         }
@@ -242,7 +242,7 @@ function handleJsonFallback() {
             echo json_encode([
                 'status' => 'error',
                 'success' => false,
-                'message' => 'Địa chỉ email không hợp lệ.'
+                'message' => 'Invalid email address.'
             ]);
             exit;
         }
@@ -272,7 +272,7 @@ function handleJsonFallback() {
         echo json_encode([
             'status' => 'success',
             'success' => true,
-            'message' => "Cảm ơn $name! Thông tin liên hệ của bạn đã được gửi thành công (JSON).",
+            'message' => "Thank you $name! Your contact message has been sent successfully (JSON).",
             'contactId' => $newId
         ]);
         exit;

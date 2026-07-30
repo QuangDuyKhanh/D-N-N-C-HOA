@@ -29,23 +29,21 @@
           <h1
             class="font-title text-fluid-hero font-bold text-white leading-tight mb-4"
           >
-            Khẳng Định <br class="hidden md:inline" />
-            <span class="text-gold">Dấu Ấn Riêng</span>
+            Define Your <br class="hidden md:inline" />
+            <span class="text-gold">Signature Scent</span>
           </h1>
           <p
             class="text-fluid-base text-gray-300 max-w-xl mb-8 font-light mx-auto lg:mx-0"
           >
-            DOCI Perfume mang đến những mùi hương lấy cảm hứng từ các dòng nước
-            hoa biểu tượng thế giới, với độ lưu hương 6–8 giờ và thiết kế tinh
-            tế, nâng tầm đẳng cấp của bạn.
+            DOCI Perfume delivers high-end fragrances inspired by iconic world perfumes. Enjoy 6–8 hours longevity and exquisite designs that elevate your style.
           </p>
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-20"
           >
             <a href="#collections-section" class="btn-luxury btn-luxury-solid"
-              >MUA NGAY</a
+              >SHOP NOW</a
             >
-            <a href="#quiz-section" class="btn-luxury">TÌM MÙI HƯƠNG</a>
+            <a href="#quiz-section" class="btn-luxury">FIND YOUR SCENT</a>
           </div>
         </div>
 
@@ -70,3 +68,4 @@
         </div>
       </div>
     </section>
+

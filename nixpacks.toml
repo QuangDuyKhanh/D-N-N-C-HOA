@@ -3,7 +3,6 @@ nixPkgs = [
   "php82",
   "php82Extensions.mysqli",
   "php82Extensions.pdo_mysql",
-  "php82Extensions.json",
   "php82Extensions.mbstring",
   "php82Extensions.curl"
 ]

@@ -30,7 +30,7 @@ if (!$order_id) {
 }
 
 if (!$order_id) {
-    die(json_encode(['payment_status' => 'access_denied', 'message' => 'Thiếu tham số order_id']));
+    die(json_encode(['payment_status' => 'access_denied', 'message' => 'Missing parameter order_id']));
 }
 
 $cleanId = preg_replace('/[^0-9]/', '', (string)$order_id);

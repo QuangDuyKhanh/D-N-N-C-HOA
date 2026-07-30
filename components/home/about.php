@@ -22,24 +22,18 @@
           <div class="flex flex-col justify-center" data-aos="fade-left">
             <span
               class="text-xs font-semibold tracking-wide text-gold uppercase mb-2"
-              >TRIẾT LÝ THƯƠNG HIỆU</span
+              >BRAND PHILOSOPHY</span
             >
             <h2
               class="font-title text-3xl md:text-4xl font-bold text-white mb-6"
             >
-              Đẳng Cấp Từ Sự Tinh Tế
+              Elegance Through Refinement
             </h2>
             <p class="text-sm text-gray-300 mb-6 font-light leading-relaxed">
-              DOCI Perfume ra đời với sứ mệnh mang đến trải nghiệm nước hoa xa
-              xỉ với mức giá tiếp cận dễ dàng. Lấy cảm hứng từ các biểu tượng
-              hương thơm nổi tiếng thế giới (Designer Perfumes), chúng tôi kết
-              hợp tinh dầu nước hoa nhập khẩu cao cấp cùng quy trình đóng chai
-              hiện đại.
+              DOCI Perfume was born with a mission to deliver luxury fragrance experiences at accessible prices. Inspired by iconic designer perfumes worldwide, we blend premium imported essence with modern bottling techniques.
             </p>
             <p class="text-sm text-gray-300 mb-8 font-light leading-relaxed">
-              Mỗi chai nước hoa DOCI không chỉ mang mùi hương thượng lưu cuốn
-              hút, mà còn sở hữu thiết kế chai tinh xảo độc đáo, khả năng tỏa
-              hương xa từ 1-2m và độ lưu hương bền bỉ suốt 6 đến 8 giờ.
+              Every bottle of DOCI not only carries a captivating high-end scent, but also features an exquisite bottle design, 1-2m projection, and 6 to 8 hours of lasting performance.
             </p>
 
             <!-- Các chỉ số thống kê (Counters) -->
@@ -54,7 +48,7 @@
                   >0</span
                 >
                 <span class="text-[10px] uppercase tracking-wide text-gray-400"
-                  >Mùi Hương</span
+                  >Scents</span
                 >
               </div>
               <div>
@@ -65,7 +59,7 @@
                   >0</span
                 >
                 <span class="text-[10px] uppercase tracking-wide text-gray-400"
-                  >Khách Hàng</span
+                  >Happy Clients</span
                 >
               </div>
               <div>
@@ -76,7 +70,7 @@
                   >0</span
                 >
                 <span class="text-[10px] uppercase tracking-wide text-gray-400"
-                  >Đánh Giá</span
+                  >Rating</span
                 >
               </div>
               <div>
@@ -87,7 +81,7 @@
                   >0</span
                 >
                 <span class="text-[10px] uppercase tracking-wide text-gray-400"
-                  >Lưu Hương</span
+                  >Longevity</span
                 >
               </div>
             </div>
@@ -95,3 +89,4 @@
         </div>
       </div>
     </section>
+

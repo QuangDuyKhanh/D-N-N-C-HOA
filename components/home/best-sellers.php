@@ -7,7 +7,7 @@
           <div data-aos="fade-right">
             <span
               class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
-              >MÙI HƯƠNG YÊU THÍCH</span
+              >POPULAR SCENTS</span
             >
             <h2 class="font-title text-3xl font-bold text-white">
               Best Sellers
@@ -32,7 +32,7 @@
         <!-- Swiper Slider Container -->
         <div class="swiper best-seller-swiper py-4" data-aos="fade-up">
           <div class="swiper-wrapper">
-            <!-- Slide 1: Chai nước hoa Chai nước hoa Yes Sir -->
+            <!-- Slide 1: Yes Sir -->
             <div class="swiper-slide glass-card overflow-hidden group relative">
               <div class="ribbon-badge">Best Seller</div>
               <div
@@ -50,7 +50,7 @@
                       event.stopPropagation();
                       openDetails('men-ves-sir');
                     "
-                    title="Xem Chi Tiết"
+                    title="View Details"
                   >
                     <i class="fa-solid fa-eye"></i>
                   </button>
@@ -60,7 +60,7 @@
                       event.stopPropagation();
                       addToCart('men-ves-sir');
                     "
-                    title="Thêm Vào Giỏ"
+                    title="Add to Cart"
                   >
                     <i class="fa-solid fa-shopping-bag"></i>
                   </button>
@@ -70,7 +70,7 @@
                 <div>
                   <span
                     class="text-[10px] text-gold uppercase tracking-wide block mb-1"
-                    >Cho Chàng • Thanh Mát</span
+                    >For Men • Fresh & Crisp</span
                   >
                   <h3
                     class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
@@ -82,28 +82,28 @@
                     Inspired by YSL Y EDP
                   </p>
                   <div class="flex flex-wrap gap-1 mb-4">
-                    <span class="product-spec-item">Lưu: 6-8h</span>
-                    <span class="product-spec-item">Tỏa: 1-2m</span>
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
                   </div>
                 </div>
                 <div>
                   <div class="flex items-baseline gap-2 mb-4">
-                    <span class="text-sm font-bold text-gold">319.000đ</span>
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
                     <span class="text-[10px] text-gray-500 line-through"
-                      >450.000đ</span
+                      >450,000 VND</span
                     >
                   </div>
                   <button
                     class="w-full btn-luxury"
                     onclick="addToCart('men-ves-sir')"
                   >
-                    MUA NGAY
+                    SHOP NOW
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 2: Chai nước hoa Chai nước hoa Slay Queen -->
+            <!-- Slide 2: Slay Queen -->
             <div class="swiper-slide glass-card overflow-hidden group relative">
               <div class="ribbon-badge">Best Seller</div>
               <div
@@ -121,7 +121,7 @@
                       event.stopPropagation();
                       openDetails('women-slay-queen');
                     "
-                    title="Xem Chi Tiết"
+                    title="View Details"
                   >
                     <i class="fa-solid fa-eye"></i>
                   </button>
@@ -131,7 +131,7 @@
                       event.stopPropagation();
                       addToCart('women-slay-queen');
                     "
-                    title="Thêm Vào Giỏ"
+                    title="Add to Cart"
                   >
                     <i class="fa-solid fa-shopping-bag"></i>
                   </button>
@@ -141,7 +141,7 @@
                 <div>
                   <span
                     class="text-[10px] text-gold uppercase tracking-wide block mb-1"
-                    >Cho Nàng • Quyến Rũ</span
+                    >For Women • Seductive</span
                   >
                   <h3
                     class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
@@ -153,13 +153,13 @@
                     Inspired by Good Girl
                   </p>
                   <div class="flex flex-wrap gap-1 mb-4">
-                    <span class="product-spec-item">Lưu: 6-8h</span>
-                    <span class="product-spec-item">Tỏa: 1-2m</span>
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
                   </div>
                 </div>
                 <div>
                   <div class="flex items-baseline gap-2 mb-4">
-                    <span class="text-sm font-bold text-gold">319.000đ</span>
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
                     <span class="text-[10px] text-gray-500 line-through"
                       >450.000đ</span
                     >
@@ -174,7 +174,7 @@
               </div>
             </div>
 
-            <!-- Slide 3: Chai nước hoa Chai nước hoa Nice Navy -->
+            <!-- Slide 3: Nice Navy -->
             <div class="swiper-slide glass-card overflow-hidden group relative">
               <div class="ribbon-badge">Best Seller</div>
               <div
@@ -192,7 +192,7 @@
                       event.stopPropagation();
                       openDetails('men-nice-navy');
                     "
-                    title="Xem Chi Tiết"
+                    title="View Details"
                   >
                     <i class="fa-solid fa-eye"></i>
                   </button>
@@ -202,7 +202,7 @@
                       event.stopPropagation();
                       addToCart('men-nice-navy');
                     "
-                    title="Thêm Vào Giỏ"
+                    title="Add to Cart"
                   >
                     <i class="fa-solid fa-shopping-bag"></i>
                   </button>
@@ -212,7 +212,7 @@
                 <div>
                   <span
                     class="text-[10px] text-gold uppercase tracking-wide block mb-1"
-                    >Cho Chàng • Sang Trọng</span
+                    >For Men • Luxury & Elegant</span
                   >
                   <h3
                     class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
@@ -224,28 +224,28 @@
                     Inspired by Bleu de Chanel
                   </p>
                   <div class="flex flex-wrap gap-1 mb-4">
-                    <span class="product-spec-item">Lưu: 6-8h</span>
-                    <span class="product-spec-item">Tỏa: 1-2m</span>
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
                   </div>
                 </div>
                 <div>
                   <div class="flex items-baseline gap-2 mb-4">
-                    <span class="text-sm font-bold text-gold">319.000đ</span>
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
                     <span class="text-[10px] text-gray-500 line-through"
-                      >450.000đ</span
+                      >450,000 VND</span
                     >
                   </div>
                   <button
                     class="w-full btn-luxury"
                     onclick="addToCart('men-nice-navy')"
                   >
-                    MUA NGAY
+                    SHOP NOW
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 4: Chai nước hoa Chai nước hoa Madam Co -->
+            <!-- Slide 4: Madam Co -->
             <div class="swiper-slide glass-card overflow-hidden group relative">
               <div class="ribbon-badge">Best Seller</div>
               <div
@@ -263,7 +263,7 @@
                       event.stopPropagation();
                       openDetails('women-madam-co');
                     "
-                    title="Xem Chi Tiết"
+                    title="View Details"
                   >
                     <i class="fa-solid fa-eye"></i>
                   </button>
@@ -273,7 +273,7 @@
                       event.stopPropagation();
                       addToCart('women-madam-co');
                     "
-                    title="Thêm Vào Giỏ"
+                    title="Add to Cart"
                   >
                     <i class="fa-solid fa-shopping-bag"></i>
                   </button>
@@ -283,7 +283,7 @@
                 <div>
                   <span
                     class="text-[10px] text-gold uppercase tracking-wide block mb-1"
-                    >Cho Nàng • Thanh Lịch</span
+                    >For Women • Elegance</span
                   >
                   <h3
                     class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
@@ -295,28 +295,28 @@
                     Inspired by Coco Chanel
                   </p>
                   <div class="flex flex-wrap gap-1 mb-4">
-                    <span class="product-spec-item">Lưu: 6-8h</span>
-                    <span class="product-spec-item">Tỏa: 1-2m</span>
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
                   </div>
                 </div>
                 <div>
                   <div class="flex items-baseline gap-2 mb-4">
-                    <span class="text-sm font-bold text-gold">319.000đ</span>
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
                     <span class="text-[10px] text-gray-500 line-through"
-                      >450.000đ</span
+                      >450,000 VND</span
                     >
                   </div>
                   <button
                     class="w-full btn-luxury"
                     onclick="addToCart('women-madam-co')"
                   >
-                    MUA NGAY
+                    SHOP NOW
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 5: Chai nước hoa Chai nước hoa Old King -->
+            <!-- Slide 5: Old King -->
             <div class="swiper-slide glass-card overflow-hidden group relative">
               <div class="ribbon-badge">Best Seller</div>
               <div
@@ -334,7 +334,7 @@
                       event.stopPropagation();
                       openDetails('men-old-king');
                     "
-                    title="Xem Chi Tiết"
+                    title="View Details"
                   >
                     <i class="fa-solid fa-eye"></i>
                   </button>
@@ -344,7 +344,7 @@
                       event.stopPropagation();
                       addToCart('men-old-king');
                     "
-                    title="Thêm Vào Giỏ"
+                    title="Add to Cart"
                   >
                     <i class="fa-solid fa-shopping-bag"></i>
                   </button>
@@ -354,7 +354,7 @@
                 <div>
                   <span
                     class="text-[10px] text-gold uppercase tracking-wide block mb-1"
-                    >Cho Chàng • Sang Trọng</span
+                    >For Men • Regal & Bold</span
                   >
                   <h3
                     class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
@@ -366,22 +366,22 @@
                     Inspired by Creed Aventus
                   </p>
                   <div class="flex flex-wrap gap-1 mb-4">
-                    <span class="product-spec-item">Lưu: 6-8h</span>
-                    <span class="product-spec-item">Tỏa: 1-2m</span>
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
                   </div>
                 </div>
                 <div>
                   <div class="flex items-baseline gap-2 mb-4">
-                    <span class="text-sm font-bold text-gold">319.000đ</span>
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
                     <span class="text-[10px] text-gray-500 line-through"
-                      >450.000đ</span
+                      >450,000 VND</span
                     >
                   </div>
                   <button
                     class="w-full btn-luxury"
                     onclick="addToCart('men-old-king')"
                   >
-                    MUA NGAY
+                    SHOP NOW
                   </button>
                 </div>
               </div>
@@ -390,3 +390,4 @@
         </div>
       </div>
     </section>
+

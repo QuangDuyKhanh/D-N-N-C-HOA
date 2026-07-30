@@ -80,7 +80,7 @@ if ($conn && !$conn->connect_error) {
             $checkStmt->execute();
             $checkRes = $checkStmt->get_result();
             if ($checkRes && $checkRes->num_rows > 0) {
-                echo json_encode(['success' => true, 'message' => 'Giao dịch đã được xử lý trước đó']);
+                echo json_encode(['success' => true, 'message' => 'Transaction has already been processed']);
                 $checkStmt->close();
                 exit;
             }
@@ -114,7 +114,7 @@ if (!preg_match($regex, $transaction_content, $matches)) {
         $pay_order_code = strtoupper($altMatches[1]);
         $pay_order_id = preg_replace('/[^0-9]/', '', $pay_order_code);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Không tìm thấy mã đơn hàng DH trong nội dung thanh toán']);
+        echo json_encode(['success' => false, 'message' => 'Order code DH not found in transaction content']);
         exit;
     }
 } else {
@@ -160,7 +160,7 @@ if ($conn && !$conn->connect_error) {
             // Gửi tín hiệu Realtime qua WebSocket cho Admin Panel
             sendPieSocketSePayNotification($matchedId, $amount_in);
 
-            echo json_encode(['success' => true, 'message' => 'Xác nhận thanh toán đơn hàng thành công!', 'order_id' => $matchedId]);
+            echo json_encode(['success' => true, 'message' => 'Order payment confirmed successfully!', 'order_id' => $matchedId]);
             $stmtDoci->close();
             exit;
         }
@@ -170,7 +170,7 @@ if ($conn && !$conn->connect_error) {
     // Nếu không khớp đơn hàng nhưng vẫn nhận được tiền chuyển khoản
     sendTelegramSePayNotification($fullOrderCode, $amount_in, $gateway, $transaction_content, $reference_number, $transaction_date, false);
 
-    echo json_encode(['success' => true, 'message' => 'Lưu giao dịch thành công nhưng chưa khớp đơn hàng ' . $fullOrderCode]);
+    echo json_encode(['success' => true, 'message' => 'Transaction saved successfully but order code not matched: ' . $fullOrderCode]);
 } else {
     echo json_encode(['success' => true]);
 }
@@ -185,16 +185,16 @@ function sendTelegramSePayNotification($orderCode, $amount, $gateway, $content, 
     if (empty($botToken) || empty($chatId)) return;
 
     $formattedAmount = number_format($amount, 0, ',', '.') . ' VNĐ';
-    $statusText = $matched ? "✅ Đơn hàng đã tự động xác nhận HOÀN THÀNH" : "⚠️ Chưa tìm thấy mã đơn tương ứng trong CSDL";
+    $statusText = $matched ? "✅ Order auto-confirmed as COMPLETED" : "⚠️ Corresponding order code not found in database";
 
-    $message = "💰 <b>THÔNG BÁO CHUYỂN KHOẢN TỰ ĐỘNG (SEPAY)</b>\n";
+    $message = "💰 <b>AUTOMATIC BANK TRANSFER NOTIFICATION (SEPAY)</b>\n";
     $message .= "━━━━━━━━━━━━━━━━━━━━\n";
-    $message .= "<b>Mã đơn hàng:</b> #{$orderCode}\n";
-    $message .= "<b>Số tiền nhận:</b> <code>{$formattedAmount}</code>\n";
-    $message .= "<b>Ngân hàng:</b> {$gateway}\n";
-    $message .= "<b>Nội dung CK:</b> <i>{$content}</i>\n";
-    $message .= "<b>Mã GD Ngân hàng:</b> <code>{$refCode}</code>\n";
-    $message .= "<b>Thời gian:</b> {$date}\n";
+    $message .= "<b>Order ID:</b> #{$orderCode}\n";
+    $message .= "<b>Amount received:</b> <code>{$formattedAmount}</code>\n";
+    $message .= "<b>Bank/Gateway:</b> {$gateway}\n";
+    $message .= "<b>Transaction Content:</b> <i>{$content}</i>\n";
+    $message .= "<b>Reference Code:</b> <code>{$refCode}</code>\n";
+    $message .= "<b>Transaction Date:</b> {$date}\n";
     $message .= "━━━━━━━━━━━━━━━━━━━━\n";
     $message .= "{$statusText}";
 

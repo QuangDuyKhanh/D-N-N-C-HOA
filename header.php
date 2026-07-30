@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="vi" class="lenis">
+<html lang="en" class="lenis">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOCI PERFUME | Luxury Inspired Fragrance - Nước Hoa Cao Cấp</title>
+    <title>DOCI PERFUME | Luxury Inspired Fragrance - High-End Perfumes</title>
     <meta
       name="description"
-      content="Khám phá DOCI Perfume - Thương hiệu nước hoa cao cấp lấy cảm hứng từ các biểu tượng mùi hương thế giới. Lưu hương 6-8 giờ, tỏa hương 1-2m, thiết kế tinh xảo."
+      content="Discover DOCI Perfume - Premium luxury fragrances inspired by world-renowned perfume icons. 6-8 hours longevity, 1-2m projection, exquisite design."
     />
 
     <!-- Favicon & Touch Icon -->
@@ -20,14 +20,14 @@
     <!-- Open Graph / Facebook / Zalo Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://doci-perfume.vercel.app/" />
-    <meta property="og:title" content="DOCI PERFUME | Luxury Inspired Fragrance - Nước Hoa Cao Cấp" />
-    <meta property="og:description" content="Nước hoa lấy cảm hứng từ các dòng hương kinh điển thế giới. Lưu hương 6-8h, tỏa hương 1-2m. Đặt hàng ngay hôm nay để nhận ưu đãi đặc biệt!" />
+    <meta property="og:title" content="DOCI PERFUME | Luxury Inspired Fragrance" />
+    <meta property="og:description" content="Perfumes inspired by global icon scents. Lasts 6-8h, 1-2m projection. Order today for special offers!" />
     <meta property="og:image" content="https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="DOCI PERFUME | Luxury Inspired Fragrance" />
-    <meta name="twitter:description" content="Thương hiệu nước hoa cao cấp lưu hương 6-8 giờ, tỏa hương 1-2m. Thiết kế tinh xảo, quà tặng độc quyền." />
+    <meta name="twitter:description" content="Premium luxury fragrance brand, 6-8 hours longevity, 1-2m projection. Exquisite design, exclusive gifts." />
     <meta name="twitter:image" content="https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg" />
 
     <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
@@ -37,7 +37,7 @@
       "@type": "Store",
       "name": "DOCI PERFUME",
       "image": "https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg",
-      "description": "Thương hiệu nước hoa cao cấp lấy cảm hứng từ các biểu tượng mùi hương thế giới. Lưu hương 6-8h, tỏa hương 1-2m.",
+      "description": "Premium luxury fragrances inspired by world-renowned perfume icons. Lasts 6-8h, 1-2m projection.",
       "url": "https://doci-perfume.vercel.app/",
       "priceRange": "$$",
       "currenciesAccepted": "VND",
@@ -115,16 +115,16 @@
           class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wide text-gray-300"
         >
           <a href="#hero-section" class="hover:text-gold transition-colors"
-            >Trang Chủ</a
+            >Home</a
           >
           <a href="#about-section" class="hover:text-gold transition-colors"
-            >Giới Thiệu</a
+            >About Us</a
           >
           <a href="#best-sellers" class="hover:text-gold transition-colors"
-            >Bán Chạy</a
+            >Best Sellers</a
           >
           <a href="#quiz-section" class="hover:text-gold transition-colors"
-            >Chọn Mùi Hương</a
+            >Fragrance Quiz</a
           >
         </nav>
 
@@ -151,13 +151,13 @@
             <a
               href="#collections-section"
               class="hover:text-gold transition-colors"
-              >Bộ Sưu Tập</a
+              >Collections</a
             >
             <a href="#faq-section" class="hover:text-gold transition-colors"
-              >Hỏi Đáp</a
+              >FAQ</a
             >
             <a href="#contact-section" class="hover:text-gold transition-colors"
-              >Liên Hệ</a
+              >Contact</a
             >
           </nav>
 
@@ -165,7 +165,7 @@
           <button
             id="theme-toggle"
             class="text-white hover:text-gold transition-colors p-1"
-            title="Đổi Chế Độ Sáng/Tối"
+            title="Toggle Dark/Light Mode"
           >
             <i class="fa-solid fa-sun text-lg"></i>
           </button>
@@ -174,7 +174,7 @@
           <button
             id="cart-toggle"
             class="relative text-white hover:text-gold transition-colors p-1"
-            title="Giỏ hàng"
+            title="Shopping Cart"
           >
             <i class="fa-solid fa-shopping-bag text-lg"></i>
             <span
@@ -188,8 +188,8 @@
           <button
             id="mobile-menu-toggle"
             class="lg:hidden text-white hover:text-gold transition-colors p-1"
-            title="Mở menu"
-            aria-label="Mở menu điều hướng"
+            title="Open Menu"
+            aria-label="Open Navigation Menu"
           >
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
@@ -214,7 +214,7 @@
           <span class="font-title text-xl font-bold tracking-[4px] text-white">DOCI</span>
           <span class="text-[8px] uppercase tracking-[3px] text-[#D4AF37] block -mt-1">PERFUME</span>
         </div>
-        <button id="mobile-menu-close" class="text-white hover:text-gold p-1" aria-label="Đóng menu">
+        <button id="mobile-menu-close" class="text-white hover:text-gold p-1" aria-label="Close Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
         </button>
       </div>
@@ -222,25 +222,25 @@
       <!-- Các liên kết điều hướng trong Hộp trượt -->
       <nav class="flex flex-col gap-1 px-4 py-4 flex-1 overflow-y-auto">
         <a href="#hero-section"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-house w-5 text-center text-gold"></i> Trang Chủ
+          <i class="fa-solid fa-house w-5 text-center text-gold"></i> Home
         </a>
         <a href="#about-section"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-star w-5 text-center text-gold"></i> Giới Thiệu
+          <i class="fa-solid fa-star w-5 text-center text-gold"></i> About Us
         </a>
         <a href="#best-sellers"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-fire w-5 text-center text-gold"></i> Bán Chạy
+          <i class="fa-solid fa-fire w-5 text-center text-gold"></i> Best Sellers
         </a>
         <a href="#collections-section" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-grid-2 w-5 text-center text-gold"></i> Bộ Sưu Tập
+          <i class="fa-solid fa-grid-2 w-5 text-center text-gold"></i> Collections
         </a>
         <a href="#quiz-section"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-wand-magic-sparkles w-5 text-center text-gold"></i> Chọn Mùi Hương
+          <i class="fa-solid fa-wand-magic-sparkles w-5 text-center text-gold"></i> Fragrance Quiz
         </a>
         <a href="#faq-section"     class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-circle-question w-5 text-center text-gold"></i> Hỏi Đáp
+          <i class="fa-solid fa-circle-question w-5 text-center text-gold"></i> FAQ
         </a>
         <a href="#contact-section" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
-          <i class="fa-solid fa-envelope w-5 text-center text-gold"></i> Liên Hệ
+          <i class="fa-solid fa-envelope w-5 text-center text-gold"></i> Contact
         </a>
       </nav>
 
@@ -249,6 +249,6 @@
         <a
           href="#collections-section"
           class="mobile-nav-link btn-luxury btn-luxury-solid w-full block text-center text-xs py-3 rounded-xl"
-        >MUA NGAY - 319.000đ</a>
+        >SHOP NOW - 319,000 VND</a>
       </div>
     </div>

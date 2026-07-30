@@ -1,19 +1,18 @@
-<!-- 8. BỘ SƯU TẬP SẢN PHẨM DẠNG LƯỚI GRID -->
+<!-- 8. COLLECTIONS SECTION -->
     <section id="collections-section" class="py-24 bg-darkSurface relative">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <span
             class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
-            >MUA SẮM TRỰC TUYẾN</span
+            >ONLINE BOUTIQUE</span
           >
           <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
-            Bộ Sưu Tập Nước Hoa DOCI
+            DOCI Perfume Collection
           </h2>
           <p
             class="text-xs md:text-sm text-gray-400 max-w-xl mx-auto font-light"
           >
-            Lựa chọn dòng hương tinh tế cho bản thân hoặc quà tặng sang trọng
-            dành tặng đối tác và những người thân yêu.
+            Select a refined fragrance for yourself or an exquisite luxury gift set for your loved ones.
           </p>
         </div>
 
@@ -25,12 +24,12 @@
           <span
             id="tab-women"
             class="tab-btn active pb-3 text-gold border-b-2 border-[#D4AF37] transition-all duration-300"
-            >BỘ SƯU TẬP CHO NÀNG</span
+            >WOMEN'S COLLECTION</span
           >
           <span
             id="tab-men"
             class="tab-btn pb-3 text-gray-400 hover:text-white transition-all duration-300"
-            >BỘ SƯU TẬP CHO CHÀNG</span
+            >MEN'S COLLECTION</span
           >
         </div>
 
@@ -53,23 +52,23 @@
       </div>
     </section>
 
-    <!-- 9. HÌNH ẢNH MINH HỌA CÁC NỐT HƯƠNG TƯƠNG TÁC -->
+    <!-- 9. FRAGRANCE PYRAMID -->
     <section class="py-24 bg-darkBg relative overflow-hidden">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <span
             class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
-            >KIẾN THỨC MÙI HƯƠNG</span
+            >SCENT KNOWLEDGE</span
           >
           <h2 class="font-title text-3xl md:text-4xl font-bold text-white">
-            Tháp 3 Tầng Hương Của Nước Hoa
+            The 3-Tier Fragrance Pyramid
           </h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- Trái: Tháp Infographic -->
+          <!-- Infographic Pyramid -->
           <div class="lg:col-span-7 flex flex-col gap-6" data-aos="fade-right">
-            <!-- Tầng 1 -->
+            <!-- Tier 1 -->
             <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
               <div
                 class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
@@ -78,19 +77,17 @@
               </div>
               <div>
                 <h4 class="font-title text-lg font-bold text-white mb-1">
-                  Hương Đầu (Top Notes)
+                  Top Notes
                 </h4>
                 <span class="text-[10px] text-gold uppercase font-semibold"
-                  >Tỏa sáng từ 5 - 15 phút đầu</span
+                  >Radiates for the first 5 - 15 minutes</span
                 >
                 <p class="text-xs text-gray-300 mt-2 font-light">
-                  Ấn tượng đầu tiên cực kỳ sảng khoái và lôi cuốn ngay khi xịt
-                  nước hoa lên da. Thường là các nốt citrus thanh thanh như
-                  Chanh, Cam Bergamot, Lê, Dâu tây.
+                  The initial impression, fresh and captivating immediately upon application. Features vibrant citrus notes like Lemon, Bergamot, Pear, or Strawberry.
                 </p>
               </div>
             </div>
-            <!-- Tầng 2 -->
+            <!-- Tier 2 -->
             <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
               <div
                 class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
@@ -99,19 +96,17 @@
               </div>
               <div>
                 <h4 class="font-title text-lg font-bold text-white mb-1">
-                  Hương Giữa (Middle / Heart Notes)
+                  Middle / Heart Notes
                 </h4>
                 <span class="text-[10px] text-gold uppercase font-semibold"
-                  >Duy trì từ 2 - 4 giờ tiếp theo</span
+                  >Sustains for the next 2 - 4 hours</span
                 >
                 <p class="text-xs text-gray-300 mt-2 font-light">
-                  Linh hồn, cấu trúc định hình tính cách riêng biệt của chai
-                  nước hoa. Thường đơm hoa kết trái với Huệ tây kiêu kỳ, Hoa
-                  hồng quyến rũ, Oải hương thanh thanh hay Quế, Thì là nồng nàn.
+                  The true character and soul of the perfume. Blossoms with elegant Jasmine, seductive Rose, crisp Lavender, or warm Cinnamon and Cumin.
                 </p>
               </div>
             </div>
-            <!-- Tầng 3 -->
+            <!-- Tier 3 -->
             <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
               <div
                 class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
@@ -120,21 +115,19 @@
               </div>
               <div>
                 <h4 class="font-title text-lg font-bold text-white mb-1">
-                  Hương Cuối (Base Notes)
+                  Base Notes
                 </h4>
                 <span class="text-[10px] text-gold uppercase font-semibold"
-                  >Lắng đọng sâu từ 6 - 8 giờ</span
+                  >Deeply lingers for 6 - 8+ hours</span
                 >
                 <p class="text-xs text-gray-300 mt-2 font-light">
-                  Những nốt hương sâu lắng, trầm ấm nhất bám lại trên da dẻ. Là
-                  chất khóa hương và tạo sự lưu luyến cho người đối diện với Xạ
-                  hương ấm áp, Hổ phách bí ẩn, Gỗ tuyết tùng trầm sâu.
+                  Deep, warm notes that anchor to your skin. Creates a lasting impression with rich Amber, sensual Musk, and deep Cedarwood.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Phải: Mô tả nghệ thuật -->
+          <!-- Right: Visual -->
           <div
             class="lg:col-span-5 text-center lg:text-left"
             data-aos="fade-left"
@@ -142,7 +135,6 @@
             <div
               class="relative w-full max-w-sm mx-auto p-4 border border-gold/10 rounded-2xl bg-black/30"
             >
-              <!-- Ảnh trình bày DOCI Perfume gốc -->
               <img
                 src="assets/images/doci-bottle-presentation.jpg"
                 alt="DOCI Perfume Bottle Design"
@@ -156,7 +148,7 @@
                   >DOCI Perfume</span
                 >
                 <p class="font-title text-white text-md font-bold">
-                  Lưu hương 6 - 8H • Tỏa xa 1 - 2M
+                  6 - 8H Longevity • 1 - 2M Projection
                 </p>
               </div>
             </div>
@@ -164,3 +156,4 @@
         </div>
       </div>
     </section>
+

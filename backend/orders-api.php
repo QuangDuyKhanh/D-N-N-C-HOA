@@ -47,7 +47,7 @@ if ($method === 'POST') {
     $data = json_decode($input, true);
     
     if (!$data) {
-        echo json_encode(['success' => false, 'message' => 'Dữ liệu không hợp lệ']);
+        echo json_encode(['success' => false, 'message' => 'Invalid data']);
         $conn->close();
         exit;
     }
@@ -59,9 +59,9 @@ if ($method === 'POST') {
         
         $sql = "UPDATE `orders` SET `status` = '$newStatus' WHERE `id` = '$orderId'";
         if ($conn->query($sql)) {
-            echo json_encode(['success' => true, 'message' => 'Cập nhật trạng thái thành công']);
+            echo json_encode(['success' => true, 'message' => 'Status updated successfully']);
         } else {
-            echo json_encode(['success' => false, 'message' => 'Không thể cập nhật đơn hàng: ' . $conn->error]);
+            echo json_encode(['success' => false, 'message' => 'Could not update order: ' . $conn->error]);
         }
         $conn->close();
         exit;
@@ -87,9 +87,9 @@ if ($method === 'POST') {
                 WHERE `id` = '$orderId'";
                 
         if ($conn->query($sql)) {
-            echo json_encode(['success' => true, 'message' => 'Cập nhật đơn hàng thành công']);
+            echo json_encode(['success' => true, 'message' => 'Order updated successfully']);
         } else {
-            echo json_encode(['success' => false, 'message' => 'Lỗi cập nhật CSDL: ' . $conn->error]);
+            echo json_encode(['success' => false, 'message' => 'Database update error: ' . $conn->error]);
         }
         $conn->close();
         exit;
@@ -101,9 +101,9 @@ if ($method === 'POST') {
         
         $sql = "DELETE FROM `orders` WHERE `id` = '$orderId'";
         if ($conn->query($sql)) {
-            echo json_encode(['success' => true, 'message' => 'Đã xóa đơn hàng thành công']);
+            echo json_encode(['success' => true, 'message' => 'Order deleted successfully']);
         } else {
-            echo json_encode(['success' => false, 'message' => 'Lỗi xóa đơn hàng trong CSDL: ' . $conn->error]);
+            echo json_encode(['success' => false, 'message' => 'Database error deleting order: ' . $conn->error]);
         }
         $conn->close();
         exit;
@@ -112,7 +112,7 @@ if ($method === 'POST') {
     // Xóa toàn bộ đơn hàng trong MySQL Laragon
     if (isset($data['action']) && $data['action'] === 'clear_all') {
         $conn->query("TRUNCATE TABLE `orders`");
-        echo json_encode(['success' => true, 'message' => 'Đã xóa toàn bộ đơn hàng']);
+        echo json_encode(['success' => true, 'message' => 'All orders cleared successfully']);
         $conn->close();
         exit;
     }
@@ -150,9 +150,9 @@ if ($method === 'POST') {
         // Gửi thông báo Telegram khi lưu thành công đơn hàng vào MySQL
         sendTelegramNewOrderNotification($id, $name, $phone, $address, $total, $payment, $note);
 
-        echo json_encode(['success' => true, 'message' => 'Đặt hàng thành công', 'orderId' => $id]);
+        echo json_encode(['success' => true, 'message' => 'Order placed successfully', 'orderId' => $id]);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Lỗi lưu vào CSDL MySQL: ' . $conn->error]);
+        echo json_encode(['success' => false, 'message' => 'Error saving to MySQL database: ' . $conn->error]);
     }
     $conn->close();
     exit;
@@ -177,7 +177,7 @@ function handleJsonFallback() {
         $data = json_decode($input, true);
         
         if (!$data) {
-            echo json_encode(['success' => false, 'message' => 'Dữ liệu không hợp lệ']);
+            echo json_encode(['success' => false, 'message' => 'Invalid data']);
             exit;
         }
         
@@ -196,9 +196,9 @@ function handleJsonFallback() {
             }
             if ($updated) {
                 file_put_contents($file, json_encode($orders, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                echo json_encode(['success' => true, 'message' => 'Cập nhật trạng thái thành công (JSON)']);
+                echo json_encode(['success' => true, 'message' => 'Status updated successfully (JSON)']);
             } else {
-                echo json_encode(['success' => false, 'message' => 'Không tìm thấy đơn hàng']);
+                echo json_encode(['success' => false, 'message' => 'Order not found']);
             }
             exit;
         }
@@ -220,9 +220,9 @@ function handleJsonFallback() {
             }
             if ($updated) {
                 file_put_contents($file, json_encode($orders, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                echo json_encode(['success' => true, 'message' => 'Cập nhật đơn hàng thành công (JSON)']);
+                echo json_encode(['success' => true, 'message' => 'Order updated successfully (JSON)']);
             } else {
-                echo json_encode(['success' => false, 'message' => 'Không tìm thấy đơn hàng']);
+                echo json_encode(['success' => false, 'message' => 'Order not found']);
             }
             exit;
         }
@@ -236,16 +236,16 @@ function handleJsonFallback() {
             $orders = array_values($orders);
             if (count($orders) < $initialCount) {
                 file_put_contents($file, json_encode($orders, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                echo json_encode(['success' => true, 'message' => 'Đã xóa đơn hàng thành công (JSON)']);
+                echo json_encode(['success' => true, 'message' => 'Order deleted successfully (JSON)']);
             } else {
-                echo json_encode(['success' => false, 'message' => 'Không tìm thấy đơn hàng để xóa']);
+                echo json_encode(['success' => false, 'message' => 'Order not found to delete']);
             }
             exit;
         }
 
         if (isset($data['action']) && $data['action'] === 'clear_all') {
             file_put_contents($file, json_encode([]));
-            echo json_encode(['success' => true, 'message' => 'Đã xóa toàn bộ đơn hàng (JSON)']);
+            echo json_encode(['success' => true, 'message' => 'All orders cleared (JSON)']);
             exit;
         }
         
@@ -261,7 +261,7 @@ function handleJsonFallback() {
         
         array_unshift($orders, $data);
         file_put_contents($file, json_encode($orders, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-        echo json_encode(['success' => true, 'message' => 'Đặt hàng thành công (JSON)', 'order' => $data]);
+        echo json_encode(['success' => true, 'message' => 'Order placed successfully (JSON)', 'order' => $data]);
         exit;
     }
 }
@@ -276,21 +276,21 @@ function sendTelegramNewOrderNotification($orderId, $name, $phone, $address, $to
     if (empty($botToken) || empty($chatId)) return;
 
     $formattedTotal = number_format($total, 0, ',', '.') . ' VNĐ';
-    $methodText = ($paymentMethod === 'bank') ? 'Chuyển khoản VietQR (SePay)' : 'Thanh toán COD khi nhận hàng';
+    $methodText = ($paymentMethod === 'bank') ? 'VietQR Bank Transfer (SePay)' : 'COD Payment on Delivery';
 
-    $message = "📦 <b>ĐƠN HÀNG MỚI ĐÃ LƯU VÀO MYSQL DATABASE</b>\n";
+    $message = "📦 <b>NEW ORDER SAVED TO MYSQL DATABASE</b>\n";
     $message .= "━━━━━━━━━━━━━━━━━━━━\n";
-    $message .= "<b>Mã đơn hàng:</b> #{$orderId}\n";
-    $message .= "<b>Khách hàng:</b> {$name}\n";
-    $message .= "<b>SĐT:</b> <code>{$phone}</code>\n";
-    $message .= "<b>Địa chỉ:</b> {$address}\n";
-    $message .= "<b>Tổng tiền:</b> <code>{$formattedTotal}</code>\n";
-    $message .= "<b>Phương thức:</b> {$methodText}\n";
+    $message .= "<b>Order ID:</b> #{$orderId}\n";
+    $message .= "<b>Customer:</b> {$name}\n";
+    $message .= "<b>Phone:</b> <code>{$phone}</code>\n";
+    $message .= "<b>Address:</b> {$address}\n";
+    $message .= "<b>Total:</b> <code>{$formattedTotal}</code>\n";
+    $message .= "<b>Method:</b> {$methodText}\n";
     if (!empty($note)) {
-        $message .= "<b>Ghi chú:</b> <i>{$note}</i>\n";
+        $message .= "<b>Notes:</b> <i>{$note}</i>\n";
     }
     $message .= "━━━━━━━━━━━━━━━━━━━━\n";
-    $message .= "<i>Đã đồng bộ vào bảng orders & tb_orders MySQL!</i>";
+    $message .= "<i>Synced to orders & tb_orders MySQL tables!</i>";
 
     $url = "https://api.telegram.org/bot{$botToken}/sendMessage";
     $postData = [

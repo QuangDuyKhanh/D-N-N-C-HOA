@@ -1,52 +1,52 @@
-<!-- Modal Chỉnh Sửa Đơn Hàng (Edit Order Modal) -->
+<!-- Edit Order Modal -->
 <div id="edit-order-modal" class="detail-modal opacity-0 pointer-events-none transition-opacity duration-300 fixed inset-0 z-50 flex items-center justify-center p-4">
   <div class="detail-modal-bg absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
   <div class="detail-modal-container max-w-lg w-full bg-darkSurface border border-gold/30 rounded-2xl p-6 md:p-8 z-10 relative overflow-y-auto max-h-[90vh]">
     <button onclick="closeEditOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10">&times;</button>
     
-    <h3 class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-pen-to-square mr-2"></i>Chỉnh Sửa Đơn Hàng <span id="edit-modal-order-id" class="text-white text-sm font-body font-normal"></span></h3>
+    <h3 class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Order <span id="edit-modal-order-id" class="text-white text-sm font-body font-normal"></span></h3>
     
     <form id="edit-order-form" onsubmit="handleSaveEditedOrder(event)" class="space-y-4">
       <input type="hidden" id="edit-order-id" />
       
       <div>
-        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Tên Khách Hàng *</label>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Customer Name *</label>
         <input type="text" id="edit-customer-name" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
       </div>
       
       <div>
-        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Số Điện Thoại *</label>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Phone Number *</label>
         <input type="text" id="edit-customer-phone" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
       </div>
       
       <div>
-        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Địa Chỉ Giao Hàng *</label>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Delivery Address *</label>
         <textarea id="edit-customer-address" required rows="2" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none focus:border-gold/55 focus:outline-none transition-colors"></textarea>
       </div>
       
       <div>
-        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Ghi Chú Đơn Hàng</label>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Order Notes</label>
         <input type="text" id="edit-customer-note" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
       </div>
       
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Tổng Tiền (đ) *</label>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Total Amount (VND) *</label>
           <input type="number" id="edit-order-total" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
         </div>
         <div>
-          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Trạng Thái *</label>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Status *</label>
           <select id="edit-order-status" class="w-full bg-[#111111] border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors">
-            <option value="pending" class="bg-darkBg text-yellow-500">Chờ Duyệt</option>
-            <option value="confirmed" class="bg-darkBg text-green-500">Đã Xác Nhận</option>
-            <option value="cancelled" class="bg-darkBg text-red-500">Đã Hủy</option>
+            <option value="pending" class="bg-darkBg text-yellow-500">Pending</option>
+            <option value="confirmed" class="bg-darkBg text-green-500">Confirmed</option>
+            <option value="cancelled" class="bg-darkBg text-red-500">Cancelled</option>
           </select>
         </div>
       </div>
       
       <div class="pt-4 flex gap-3">
-        <button type="button" onclick="closeEditOrderModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">HỦY</button>
-        <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">LƯU THAY ĐỔI</button>
+        <button type="button" onclick="closeEditOrderModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">CANCEL</button>
+        <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">SAVE CHANGES</button>
       </div>
     </form>
   </div>

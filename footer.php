@@ -16,7 +16,7 @@
       ></a>
     </div>
 
-    <div class="back-to-top" title="Cuộn lên đầu trang">
+    <div class="back-to-top" title="Back to top">
       <i class="fa-solid fa-arrow-up"></i>
     </div>
 

@@ -12,14 +12,13 @@
         >
           <span
             class="text-xs font-semibold tracking-wide text-gold uppercase bg-gold/10 px-3 py-1 rounded border border-gold/20 inline-block mb-3"
-            >HÔM NAY DUY NHẤT</span
+            >LIMITED TIME ONLY</span
           >
           <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-2">
-            Ưu Đãi Đặc Biệt
+            Special Offer
           </h2>
           <p class="text-xs text-gray-400 mb-6">
-            Mỗi đơn hàng hôm nay sẽ nhận được quà tặng đặc biệt mẫu test 2ml tùy
-            chọn.
+            Every order today receives a complimentary 2ml sample vial of your choice.
           </p>
 
           <!-- Hộp Countdown -->
@@ -31,7 +30,7 @@
                 >00</span
               >
               <span class="text-[9px] text-gray-400 uppercase tracking-wide"
-                >Giờ</span
+                >Hours</span
               >
             </div>
             <div class="countdown-box">
@@ -41,7 +40,7 @@
                 >00</span
               >
               <span class="text-[9px] text-gray-400 uppercase tracking-wide"
-                >Phút</span
+                >Mins</span
               >
             </div>
             <div class="countdown-box">
@@ -51,7 +50,7 @@
                 >00</span
               >
               <span class="text-[9px] text-gray-400 uppercase tracking-wide"
-                >Giây</span
+                >Secs</span
               >
             </div>
           </div>
@@ -74,9 +73,9 @@
                 DOCI LADY ROSE
               </h4>
               <div class="flex gap-2 items-baseline mt-0.5">
-                <span class="text-xs font-bold text-gold">319.000đ</span>
+                <span class="text-xs font-bold text-gold">319,000 VND</span>
                 <span class="text-[9px] text-gray-500 line-through"
-                  >450.000đ</span
+                  >450,000 VND</span
                 >
               </div>
               <!-- Thanh hiển thị tiến trình -->
@@ -86,7 +85,7 @@
                 <div class="bg-gold h-full" style="width: 78%"></div>
               </div>
               <span class="text-[9px] text-gray-400 block mt-0.5"
-                >Đã bán 39/50 chai</span
+                >Sold 39/50 bottles</span
               >
               <!-- Nút bấm hành động nhỏ gọn -->
               <div class="flex gap-1.5 mt-2">
@@ -94,13 +93,13 @@
                   onclick="openDetails('women-lady-rose')"
                   class="px-2 py-1 text-[9px] font-bold border border-[#D4AF37]/30 text-gold hover:bg-[#D4AF37] hover:text-black rounded transition-all flex-1 text-center"
                 >
-                  CHI TIẾT
+                  DETAILS
                 </button>
                 <button
                   onclick="addToCart('women-lady-rose')"
                   class="px-2 py-1 text-[9px] font-bold bg-[#D4AF37] text-[#111111] hover:bg-white transition-all rounded flex-1 text-center"
                 >
-                  MUA NGAY
+                  BUY NOW
                 </button>
               </div>
             </div>
@@ -117,9 +116,9 @@
                 DOCI YES SIR
               </h4>
               <div class="flex gap-2 items-baseline mt-0.5">
-                <span class="text-xs font-bold text-gold">319.000đ</span>
+                <span class="text-xs font-bold text-gold">319,000 VND</span>
                 <span class="text-[9px] text-gray-500 line-through"
-                  >450.000đ</span
+                  >450,000 VND</span
                 >
               </div>
               <!-- Thanh hiển thị tiến trình -->
@@ -129,7 +128,7 @@
                 <div class="bg-gold h-full" style="width: 86%"></div>
               </div>
               <span class="text-[9px] text-gray-400 block mt-0.5"
-                >Đã bán 43/50 chai</span
+                >Sold 43/50 bottles</span
               >
               <!-- Nút bấm hành động nhỏ gọn -->
               <div class="flex gap-1.5 mt-2">
@@ -137,13 +136,13 @@
                   onclick="openDetails('men-ves-sir')"
                   class="px-2 py-1 text-[9px] font-bold border border-[#D4AF37]/30 text-gold hover:bg-[#D4AF37] hover:text-black rounded transition-all flex-1 text-center"
                 >
-                  CHI TIẾT
+                  DETAILS
                 </button>
                 <button
                   onclick="addToCart('men-ves-sir')"
                   class="px-2 py-1 text-[9px] font-bold bg-[#D4AF37] text-[#111111] hover:bg-white transition-all rounded flex-1 text-center"
                 >
-                  MUA NGAY
+                  BUY NOW
                 </button>
               </div>
             </div>
@@ -151,3 +150,4 @@
         </div>
       </div>
     </section>
+

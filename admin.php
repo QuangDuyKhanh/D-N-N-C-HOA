@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOCI PERFUME | Quản Trị Đơn Hàng</title>
+    <title>DOCI PERFUME | Admin Dashboard</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -71,22 +71,22 @@
         <div id="audio-consent-banner" class="hidden glass-card border-gold/30 p-4 rounded-xl mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-center gap-3">
             <i class="fa-solid fa-circle-info text-gold text-lg"></i>
-            <p class="text-xs text-gray-300">Trình duyệt yêu cầu tương tác để bật **âm thanh thông báo** khi có đơn hàng mới.</p>
+            <p class="text-xs text-gray-300">Browser requires user interaction to enable **notification audio** for new orders.</p>
           </div>
-          <button onclick="enableAudio()" class="bg-gold text-black font-bold text-xs px-4 py-2 rounded hover:bg-gold/80 transition-colors whitespace-nowrap">Kích Hoạt Âm Thanh</button>
+          <button onclick="enableAudio()" class="bg-gold text-black font-bold text-xs px-4 py-2 rounded hover:bg-gold/80 transition-colors whitespace-nowrap">Enable Audio</button>
         </div>
 
         <!-- Thanh điều hướng Tab chính -->
         <div class="flex border-b border-white/10 mb-8 gap-2">
           <button id="nav-orders-btn" onclick="switchSection('orders')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-gold text-white flex items-center gap-2 transition-all">
-            <i class="fa-solid fa-cart-shopping"></i> QUẢN LÝ ĐƠN HÀNG
+            <i class="fa-solid fa-cart-shopping"></i> ORDER MANAGEMENT
           </button>
           <button id="nav-contacts-btn" onclick="switchSection('contacts')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-transparent text-gray-400 hover:text-white flex items-center gap-2 relative transition-all">
-            <i class="fa-solid fa-envelope"></i> TIN NHẮN LIÊN HỆ
+            <i class="fa-solid fa-envelope"></i> CONTACT MESSAGES
             <span id="contacts-badge" class="hidden bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-1.5">0</span>
           </button>
           <button id="nav-dashboard-btn" onclick="switchSection('dashboard')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-transparent text-gray-400 hover:text-white flex items-center gap-2 transition-all">
-            <i class="fa-solid fa-chart-line"></i> THỐNG KÊ DOANH THU
+            <i class="fa-solid fa-chart-line"></i> REVENUE REPORTS
           </button>
         </div>
 
