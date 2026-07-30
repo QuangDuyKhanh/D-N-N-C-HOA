@@ -1,0 +1,5 @@
+# Local deployment build output
+.vercel
+
+# Local Netlify folder
+.netlify

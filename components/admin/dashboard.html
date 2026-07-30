@@ -1,0 +1,66 @@
+<!-- Phần Thống Kê Doanh Thu (Dashboard Section) -->
+<div id="section-dashboard" class="hidden">
+  <!-- Control Bar Doanh Thu -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div>
+      <h2 class="font-title text-2xl font-bold text-white mb-1">Báo Cáo Doanh Thu</h2>
+      <p class="text-xs text-gray-400">Kiểm soát dòng tiền doanh thu và tiến trình kinh doanh.</p>
+    </div>
+    
+    <!-- Bộ lọc thời gian -->
+    <div class="flex flex-wrap items-center gap-3">
+      <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Lọc theo:</label>
+      <select id="revenue-time-filter" onchange="handleTimeFilterChange()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-2 focus:border-gold/55 focus:outline-none transition-colors">
+        <option value="today" class="bg-darkBg">Hôm nay</option>
+        <option value="week" class="bg-darkBg">Tuần này</option>
+        <option value="month" class="bg-darkBg" selected>Tháng này</option>
+        <option value="quarter" class="bg-darkBg">Quý này</option>
+        <option value="year" class="bg-darkBg">Năm nay</option>
+        <option value="custom" class="bg-darkBg">Khoảng tự chọn</option>
+      </select>
+      <div id="custom-date-inputs" class="hidden flex items-center gap-2">
+        <input type="date" id="revenue-start-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
+        <span class="text-xs text-gray-500">đến</span>
+        <input type="date" id="revenue-end-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-coins"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Doanh thu thực tế (Đã duyệt)</span>
+      <h3 id="stat-revenue-confirmed" class="text-2xl font-bold text-green-500">0đ</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Chỉ tính đơn đã xác nhận (Confirmed)</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Doanh thu chờ duyệt</span>
+      <h3 id="stat-revenue-pending" class="text-2xl font-bold text-yellow-500">0đ</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Tính từ đơn chờ duyệt (Pending)</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-ban"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Doanh thu bị hủy</span>
+      <h3 id="stat-revenue-cancelled" class="text-2xl font-bold text-red-500">0đ</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Tổng tiền của đơn đã hủy (Cancelled)</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-scale-balanced"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">So với tháng trước</span>
+      <h3 id="stat-revenue-compare" class="text-2xl font-bold text-white">0%</h3>
+      <p id="stat-revenue-compare-desc" class="text-[9px] text-gray-500 mt-1">Đang tính toán dữ liệu so sánh...</p>
+    </div>
+  </div>
+
+  <!-- Chart Area -->
+  <div class="grid grid-cols-1 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl">
+      <h3 class="font-title text-lg font-bold text-white mb-4"><i class="fa-solid fa-chart-area text-gold mr-2"></i>Biểu Đồ Xu Hướng Doanh Thu</h3>
+      <div class="w-full h-80 relative">
+        <canvas id="revenue-chart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

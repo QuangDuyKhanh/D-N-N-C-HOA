@@ -1,0 +1,3071 @@
+<!doctype html>
+<html lang="en" class="lenis">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCI PERFUME | Luxury Inspired Fragrance - High-End Perfumes</title>
+    <meta
+      name="description"
+      content="Discover DOCI Perfume - Premium luxury fragrances inspired by world-renowned perfume icons. 6-8 hours longevity, 1-2m projection, exquisite design."
+    />
+
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
+
+    <!-- Mobile Browser Theme Color & PWA Meta -->
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph / Facebook / Zalo Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://doci-perfume.vercel.app/" />
+    <meta property="og:title" content="DOCI PERFUME | Luxury Inspired Fragrance" />
+    <meta property="og:description" content="Perfumes inspired by global icon scents. Lasts 6-8h, 1-2m projection. Order today for special offers!" />
+    <meta property="og:image" content="https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DOCI PERFUME | Luxury Inspired Fragrance" />
+    <meta name="twitter:description" content="Thương hiệu nước hoa cao cấp lưu hương 6-8 giờ, tỏa hương 1-2m. Thiết kế tinh xảo, quà tặng độc quyền." />
+    <meta name="twitter:image" content="https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg" />
+
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "DOCI PERFUME",
+      "image": "https://doci-perfume.vercel.app/assets/images/doci-bottle-presentation.jpg",
+      "description": "Thương hiệu nước hoa cao cấp lấy cảm hứng từ các biểu tượng mùi hương thế giới. Lưu hương 6-8h, tỏa hương 1-2m.",
+      "url": "https://doci-perfume.vercel.app/",
+      "priceRange": "$",
+      "currenciesAccepted": "VND",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer, VietQR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1250"
+      }
+    }
+    </script>
+
+    <!-- Liên kết CDN cho CSS -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- Phông chữ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Tùy Chỉnh cho Dự Án -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Thư viện biểu tượng Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS Hiệu Ứng AOS Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- CSS Bộ Slide SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- 1. MÀN HÌNH CHỜ (PRELOADER) -->
+    <div id="preloader">
+      <h1 class="preloader-logo text-3xl md:text-5xl font-bold">
+        DOCI PERFUME
+      </h1>
+      <p
+        class="text-[10px] text-gray-500 uppercase tracking-[4px] mt-2 font-light"
+      >
+        Luxury Inspired Fragrance
+      </p>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+
+    <!-- Thanh tiến trình cuộn trang -->
+    <div id="scroll-progress"></div>
+
+    <!-- 2. THANH MENU ĐIỀU HƯỚNG CỐ ĐỊNH (STICKY NAV) -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 bg-transparent"
+    >
+      <div
+        class="container mx-auto px-4 md:px-8 flex items-center justify-between"
+      >
+        <!-- Các liên kết Menu (Bên Trái) -->
+        <nav
+          class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wide text-gray-300"
+        >
+          <a href="#hero-section" class="hover:text-gold transition-colors"
+            >Home</a
+          >
+          <a href="#about-section" class="hover:text-gold transition-colors"
+            >About Us</a
+          >
+          <a href="#best-sellers" class="hover:text-gold transition-colors"
+            >Best Sellers</a
+          >
+          <a href="#quiz-section" class="hover:text-gold transition-colors"
+            >Fragrance Quiz</a
+          >
+        </nav>
+
+        <!-- Logo Thương hiệu ở Trung Tâm -->
+        <a
+          href="#hero-section"
+          class="text-center flex flex-col justify-center items-center"
+        >
+          <span
+            class="font-title text-2xl md:text-3xl font-bold tracking-[6px] text-white"
+            >DOCI</span
+          >
+          <span
+            class="text-[7px] md:text-[9px] uppercase tracking-[4px] text-[#D4AF37] font-semibold -mt-1"
+            >PERFUME</span
+          >
+        </a>
+
+        <!-- Các liên kết Menu & Biểu tượng (Bên Phải) -->
+        <div class="flex items-center gap-4 md:gap-6">
+          <nav
+            class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wide text-gray-300 mr-4"
+          >
+            <a
+              href="#collections-section"
+              class="hover:text-gold transition-colors"
+              >Collections</a
+            >
+            <a href="#faq-section" class="hover:text-gold transition-colors"
+              >FAQ</a
+            >
+            <a href="#contact-section" class="hover:text-gold transition-colors"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Nút chuyển đổi chế độ Sáng/Tối -->
+          <button
+            id="theme-toggle"
+            class="text-white hover:text-gold transition-colors p-1"
+            title="Toggle Dark/Light Mode"
+          >
+            <i class="fa-solid fa-sun text-lg"></i>
+          </button>
+
+          <!-- Biểu tượng Tài khoản Khách hàng -->
+          <button
+            id="user-account-btn"
+            class="relative text-white hover:text-gold transition-colors p-1 flex items-center gap-2 group"
+            title="Customer Account"
+          >
+            <div class="w-7 h-7 rounded-full border border-white/20 group-hover:border-gold flex items-center justify-center bg-white/5 transition-all" id="user-avatar-badge">
+              <i class="fa-regular fa-user text-xs" id="user-avatar-icon"></i>
+            </div>
+            <span id="user-header-name" class="hidden md:inline text-xs font-semibold text-gray-200 group-hover:text-gold max-w-[100px] truncate">Account</span>
+          </button>
+
+          <!-- Biểu tượng Giỏ Hàng -->
+          <button
+            id="cart-toggle"
+            class="relative text-white hover:text-gold transition-colors p-1"
+            title="Shopping Cart"
+          >
+            <i class="fa-solid fa-shopping-bag text-lg"></i>
+            <span
+              id="cart-badge"
+              class="absolute -top-1 -right-2 bg-gold text-[#111111] text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden"
+              >0</span
+            >
+          </button>
+
+          <!-- Nút Menu Hamburger (Chỉ hiển thị trên điện thoại) -->
+          <button
+            id="mobile-menu-toggle"
+            class="lg:hidden text-white hover:text-gold transition-colors p-1"
+            title="Open Menu"
+            aria-label="Open Navigation Menu"
+          >
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Lớp phủ Menu trên điện thoại -->
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+    ></div>
+
+    <!-- Hộp trượt Menu trên điện thoại -->
+    <div
+      id="mobile-menu-drawer"
+      class="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-[#111111] border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col"
+    >
+      <!-- Phần đầu của Hộp trượt -->
+      <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+        <div>
+          <span class="font-title text-xl font-bold tracking-[4px] text-white">DOCI</span>
+          <span class="text-[8px] uppercase tracking-[3px] text-[#D4AF37] block -mt-1">PERFUME</span>
+        </div>
+        <button id="mobile-menu-close" class="text-white hover:text-gold p-1" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Các liên kết điều hướng trong Hộp trượt -->
+      <nav class="flex flex-col gap-1 px-4 py-4 flex-1 overflow-y-auto">
+        <a href="#hero-section"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-house w-5 text-center text-gold"></i> Home
+        </a>
+        <a href="#about-section"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-star w-5 text-center text-gold"></i> About Us
+        </a>
+        <a href="#best-sellers"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-fire w-5 text-center text-gold"></i> Best Sellers
+        </a>
+        <a href="#collections-section" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-grid-2 w-5 text-center text-gold"></i> Collections
+        </a>
+        <a href="#quiz-section"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-wand-magic-sparkles w-5 text-center text-gold"></i> Fragrance Quiz
+        </a>
+        <a href="#faq-section"     class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-circle-question w-5 text-center text-gold"></i> FAQ
+        </a>
+        <a href="#contact-section" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-300 hover:text-gold hover:bg-white/5 transition-all text-sm font-semibold uppercase tracking-wide">
+          <i class="fa-solid fa-envelope w-5 text-center text-gold"></i> Contact
+        </a>
+        <button id="mobile-user-account-btn" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gold bg-gold/10 border border-gold/20 hover:bg-gold/20 transition-all text-sm font-semibold uppercase tracking-wide w-full text-left mt-2">
+          <i class="fa-solid fa-user-circle w-5 text-center text-gold text-lg"></i> <span id="mobile-user-label">Sign In / Register</span>
+        </button>
+      </nav>
+
+      <!-- Nút kêu gọi hành động (CTA) ở chân Hộp trượt -->
+      <div class="px-6 py-5 border-t border-white/10">
+        <a
+          href="#collections-section"
+          class="mobile-nav-link btn-luxury btn-luxury-solid w-full block text-center text-xs py-3 rounded-xl"
+        >SHOP NOW - 319,000 VND</a>
+      </div>
+    </div>
+
+
+<!-- 3. PHẦN BANNER CHÍNH & HẠT BỤI VÀNG -->
+    <section
+      id="hero-section"
+      class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20"
+    >
+      <!-- Golden particles bay bằng GSAP -->
+      <canvas id="particles-canvas"></canvas>
+
+      <!-- Lớp phủ tối mờ -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/80 to-darkBg z-0"
+      ></div>
+
+      <!-- Đèn chiếu sáng nghệ thuật đằng sau chai nước hoa -->
+      <div class="hero-glow"></div>
+
+      <div
+        class="container mx-auto px-4 md:px-8 z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-12"
+      >
+        <!-- Cột chữ (Trái) -->
+        <div
+          class="lg:col-span-6 text-center lg:text-left order-2 lg:order-1"
+          data-aos="fade-right"
+        >
+          <span
+            class="text-fluid-sm font-semibold tracking-[4px] text-gold uppercase block mb-3"
+            >LUXURY INSPIRED FRAGRANCE</span
+          >
+          <h1
+            class="font-title text-fluid-hero font-bold text-white leading-tight mb-4"
+          >
+            Define Your <br class="hidden md:inline" />
+            <span class="text-gold">Signature Scent</span>
+          </h1>
+          <p
+            class="text-fluid-base text-gray-300 max-w-xl mb-8 font-light mx-auto lg:mx-0"
+          >
+            DOCI Perfume delivers high-end fragrances inspired by iconic world perfumes. Enjoy 6–8 hours longevity and exquisite designs that elevate your style.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-20"
+          >
+            <a href="#collections-section" class="btn-luxury btn-luxury-solid"
+              >SHOP NOW</a
+            >
+            <a href="#quiz-section" class="btn-luxury">FIND YOUR SCENT</a>
+          </div>
+        </div>
+
+        <!-- Cột ảnh chai nước hoa lớn (Phải) -->
+        <div
+          class="lg:col-span-6 flex justify-center items-center order-1 lg:order-2"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <div
+            class="relative w-full max-w-md md:max-w-lg lg:max-w-xl aspect-square flex items-center justify-center float-element rounded-2xl overflow-hidden border border-gold/30 shadow-2xl bg-black/40 hero-3d-card"
+          >
+            <video
+              class="w-full h-full object-cover"
+              src="assets/images/1780966300690_7983307016412442049_g2758941255649715778.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Nhúng file about.php  -->
+<!-- 4. GIỚI THIỆU & CÂU CHUYỆN THƯƠNG HIỆU -->
+    <section
+      id="about-section"
+      class="py-24 bg-darkSurface relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Ảnh Presentation của DOCI -->
+          <div class="relative flex justify-center" data-aos="fade-right">
+            <div
+              class="relative w-full max-w-lg border border-gold/20 p-3 rounded-2xl bg-black/40"
+            >
+              <img
+                src="assets/images/doci-bottle-presentation.jpg"
+                alt="DOCI Perfume Presentation"
+                class="rounded-xl w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <!-- Chữ Giới Thiệu -->
+          <div class="flex flex-col justify-center" data-aos="fade-left">
+            <span
+              class="text-xs font-semibold tracking-wide text-gold uppercase mb-2"
+              >BRAND PHILOSOPHY</span
+            >
+            <h2
+              class="font-title text-3xl md:text-4xl font-bold text-white mb-6"
+            >
+              Elegance Through Refinement
+            </h2>
+            <p class="text-sm text-gray-300 mb-6 font-light leading-relaxed">
+              DOCI Perfume was born with a mission to deliver luxury fragrance experiences at accessible prices. Inspired by iconic designer perfumes worldwide, we blend premium imported essence with modern bottling techniques.
+            </p>
+            <p class="text-sm text-gray-300 mb-8 font-light leading-relaxed">
+              Every bottle of DOCI not only carries a captivating high-end scent, but also features an exquisite bottle design, 1-2m projection, and 6 to 8 hours of lasting performance.
+            </p>
+
+            <!-- Các chỉ số thống kê (Counters) -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-white/10"
+            >
+              <div>
+                <span
+                  class="counter-val font-title text-2xl md:text-3xl font-bold text-gold block"
+                  data-target="20"
+                  data-suffix="+"
+                  >0</span
+                >
+                <span class="text-[10px] uppercase tracking-wide text-gray-400"
+                  >Scents</span
+                >
+              </div>
+              <div>
+                <span
+                  class="counter-val font-title text-2xl md:text-3xl font-bold text-gold block"
+                  data-target="5000"
+                  data-suffix="+"
+                  >0</span
+                >
+                <span class="text-[10px] uppercase tracking-wide text-gray-400"
+                  >Happy Clients</span
+                >
+              </div>
+              <div>
+                <span
+                  class="counter-val font-title text-2xl md:text-3xl font-bold text-gold block"
+                  data-target="4.8"
+                  data-suffix="★"
+                  >0</span
+                >
+                <span class="text-[10px] uppercase tracking-wide text-gray-400"
+                  >Rating</span
+                >
+              </div>
+              <div>
+                <span
+                  class="counter-val font-title text-2xl md:text-3xl font-bold text-gold block"
+                  data-target="8"
+                  data-suffix="h+"
+                  >0</span
+                >
+                <span class="text-[10px] uppercase tracking-wide text-gray-400"
+                  >Longevity</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Nhúng file best-sellers.php  -->
+<!-- 5. PHẦN SẢN PHẨM BÁN CHẠY NHẤT (BỘ TRƯỢT SLIDE) -->
+    <section id="best-sellers" class="py-24 bg-darkBg relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mb-12"
+        >
+          <div data-aos="fade-right">
+            <span
+              class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+              >POPULAR SCENTS</span
+            >
+            <h2 class="font-title text-3xl font-bold text-white">
+              Best Sellers
+            </h2>
+          </div>
+
+          <!-- Nút Swiper controls -->
+          <div class="flex gap-3 mt-4 md:mt-0" data-aos="fade-left">
+            <button
+              class="swiper-button-prev-best w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-colors"
+            >
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button
+              class="swiper-button-next-best w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-colors"
+            >
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper Slider Container -->
+        <div class="swiper best-seller-swiper py-4" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Slide 1: Yes Sir -->
+            <div class="swiper-slide glass-card overflow-hidden group relative">
+              <div class="ribbon-badge">Best Seller</div>
+              <div
+                class="product-img-wrapper cursor-pointer"
+                onclick="openDetails('men-ves-sir')"
+              >
+                <img
+                  src="assets/images/1783734467461_7983307016412442049_g2758941255649715778_3225eab47b7f0c8a09b1b9593a06cc85.jpg"
+                  alt="DOCI YES SIR"
+                />
+                <div class="product-hover-actions">
+                  <button
+                    class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      openDetails('men-ves-sir');
+                    "
+                    title="View Details"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                  <button
+                    class="w-10 h-10 rounded-full bg-white text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      addToCart('men-ves-sir');
+                    "
+                    title="Add to Cart"
+                  >
+                    <i class="fa-solid fa-shopping-bag"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="glass-card-info">
+                <div>
+                  <span
+                    class="text-[10px] text-gold uppercase tracking-wide block mb-1"
+                    >For Men • Fresh & Crisp</span
+                  >
+                  <h3
+                    class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
+                    onclick="openDetails('men-ves-sir')"
+                  >
+                    DOCI YES SIR
+                  </h3>
+                  <p class="text-[10px] text-gray-500 italic mb-3">
+                    Inspired by YSL Y EDP
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
+                    <span class="text-[10px] text-gray-500 line-through"
+                      >450,000 VND</span
+                    >
+                  </div>
+                  <button
+                    class="w-full btn-luxury"
+                    onclick="addToCart('men-ves-sir')"
+                  >
+                    SHOP NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Slay Queen -->
+            <div class="swiper-slide glass-card overflow-hidden group relative">
+              <div class="ribbon-badge">Best Seller</div>
+              <div
+                class="product-img-wrapper cursor-pointer"
+                onclick="openDetails('women-slay-queen')"
+              >
+                <img
+                  src="assets/images/1783734471142_7983307016412442049_g2758941255649715778_b8d42bec3e3ae33de4fdae80d066a4a1.jpg"
+                  alt="DOCI Slay Queen"
+                />
+                <div class="product-hover-actions">
+                  <button
+                    class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      openDetails('women-slay-queen');
+                    "
+                    title="View Details"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                  <button
+                    class="w-10 h-10 rounded-full bg-white text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      addToCart('women-slay-queen');
+                    "
+                    title="Add to Cart"
+                  >
+                    <i class="fa-solid fa-shopping-bag"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="glass-card-info">
+                <div>
+                  <span
+                    class="text-[10px] text-gold uppercase tracking-wide block mb-1"
+                    >For Women • Seductive</span
+                  >
+                  <h3
+                    class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
+                    onclick="openDetails('women-slay-queen')"
+                  >
+                    DOCI SLAY QUEEN
+                  </h3>
+                  <p class="text-[10px] text-gray-500 italic mb-3">
+                    Inspired by Good Girl
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
+                    <span class="text-[10px] text-gray-500 line-through"
+                      >450.000đ</span
+                    >
+                  </div>
+                  <button
+                    class="w-full btn-luxury"
+                    onclick="addToCart('women-slay-queen')"
+                  >
+                    MUA NGAY
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Nice Navy -->
+            <div class="swiper-slide glass-card overflow-hidden group relative">
+              <div class="ribbon-badge">Best Seller</div>
+              <div
+                class="product-img-wrapper cursor-pointer"
+                onclick="openDetails('men-nice-navy')"
+              >
+                <img
+                  src="assets/images/1783734467465_7983307016412442049_g2758941255649715778_04822642e5e316fe53c2df7ead3066bb.jpg"
+                  alt="DOCI Nice Navy"
+                />
+                <div class="product-hover-actions">
+                  <button
+                    class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      openDetails('men-nice-navy');
+                    "
+                    title="View Details"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                  <button
+                    class="w-10 h-10 rounded-full bg-white text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      addToCart('men-nice-navy');
+                    "
+                    title="Add to Cart"
+                  >
+                    <i class="fa-solid fa-shopping-bag"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="glass-card-info">
+                <div>
+                  <span
+                    class="text-[10px] text-gold uppercase tracking-wide block mb-1"
+                    >For Men • Luxury & Elegant</span
+                  >
+                  <h3
+                    class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
+                    onclick="openDetails('men-nice-navy')"
+                  >
+                    DOCI NICE NAVY
+                  </h3>
+                  <p class="text-[10px] text-gray-500 italic mb-3">
+                    Inspired by Bleu de Chanel
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
+                    <span class="text-[10px] text-gray-500 line-through"
+                      >450,000 VND</span
+                    >
+                  </div>
+                  <button
+                    class="w-full btn-luxury"
+                    onclick="addToCart('men-nice-navy')"
+                  >
+                    SHOP NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Madam Co -->
+            <div class="swiper-slide glass-card overflow-hidden group relative">
+              <div class="ribbon-badge">Best Seller</div>
+              <div
+                class="product-img-wrapper cursor-pointer"
+                onclick="openDetails('women-madam-co')"
+              >
+                <img
+                  src="assets/images/1783734471165_7983307016412442049_g2758941255649715778_3ffd0583d861e7e4dcbdba4afd79c2bc.jpg"
+                  alt="DOCI Madam Co"
+                />
+                <div class="product-hover-actions">
+                  <button
+                    class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      openDetails('women-madam-co');
+                    "
+                    title="View Details"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                  <button
+                    class="w-10 h-10 rounded-full bg-white text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      addToCart('women-madam-co');
+                    "
+                    title="Add to Cart"
+                  >
+                    <i class="fa-solid fa-shopping-bag"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="glass-card-info">
+                <div>
+                  <span
+                    class="text-[10px] text-gold uppercase tracking-wide block mb-1"
+                    >For Women • Elegance</span
+                  >
+                  <h3
+                    class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
+                    onclick="openDetails('women-madam-co')"
+                  >
+                    DOCI MADAM CO
+                  </h3>
+                  <p class="text-[10px] text-gray-500 italic mb-3">
+                    Inspired by Coco Chanel
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
+                    <span class="text-[10px] text-gray-500 line-through"
+                      >450,000 VND</span
+                    >
+                  </div>
+                  <button
+                    class="w-full btn-luxury"
+                    onclick="addToCart('women-madam-co')"
+                  >
+                    SHOP NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Old King -->
+            <div class="swiper-slide glass-card overflow-hidden group relative">
+              <div class="ribbon-badge">Best Seller</div>
+              <div
+                class="product-img-wrapper cursor-pointer"
+                onclick="openDetails('men-old-king')"
+              >
+                <img
+                  src="assets/images/1783734467471_7983307016412442049_g2758941255649715778_14a3b6ba4f2ad5fdd9c4bc0359afbcaa.jpg"
+                  alt="DOCI Old King"
+                />
+                <div class="product-hover-actions">
+                  <button
+                    class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      openDetails('men-old-king');
+                    "
+                    title="View Details"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                  <button
+                    class="w-10 h-10 rounded-full bg-white text-[#111111] flex items-center justify-center hover:scale-110 transition-transform"
+                    onclick="
+                      event.stopPropagation();
+                      addToCart('men-old-king');
+                    "
+                    title="Add to Cart"
+                  >
+                    <i class="fa-solid fa-shopping-bag"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="glass-card-info">
+                <div>
+                  <span
+                    class="text-[10px] text-gold uppercase tracking-wide block mb-1"
+                    >For Men • Regal & Bold</span
+                  >
+                  <h3
+                    class="font-title text-md font-bold mt-1 text-white group-hover:text-gold transition-colors cursor-pointer"
+                    onclick="openDetails('men-old-king')"
+                  >
+                    DOCI OLD KING
+                  </h3>
+                  <p class="text-[10px] text-gray-500 italic mb-3">
+                    Inspired by Creed Aventus
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="product-spec-item">Longevity: 6-8h</span>
+                    <span class="product-spec-item">Projection: 1-2m</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-baseline gap-2 mb-4">
+                    <span class="text-sm font-bold text-gold">319,000 VND</span>
+                    <span class="text-[10px] text-gray-500 line-through"
+                      >450,000 VND</span
+                    >
+                  </div>
+                  <button
+                    class="w-full btn-luxury"
+                    onclick="addToCart('men-old-king')"
+                  >
+                    SHOP NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Nhúng file flash-sale.php  -->
+<!-- 6. PHẦN FLASH SALE (BỘ ĐẾM NGƯỢC THỜI GIAN) -->
+    <section
+      class="py-16 bg-gradient-to-r from-black via-[#161616] to-black border-y border-gold/15 relative overflow-hidden"
+    >
+      <div
+        class="container mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+      >
+        <!-- Cột Countdown (Trái) -->
+        <div
+          class="lg:col-span-5 text-center lg:text-left"
+          data-aos="fade-right"
+        >
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase bg-gold/10 px-3 py-1 rounded border border-gold/20 inline-block mb-3"
+            >LIMITED TIME ONLY</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-2">
+            Special Offer
+          </h2>
+          <p class="text-xs text-gray-400 mb-6">
+            Every order today receives a complimentary 2ml sample vial of your choice.
+          </p>
+
+          <!-- Hộp Countdown -->
+          <div class="flex justify-center lg:justify-start gap-3 select-none">
+            <div class="countdown-box">
+              <span
+                id="timer-hours"
+                class="text-xl md:text-2xl font-bold text-gold block"
+                >00</span
+              >
+              <span class="text-[9px] text-gray-400 uppercase tracking-wide"
+                >Hours</span
+              >
+            </div>
+            <div class="countdown-box">
+              <span
+                id="timer-minutes"
+                class="text-xl md:text-2xl font-bold text-gold block"
+                >00</span
+              >
+              <span class="text-[9px] text-gray-400 uppercase tracking-wide"
+                >Mins</span
+              >
+            </div>
+            <div class="countdown-box">
+              <span
+                id="timer-seconds"
+                class="text-xl md:text-2xl font-bold text-gold block"
+                >00</span
+              >
+              <span class="text-[9px] text-gray-400 uppercase tracking-wide"
+                >Secs</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Hiển thị Sản Phẩm Sale (Phải) -->
+        <div
+          class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4"
+          data-aos="fade-left"
+        >
+          <!-- Card nhỏ 1 -->
+          <div class="glass-card p-4 flex flex-row gap-4 items-center">
+            <img
+              src="assets/images/1783734471152_7983307016412442049_g2758941255649715778_8b07fb4151c322a6d1f29e1f071e86c6.jpg"
+              alt="Lady Rose"
+              class="w-16 h-20 object-cover rounded flex-shrink-0"
+            />
+            <div class="flex-grow min-w-0">
+              <h4 class="text-xs font-bold text-white truncate">
+                DOCI LADY ROSE
+              </h4>
+              <div class="flex gap-2 items-baseline mt-0.5">
+                <span class="text-xs font-bold text-gold">319,000 VND</span>
+                <span class="text-[9px] text-gray-500 line-through"
+                  >450,000 VND</span
+                >
+              </div>
+              <!-- Thanh hiển thị tiến trình -->
+              <div
+                class="w-full bg-white/10 h-1 rounded-full mt-1.5 overflow-hidden"
+              >
+                <div class="bg-gold h-full" style="width: 78%"></div>
+              </div>
+              <span class="text-[9px] text-gray-400 block mt-0.5"
+                >Sold 39/50 bottles</span
+              >
+              <!-- Nút bấm hành động nhỏ gọn -->
+              <div class="flex gap-1.5 mt-2">
+                <button
+                  onclick="openDetails('women-lady-rose')"
+                  class="px-2 py-1 text-[9px] font-bold border border-[#D4AF37]/30 text-gold hover:bg-[#D4AF37] hover:text-black rounded transition-all flex-1 text-center"
+                >
+                  DETAILS
+                </button>
+                <button
+                  onclick="addToCart('women-lady-rose')"
+                  class="px-2 py-1 text-[9px] font-bold bg-[#D4AF37] text-[#111111] hover:bg-white transition-all rounded flex-1 text-center"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card nhỏ 2 -->
+          <div class="glass-card p-4 flex flex-row gap-4 items-center">
+            <img
+              src="assets/images/1783734467461_7983307016412442049_g2758941255649715778_3225eab47b7f0c8a09b1b9593a06cc85.jpg"
+              alt="Yes Sir"
+              class="w-16 h-20 object-cover rounded flex-shrink-0"
+            />
+            <div class="flex-grow min-w-0">
+              <h4 class="text-xs font-bold text-white truncate">
+                DOCI YES SIR
+              </h4>
+              <div class="flex gap-2 items-baseline mt-0.5">
+                <span class="text-xs font-bold text-gold">319,000 VND</span>
+                <span class="text-[9px] text-gray-500 line-through"
+                  >450,000 VND</span
+                >
+              </div>
+              <!-- Thanh hiển thị tiến trình -->
+              <div
+                class="w-full bg-white/10 h-1 rounded-full mt-1.5 overflow-hidden"
+              >
+                <div class="bg-gold h-full" style="width: 86%"></div>
+              </div>
+              <span class="text-[9px] text-gray-400 block mt-0.5"
+                >Sold 43/50 bottles</span
+              >
+              <!-- Nút bấm hành động nhỏ gọn -->
+              <div class="flex gap-1.5 mt-2">
+                <button
+                  onclick="openDetails('men-ves-sir')"
+                  class="px-2 py-1 text-[9px] font-bold border border-[#D4AF37]/30 text-gold hover:bg-[#D4AF37] hover:text-black rounded transition-all flex-1 text-center"
+                >
+                  DETAILS
+                </button>
+                <button
+                  onclick="addToCart('men-ves-sir')"
+                  class="px-2 py-1 text-[9px] font-bold bg-[#D4AF37] text-[#111111] hover:bg-white transition-all rounded flex-1 text-center"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 6.5. PHẦN TRƯNG BÀY ULTRA SLIDE HỘP MẪU THỬ (TESTER) -->
+    <section
+      id="tester-section"
+      class="py-24 bg-darkSurface relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >DISCOVER BEFORE FULL SIZE</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
+            Ultra Slide 10-Scent Tester Set
+          </h2>
+          <p
+            class="text-xs md:text-sm text-gray-400 max-w-xl mx-auto font-light"
+          >
+            Explore our complete best-selling fragrance collection before choosing your full-size bottle. Features a sleek Ultra Slide drawer box.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Trái: Hình ảnh Poster Hộp Tester -->
+          <div class="lg:col-span-6 flex justify-center" data-aos="fade-right">
+            <div
+              class="relative w-full max-w-lg tester-card p-3 rounded-2xl cursor-pointer"
+              onclick="
+                openLightbox(
+                  'assets/images/z7848112674236_edbc0b7d8f24edf2d4038c60a55297e1.jpg',
+                )
+              "
+            >
+              <img
+                src="assets/images/z7848112674236_edbc0b7d8f24edf2d4038c60a55297e1.jpg"
+                alt="DOCI Ultra Slide Tester Box"
+                class="rounded-xl w-full object-cover"
+              />
+              <div
+                class="absolute bottom-6 right-6 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-gold/30 flex items-center gap-1.5 text-gold text-xs"
+              >
+                <i class="fa-solid fa-expand"></i> Zoom Image
+              </div>
+            </div>
+          </div>
+
+          <!-- Phải: Chi tiết sản phẩm Tester -->
+          <div
+            class="lg:col-span-6 flex flex-col justify-center"
+            data-aos="fade-left"
+          >
+            <span
+              class="text-xs font-semibold tracking-wide text-gold uppercase mb-2"
+              >SPECIAL PROMOTION</span
+            >
+            <h3
+              class="font-title text-2xl md:text-3xl font-bold text-white mb-6"
+            >
+              Full 10-Scent Set For Only 149,000 VND
+            </h3>
+
+            <div class="flex flex-col gap-4 mb-8">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0"
+                >
+                  <i class="fa-solid fa-box-open text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white mb-0.5">
+                    Modern Ultra Slide Tray
+                  </h4>
+                  <p class="text-xs text-gray-300 font-light">
+                    Sleek drawer tech opens smoothly, securing spray vials safely against impact while preserving freshness.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0"
+                >
+                  <i class="fa-solid fa-list-ol text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white mb-0.5">
+                    10 Best-Selling Scents (Men & Women)
+                  </h4>
+                  <p class="text-xs text-gray-300 font-light">
+                    Each tray includes 10 mini sprays (2ml each) with full-size essence strength so you can switch up your scent daily.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0"
+                >
+                  <i class="fa-solid fa-ticket text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white mb-0.5">
+                    Cash-Back Voucher Included
+                  </h4>
+                  <p class="text-xs text-gray-300 font-light">
+                    Includes a 50,000 VND voucher directly applicable towards your next full-size bottle purchase.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 mb-8">
+              <div>
+                <span
+                  class="text-[10px] text-gray-500 uppercase tracking-wide block"
+                  >Offer Price</span
+                >
+                <span class="text-2xl font-bold text-gold">149,000 VND</span>
+                <span class="text-xs text-gray-500 line-through ml-2"
+                  >250,000 VND</span
+                >
+              </div>
+              <div
+                class="bg-red-500/10 border border-red-500/30 text-red-400 text-[10px] uppercase font-bold tracking-wide px-3 py-1.5 rounded"
+              >
+                Save 40%
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="btn-luxury btn-luxury-solid"
+                onclick="addToCart('tester-box')"
+              >
+                BUY TESTER SET NOW
+              </button>
+              <button
+                class="btn-luxury"
+                onclick="
+                  openLightbox(
+                    'assets/images/z7848112674236_edbc0b7d8f24edf2d4038c60a55297e1.jpg',
+                  )
+                "
+              >
+                DESIGN DETAILS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FRAGRANCE QUIZ -->
+    <section id="quiz-section" class="py-24 bg-darkBg relative">
+      <div class="container mx-auto px-4 md:px-8 text-center">
+        <div class="max-w-2xl mx-auto mb-12" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >PERSONALIZED EXPERIENCE</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
+            Find Your Signature Scent
+          </h2>
+          <p class="text-xs md:text-sm text-gray-400 font-light">
+            Answer a few simple questions and let DOCI's fragrance assistant match you with the ideal perfume for your style and preferences.
+          </p>
+        </div>
+
+        <!-- Khung trắc nghiệm Quiz -->
+        <div
+          class="max-w-3xl mx-auto glass-card p-8 border-gold/15 relative overflow-hidden"
+          data-aos="zoom-in"
+        >
+          <!-- Thanh hiển thị tiến trình -->
+          <div
+            class="w-full bg-white/5 h-1 rounded-full mb-8 relative overflow-hidden"
+          >
+            <div
+              id="quiz-progress-line"
+              class="bg-gold h-full absolute left-0 top-0 transition-all duration-500"
+              style="width: 0%"
+            ></div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div id="quiz-step-1" class="quiz-step">
+            <h3 class="font-title text-xl font-semibold mb-6">
+              Step 1: Who are you shopping for?
+            </h3>
+            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <div
+                class="quiz-option-card p-6 rounded-xl text-center"
+                data-step-name="gender"
+                data-value="women"
+              >
+                <i class="fa-solid fa-venus text-2xl text-[#D4AF37] mb-2"></i>
+                <p class="text-xs font-semibold uppercase tracking-wide">
+                  For Women
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-6 rounded-xl text-center"
+                data-step-name="gender"
+                data-value="men"
+              >
+                <i class="fa-solid fa-mars text-2xl text-[#D4AF37] mb-2"></i>
+                <p class="text-xs font-semibold uppercase tracking-wide">
+                  For Men
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="quiz-step-2" class="quiz-step hidden">
+            <h3 class="font-title text-xl font-semibold mb-6">
+              Step 2: What is your preferred scent vibe?
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div
+                class="quiz-option-card p-4 rounded-xl text-center"
+                data-step-name="style"
+                data-value="Thanh Lịch"
+              >
+                <i class="fa-solid fa-feather text-xl text-[#D4AF37] mb-2"></i>
+                <p class="text-[10px] font-semibold uppercase tracking-wide">
+                  Elegance
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-4 rounded-xl text-center"
+                data-step-name="style"
+                data-value="Sang Trọng"
+              >
+                <i class="fa-solid fa-crown text-xl text-[#D4AF37] mb-2"></i>
+                <p class="text-[10px] font-semibold uppercase tracking-wide">
+                  Luxury
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-4 rounded-xl text-center"
+                data-step-name="style"
+                data-value="Quyến Rũ"
+              >
+                <i
+                  class="fa-solid fa-fire-flame-curved text-xl text-[#D4AF37] mb-2"
+                ></i>
+                <p class="text-[10px] font-semibold uppercase tracking-wide">
+                  Seductive
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-4 rounded-xl text-center"
+                data-step-name="style"
+                data-value="Gợi Cảm"
+              >
+                <i class="fa-solid fa-heart text-xl text-[#D4AF37] mb-2"></i>
+                <p class="text-[10px] font-semibold uppercase tracking-wide">
+                  Sensual
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-8">
+              <button
+                class="quiz-prev-btn text-xs text-gray-400 hover:text-gold uppercase tracking-wide"
+              >
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div id="quiz-step-3" class="quiz-step hidden">
+            <h3 class="font-title text-xl font-semibold mb-6">
+              Step 3: Which note profile do you prefer?
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div
+                class="quiz-option-card p-4 rounded-xl"
+                data-step-name="scent"
+                data-value="Thanh Mát"
+              >
+                <p class="text-xs font-semibold uppercase tracking-wide mb-1">
+                  Fresh & Crisp
+                </p>
+                <p class="text-[9px] text-gray-400">Citrus, Ocean, Green Leaf</p>
+              </div>
+              <div
+                class="quiz-option-card p-4 rounded-xl"
+                data-step-name="scent"
+                data-value="Quyến Rũ"
+              >
+                <p class="text-xs font-semibold uppercase tracking-wide mb-1">
+                  Sweet & Gourmand
+                </p>
+                <p class="text-[9px] text-gray-400">
+                  Vanilla, Praline, Caramel
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-4 rounded-xl"
+                data-step-name="scent"
+                data-value="Sang Trọng"
+              >
+                <p class="text-xs font-semibold uppercase tracking-wide mb-1">
+                  Woody & Leather
+                </p>
+                <p class="text-[9px] text-gray-400">
+                  Cedarwood, Oud, Leather
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-8">
+              <button
+                class="quiz-prev-btn text-xs text-gray-400 hover:text-gold uppercase tracking-wide"
+              >
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div id="quiz-step-4" class="quiz-step hidden">
+            <h3 class="font-title text-xl font-semibold mb-6">
+              Step 4: What is the main occasion?
+            </h3>
+            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <div
+                class="quiz-option-card p-5 rounded-xl text-center"
+                data-step-name="occasion"
+                data-value="work"
+              >
+                <i
+                  class="fa-solid fa-briefcase text-lg text-[#D4AF37] mb-2"
+                ></i>
+                <p class="text-xs font-semibold uppercase tracking-wide">
+                  Office / Daily Work
+                </p>
+              </div>
+              <div
+                class="quiz-option-card p-5 rounded-xl text-center"
+                data-step-name="occasion"
+                data-value="date"
+              >
+                <i
+                  class="fa-solid fa-champagne-glasses text-lg text-[#D4AF37] mb-2"
+                ></i>
+                <p class="text-xs font-semibold uppercase tracking-wide">
+                  Dates & Evening Parties
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-8">
+              <button
+                class="quiz-prev-btn text-xs text-gray-400 hover:text-gold uppercase tracking-wide"
+              >
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 5 -->
+          <div id="quiz-step-5" class="quiz-step hidden">
+            <h3 class="font-title text-2xl font-bold text-gold mb-6">
+              Your Recommended Signature Fragrance
+            </h3>
+            <div id="quiz-result-card" class="mb-8">
+              <!-- Rendered dynamically -->
+            </div>
+            <button id="quiz-reset-btn" class="btn-luxury">
+              RETAKE QUIZ
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 8. COLLECTIONS SECTION -->
+    <section id="collections-section" class="py-24 bg-darkSurface relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >ONLINE BOUTIQUE</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
+            DOCI Perfume Collection
+          </h2>
+          <p
+            class="text-xs md:text-sm text-gray-400 max-w-xl mx-auto font-light"
+          >
+            Select a refined fragrance for yourself or an exquisite luxury gift set for your loved ones.
+          </p>
+        </div>
+
+        <!-- Big Tabs -->
+        <div
+          class="flex justify-center gap-8 md:gap-16 border-b border-white/5 mb-8 text-lg font-bold tracking-wide cursor-pointer select-none"
+          data-aos="fade-up"
+        >
+          <span
+            id="tab-women"
+            class="tab-btn active pb-3 text-gold border-b-2 border-[#D4AF37] transition-all duration-300"
+            >WOMEN'S COLLECTION</span
+          >
+          <span
+            id="tab-men"
+            class="tab-btn pb-3 text-gray-400 hover:text-white transition-all duration-300"
+            >MEN'S COLLECTION</span
+          >
+        </div>
+
+        <!-- Small Scent Group Filters (Rendered dynamically in app.js) -->
+        <div
+          id="filter-container"
+          class="flex flex-wrap justify-center gap-3 mb-10"
+          data-aos="fade-up"
+        >
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Grid Container -->
+        <div
+          id="product-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FRAGRANCE PYRAMID -->
+    <section class="py-24 bg-darkBg relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >SCENT KNOWLEDGE</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white">
+            The 3-Tier Fragrance Pyramid
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Infographic Pyramid -->
+          <div class="lg:col-span-7 flex flex-col gap-6" data-aos="fade-right">
+            <!-- Tier 1 -->
+            <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
+              <div
+                class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
+              >
+                1
+              </div>
+              <div>
+                <h4 class="font-title text-lg font-bold text-white mb-1">
+                  Top Notes
+                </h4>
+                <span class="text-[10px] text-gold uppercase font-semibold"
+                  >Radiates for the first 5 - 15 minutes</span
+                >
+                <p class="text-xs text-gray-300 mt-2 font-light">
+                  The initial impression, fresh and captivating immediately upon application. Features vibrant citrus notes like Lemon, Bergamot, Pear, or Strawberry.
+                </p>
+              </div>
+            </div>
+            <!-- Tier 2 -->
+            <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
+              <div
+                class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
+              >
+                2
+              </div>
+              <div>
+                <h4 class="font-title text-lg font-bold text-white mb-1">
+                  Middle / Heart Notes
+                </h4>
+                <span class="text-[10px] text-gold uppercase font-semibold"
+                  >Sustains for the next 2 - 4 hours</span
+                >
+                <p class="text-xs text-gray-300 mt-2 font-light">
+                  The true character and soul of the perfume. Blossoms with elegant Jasmine, seductive Rose, crisp Lavender, or warm Cinnamon and Cumin.
+                </p>
+              </div>
+            </div>
+            <!-- Tier 3 -->
+            <div class="glass-card p-6 flex gap-5 border-l-4 border-gold">
+              <div
+                class="w-12 h-12 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold shrink-0 text-xl font-bold font-title"
+              >
+                3
+              </div>
+              <div>
+                <h4 class="font-title text-lg font-bold text-white mb-1">
+                  Base Notes
+                </h4>
+                <span class="text-[10px] text-gold uppercase font-semibold"
+                  >Deeply lingers for 6 - 8+ hours</span
+                >
+                <p class="text-xs text-gray-300 mt-2 font-light">
+                  Deep, warm notes that anchor to your skin. Creates a lasting impression with rich Amber, sensual Musk, and deep Cedarwood.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual -->
+          <div
+            class="lg:col-span-5 text-center lg:text-left"
+            data-aos="fade-left"
+          >
+            <div
+              class="relative w-full max-w-sm mx-auto p-4 border border-gold/10 rounded-2xl bg-black/30"
+            >
+              <img
+                src="assets/images/doci-bottle-presentation.jpg"
+                alt="DOCI Perfume Bottle Design"
+                class="rounded-xl w-full"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-5"
+              >
+                <span
+                  class="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wide"
+                  >DOCI Perfume</span
+                >
+                <p class="font-title text-white text-md font-bold">
+                  6 - 8H Longevity • 1 - 2M Projection
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 10. WHY CHOOSE DOCI PERFUME -->
+    <section class="py-24 bg-darkSurface relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >OUR ADVANTAGES</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white">
+            Why Choose DOCI Perfume?
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Box 1 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-wine-glass-empty"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Premium Glass Bottle
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Sleek, heavy glass design with shock resistance and a tightly sealed cap that preserves every drop of fragrance.
+            </p>
+          </div>
+          <!-- Box 2 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Long-Lasting Performance
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Formulated with Eau De Parfum (EDP) concentration for consistent 6 to 8 hours longevity on skin and fabrics.
+            </p>
+          </div>
+          <!-- Box 3 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Iconic Fragrance Profiles
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Masterfully inspired by global icons from Chanel, Creed, YSL, and Dior for sophisticated scent profiles.
+            </p>
+          </div>
+          <!-- Box 4 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Accessible Price Point
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Experience high-end luxury scent quality at a fraction of designer perfume prices.
+            </p>
+          </div>
+          <!-- Box 5 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Luxurious Packaging
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Elegantly packaged in foil-stamped luxury boxes, making it an ideal gift for any special occasion.
+            </p>
+          </div>
+          <!-- Box 6 -->
+          <div
+            class="glass-card p-8 flex flex-col gap-4 text-center items-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl border border-gold/30"
+            >
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="font-title text-lg font-semibold text-white">
+              Express Shipping
+            </h3>
+            <p class="text-xs text-gray-300 font-light">
+              Meticulously packed and dispatched with fast courier partners, featuring cash on delivery and inspection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 10.5. VIDEO REVIEWS SECTION -->
+    <section id="video-review" class="py-24 bg-darkBg relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >REAL REVIEWS</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
+            DOCI Perfume Video Reviews
+          </h2>
+          <p
+            class="text-xs md:text-sm text-gray-400 max-w-xl mx-auto font-light"
+          >
+            Listen to genuine reviews on scent quality, longevity, and bottle craftsmanship from top lifestyle experts.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <div
+              class="glass-card p-4 border-gold/15 rounded-2xl relative overflow-hidden"
+            >
+              <div
+                class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl relative"
+              >
+                <video
+                  class="absolute top-0 left-0 w-full h-full object-cover"
+                  controls
+                  autoplay
+                  muted
+                  loop
+                >
+                  <source
+                    src="assets/images/1779074035189_7983307016412442049_g2758941255649715778.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col gap-6" data-aos="fade-left">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg shrink-0"
+              >
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xs font-bold uppercase tracking-wide text-white mb-1"
+                >
+                  Long-Lasting Performance
+                </h4>
+                <p class="text-xs text-gray-300 font-light">
+                  Tested and verified: 6-8 hours on skin and up to 12+ hours on garments, ideal for all-day wear.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg shrink-0"
+              >
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xs font-bold uppercase tracking-wide text-white mb-1"
+                >
+                  95% Match to Luxury Icons
+                </h4>
+                <p class="text-xs text-gray-300 font-light">
+                  Smooth transitions between top, heart, and base notes that authentically recreate top luxury fragrances.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg shrink-0"
+              >
+                <i class="fa-solid fa-gift"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xs font-bold uppercase tracking-wide text-white mb-1"
+                >
+                  Thiết kế hộp và chai sang trọng
+                </h4>
+                <p class="text-xs text-gray-300 font-light">
+                  Đóng gói chuẩn chỉnh, bọc chống sốc cẩn thận, chai thủy tinh
+                  dày dặn, nắp xi mạ vàng tinh xảo, thích hợp làm quà tặng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Nhúng file reviews.php  -->
+<!-- 11. PHẦN NHẬN XÉT ĐÁNH GIÁ CỦA KHÁCH HÀNG -->
+    <!-- 11. REVIEWS SECTION -->
+    <section id="reviews-section" class="py-24 bg-darkBg relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >CUSTOMER FEEDBACK</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white mb-4">
+            Real Customer Reviews
+          </h2>
+          <div class="flex justify-center items-center gap-2">
+            <span id="homepage-avg-rating-text" class="text-gold font-bold text-lg">4.8/5.0</span>
+            <div id="homepage-avg-stars" class="flex text-gold text-xs">
+              <!-- Rendered by JS -->
+            </div>
+            <span id="homepage-total-reviews-count" class="text-gray-400 text-xs"
+              >(1,200+ Satisfied Customers)</span
+            >
+          </div>
+        </div>
+
+        <div class="swiper reviews-swiper py-4" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Rendered dynamically by JS -->
+          </div>
+          <div class="swiper-pagination-reviews text-center mt-6"></div>
+        </div>
+
+        <!-- Submit Review Form -->
+        <div class="mt-16 max-w-2xl mx-auto" data-aos="fade-up">
+          <div class="glass-card p-6 md:p-8 border border-[#D4AF37]/20 relative overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
+            
+            <h3 class="font-title text-xl font-bold text-white mb-2 text-center">
+              Share Your Experience
+            </h3>
+            <p class="text-xs text-gray-400 text-center mb-6">
+              Your feedback helps DOCI continually enhance our fragrance products and services.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Your Name *</label>
+                <input type="text" id="homepage-review-name" required placeholder="E.g., Alex Smith..." class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white" />
+              </div>
+              <div>
+                <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Purchased Scent *</label>
+                <select id="homepage-review-perfume" required class="w-full bg-[#111111] border border-white/10 rounded px-4 py-2.5 text-xs text-white">
+                  <option value="" disabled selected>Select scent...</option>
+                  <option value="DOCI YES SIR">DOCI YES SIR</option>
+                  <option value="DOCI NICE NAVY">DOCI NICE NAVY</option>
+                  <option value="DOCI OLD KING">DOCI OLD KING</option>
+                  <option value="DOCI BAD BOY">DOCI BAD BOY</option>
+                  <option value="DOCI SLAY QUEEN">DOCI SLAY QUEEN</option>
+                  <option value="DOCI MADAM CO">DOCI MADAM CO</option>
+                  <option value="DOCI Hộp Tester">10-Scent Tester Set</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Your Location *</label>
+                <input type="text" id="homepage-review-location" required placeholder="E.g., London, NY, HCMC..." class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white" />
+              </div>
+              <div>
+                <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Star Rating *</label>
+                <div class="flex items-center gap-1.5 mt-2 text-gray-400 text-xl cursor-pointer select-none" id="homepage-star-selector">
+                  <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="1"></i>
+                  <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="2"></i>
+                  <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="3"></i>
+                  <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="4"></i>
+                  <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="5"></i>
+                  <input type="hidden" id="homepage-review-stars-value" value="0" />
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Review Details *</label>
+              <textarea id="homepage-review-content" required rows="3" placeholder="Share your thoughts on scent, longevity, packaging..." class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white resize-none"></textarea>
+            </div>
+            
+            <div class="text-center">
+              <button type="button" id="homepage-submit-review-btn" class="btn-luxury btn-luxury-solid py-3 px-8 text-xs font-semibold tracking-wider">
+                SUBMIT YOUR REVIEW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CERTIFICATION & BRAND CREDIBILITY -->
+    <section id="certificate-section" class="py-24 bg-darkSurface relative overflow-hidden">
+      <div class="absolute -right-32 -bottom-32 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+      <div class="absolute -left-32 -top-32 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >CERTIFIED & LEGALLY COMPLIANT</span
+          >
+          <h2 class="font-title text-2xl md:text-4xl font-bold text-white max-w-3xl mx-auto leading-snug">
+            Why DOCI PERFUME is a trusted luxury fragrance brand
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5" data-aos="fade-right">
+            <div class="glass-card p-4 rounded-2xl border border-gold/10 hover:border-gold/30 transition-all duration-500 shadow-2xl relative group">
+              <span class="absolute top-6 left-6 z-20 bg-gold text-black text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                Ministry of Health Certified
+              </span>
+              
+              <div class="swiper certificate-swiper overflow-hidden rounded-xl bg-white/5 border border-white/5 relative" style="width: 100%; aspect-ratio: 3/4;">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide relative cursor-zoom-in group" onclick="openLightbox('assets/images/certificates/cert-01.jpg')">
+                    <img src="assets/images/certificates/cert-01.jpg" alt="DOCI Certification Page 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div class="swiper-slide relative cursor-zoom-in group" onclick="openLightbox('assets/images/certificates/cert-02.jpg')">
+                    <img src="assets/images/certificates/cert-02.jpg" alt="DOCI Certification Page 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div class="swiper-slide relative cursor-zoom-in group" onclick="openLightbox('assets/images/certificates/cert-03.jpg')">
+                    <img src="assets/images/certificates/cert-03.jpg" alt="DOCI Certification Page 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                </div>
+
+                <div class="swiper-button-prev cert-prev" title="Previous Page">
+                  <i class="fa-solid fa-chevron-left text-base"></i>
+                </div>
+                <div class="swiper-button-next cert-next" title="Next Page">
+                  <i class="fa-solid fa-chevron-right text-base"></i>
+                </div>
+                <div class="swiper-pagination cert-pagination !bottom-4"></div>
+              </div>
+              
+              <p class="text-center text-[10px] text-gray-500 mt-3 font-light italic">
+                * Click image to zoom / Swipe to switch slides
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col justify-center" data-aos="fade-left">
+            <div class="glass-card p-8 md:p-10 rounded-2xl border border-white/5 bg-white/[0.01]">
+              <h3 class="font-title text-xl md:text-2xl font-bold text-gold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-handshake text-gold"></i> Commitment to Quality & Excellence
+              </h3>
+              
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+                <li class="flex items-start gap-3.5 group">
+                  <span class="w-6 h-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xs flex-shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="text-xs font-bold text-white tracking-wide uppercase mb-1">Clear Legal Compliance</h4>
+                    <p class="text-[11px] text-gray-400 font-light leading-relaxed">Fully certified and transparent product declarations.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3.5 group">
+                  <span class="w-6 h-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xs flex-shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="text-xs font-bold text-white tracking-wide uppercase mb-1">Official Health Permits</h4>
+                    <p class="text-[11px] text-gray-400 font-light leading-relaxed">Approved for nationwide distribution by Health Authorities.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3.5 group">
+                  <span class="w-6 h-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xs flex-shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="text-xs font-bold text-white tracking-wide uppercase mb-1">Top-Tier EDP Standard</h4>
+                    <p class="text-[11px] text-gray-400 font-light leading-relaxed">Concentrated Eau De Parfum formula for 6-8+ hours duration.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3.5 group">
+                  <span class="w-6 h-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xs flex-shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="text-xs font-bold text-white tracking-wide uppercase mb-1">Imported French Essences</h4>
+                    <p class="text-[11px] text-gray-400 font-light leading-relaxed">High-grade essential oils directly imported from European labs.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section id="faq-section" class="py-24 bg-darkBg relative">
+      <div class="container mx-auto px-4 md:px-8 max-w-3xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >CUSTOMER HELP CENTER</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="flex flex-col gap-4" data-aos="fade-up">
+          <div
+            class="accordion-item border border-white/10 rounded-lg overflow-hidden bg-darkSurface/50"
+          >
+            <button
+              class="accordion-header w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-xs md:text-sm text-white select-none"
+            >
+              <span>How long does DOCI perfume last on skin?</span>
+              <i
+                class="accordion-icon fa-solid fa-chevron-down text-xs text-gold transition-transform"
+              ></i>
+            </button>
+            <div
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <div class="px-6 pb-5 text-xs text-gray-300 font-light">
+                DOCI perfumes use Eau De Parfum (EDP) concentration, lasting 6 to 8 hours on skin depending on skin type and environment. On clothing, scent lingers up to 12 - 24 hours.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item border border-white/10 rounded-lg overflow-hidden bg-darkSurface/50"
+          >
+            <button
+              class="accordion-header w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-xs md:text-sm text-white select-none"
+            >
+              <span>How are the fragrances inspired?</span>
+              <i
+                class="accordion-icon fa-solid fa-chevron-down text-xs text-gold transition-transform"
+              ></i>
+            </button>
+            <div
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <div class="px-6 pb-5 text-xs text-gray-300 font-light">
+                DOCI Perfume is inspired by world-famous luxury scents like Bleu de Chanel, Creed Aventus, YSL Y, and Good Girl. We use premium imported essence to achieve a 90-95% match at accessible prices.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item border border-white/10 rounded-lg overflow-hidden bg-darkSurface/50"
+          >
+            <button
+              class="accordion-header w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-xs md:text-sm text-white select-none"
+            >
+              <span>Can I inspect the parcel before paying COD?</span>
+              <i
+                class="accordion-icon fa-solid fa-chevron-down text-xs text-gold transition-transform"
+              ></i>
+            </button>
+            <div
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <div class="px-6 pb-5 text-xs text-gray-300 font-light">
+                Yes! DOCI provides full package inspection upon delivery before you complete Cash On Delivery payment.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. CONTACT & SHOWROOM SECTION -->
+    <section id="contact-section" class="py-24 bg-darkSurface relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-xs font-semibold tracking-wide text-gold uppercase block mb-1"
+            >CONNECT WITH DOCI</span
+          >
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-white">
+            Contact & Showroom
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div
+            class="lg:col-span-6 glass-card p-8 border-gold/10"
+            data-aos="fade-right"
+          >
+            <h3 class="font-title text-xl font-bold text-white mb-6">
+              Send DOCI a Message
+            </h3>
+            <form id="contact-form" class="flex flex-col gap-4">
+              <div>
+                <label
+                  class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="contact-name"
+                  placeholder="Enter your full name..."
+                  class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="contact-email"
+                  placeholder="Enter email address..."
+                  class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+                  >Your Message</label
+                >
+                <textarea
+                  id="contact-message"
+                  placeholder="Type message here..."
+                  rows="4"
+                  class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white transition-all"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-luxury btn-luxury-solid py-3 text-xs mt-2"
+              >
+                SEND MESSAGE
+              </button>
+            </form>
+          </div>
+
+          <div
+            class="lg:col-span-6 flex flex-col justify-between"
+            data-aos="fade-left"
+          >
+            <div class="glass-card p-8 border-gold/10 flex-grow mb-6">
+              <h3 class="font-title text-xl font-bold text-white mb-6">
+                DOCI Flagship Store
+              </h3>
+              <ul class="flex flex-col gap-4 text-xs text-gray-300 font-light">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-location-dot text-gold mt-0.5"></i>
+                  <span
+                    >Main Showroom: DOCI Building, District 1, Ho Chi Minh City, Vietnam</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-gold"></i>
+                  <span>Hotline: <a href="tel:0328595037" class="hover:text-gold transition-colors">0328.595.037</a></span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-envelope text-gold"></i>
+                  <span>Support Email: <a href="mailto:quangkhanh515@gmail.com" class="hover:text-gold transition-colors">quangkhanh515@gmail.com</a></span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-clock text-gold"></i>
+                  <span>Opening Hours: 09:00 - 21:30 (Daily)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="w-full h-48 border border-white/10 rounded-lg overflow-hidden"
+            >
+              <iframe
+                class="w-full h-full grayscale opacity-80"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4602324263124!2d106.6974868!3d10.7760194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391946023!2zUXXhuq1uIDEsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1700000000000"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. CHÂN TRANG (FOOTER) -->
+    <footer class="bg-black py-16 border-t border-gold/15">
+      <div
+        class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12"
+      >
+        <!-- Cột Logo -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          <a href="#" class="flex flex-col items-start">
+            <span
+              class="font-title text-2xl font-bold tracking-[6px] text-white"
+              >DOCI</span
+            >
+            <span
+              class="text-[8px] uppercase tracking-[4px] text-[#D4AF37] font-semibold -mt-1"
+              >PERFUME</span
+            >
+          </a>
+          <p
+            class="text-[11px] text-gray-400 font-light leading-relaxed max-w-sm"
+          >
+            Thương hiệu nước hoa cảm hứng thiết kế cao cấp cho người Việt. DOCI
+            kiến tạo phong thái lịch lãm và quyến rũ vượt thời gian.
+          </p>
+          <!-- MXH -->
+          <div class="flex gap-4 mt-2">
+            <a
+              href="https://www.facebook.com/Q.D.Khanh.One/"
+              target="_blank"
+              class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+              ><i class="fa-brands fa-facebook-f text-sm"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+              ><i class="fa-brands fa-instagram text-sm"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+              ><i class="fa-brands fa-tiktok text-sm"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Cột Links -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wide mb-2">
+            Liên Kết Nhanh
+          </h4>
+          <ul class="flex flex-col gap-2 text-xs text-gray-400 font-light">
+            <li>
+              <a href="#hero-section" class="hover:text-gold transition-colors"
+                >Trang Chủ</a
+              >
+            </li>
+            <li>
+              <a href="#about-section" class="hover:text-gold transition-colors"
+                >Về DOCI Perfume</a
+              >
+            </li>
+            <li>
+              <a
+                href="#collections-section"
+                class="hover:text-gold transition-colors"
+                >Bộ Sưu Tập</a
+              >
+            </li>
+            <li>
+              <a href="#best-sellers" class="hover:text-gold transition-colors"
+                >Nước Hoa Bán Chạy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột Dịch Vụ -->
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wide mb-2">
+            Policies
+          </h4>
+          <ul class="flex flex-col gap-2 text-xs text-gray-400 font-light">
+            <li>
+              <a href="#" class="hover:text-gold transition-colors"
+                >Shipping Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gold transition-colors"
+                >Returns Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gold transition-colors"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gold transition-colors"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wide mb-2">
+            Subscribe to Newsletter
+          </h4>
+          <p class="text-[11px] text-gray-400 font-light">
+            Receive exclusive offers and scent guides from DOCI experts directly to your inbox.
+          </p>
+          <form class="flex gap-2 mt-2">
+            <input
+              type="email"
+              placeholder="Your email address..."
+              class="bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white flex-grow"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-gold hover:bg-gold/80 text-[#111111] font-bold px-4 rounded text-xs"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[10px] text-gray-500"
+      >
+        <p>&copy; 2026 DOCI Perfume. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Designed by DOCI Creative Team</p>
+      </div>
+    </footer>
+
+
+<!-- 16. CART DRAWER -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-drawer" class="cart-drawer">
+      <div
+        class="p-6 border-b border-white/10 flex items-center justify-between"
+      >
+        <h3 class="font-title text-xl font-bold text-white">
+          Your Shopping Cart
+        </h3>
+        <button id="close-cart" class="text-gray-400 hover:text-white text-2xl">
+          &times;
+        </button>
+      </div>
+
+      <!-- Product List in Cart -->
+      <div id="cart-items" class="flex-grow overflow-y-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Summary & Checkout Button -->
+      <div class="p-6 border-t border-white/10 bg-black/40 space-y-3">
+        <div class="flex gap-2">
+          <input
+            id="coupon-input"
+            type="text"
+            placeholder="Enter promo code (e.g. DOCI10)"
+            class="flex-1 bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white placeholder-gray-500 uppercase focus:border-gold/50 focus:outline-none"
+          />
+          <button
+            id="apply-coupon-btn"
+            type="button"
+            class="px-4 py-2 bg-gold/20 hover:bg-gold/30 border border-gold/40 text-gold text-xs font-bold rounded transition-colors"
+          >
+            APPLY
+          </button>
+        </div>
+        <div id="coupon-message" class="text-[10px] hidden font-medium"></div>
+
+        <div class="space-y-1.5 pt-2 border-t border-white/5">
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">0 VND</span>
+          </div>
+          <div id="discount-row" class="flex justify-between text-xs text-green-400 hidden">
+            <span>Discount (<span id="discount-code-name">--</span>)</span>
+            <span id="cart-discount">-0 VND</span>
+          </div>
+          <div class="flex justify-between text-sm font-bold pt-1">
+            <span>Total</span>
+            <span id="cart-total" class="text-gold">0 VND</span>
+          </div>
+        </div>
+        
+        <button
+          id="checkout-btn"
+          class="w-full btn-luxury btn-luxury-solid py-3 text-xs mt-2"
+        >
+          PROCEED TO CHECKOUT
+        </button>
+      </div>
+    </div>
+
+
+<!-- 17. CHECKOUT MODAL -->
+    <div id="checkout-modal" class="detail-modal">
+      <div class="detail-modal-bg"></div>
+      <div class="detail-modal-container max-w-md">
+        <div class="flex justify-center pt-3 pb-1 flex-shrink-0 md:hidden">
+          <div class="w-10 h-1 bg-white/20 rounded-full"></div>
+        </div>
+        <div class="px-6 py-4 border-b border-white/10 flex justify-between items-center flex-shrink-0">
+          <div>
+            <h3 class="font-title text-xl font-bold text-white">Shipping & Payment Details</h3>
+            <p class="text-[10px] text-gray-500 mt-0.5">Scroll up and down to view more</p>
+          </div>
+          <button id="close-checkout" class="text-gray-400 hover:text-white text-2xl w-10 h-10 flex items-center justify-center">&times;</button>
+        </div>
+        <div class="checkout-scroll-body p-6" data-lenis-prevent>
+          <form id="order-form" class="flex flex-col gap-4">
+          <div>
+            <label
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+              >Full Name *</label
+            >
+            <input
+              id="order-fullname"
+              type="text"
+              placeholder="Enter full recipient name..."
+              class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+              >Phone Number *</label
+            >
+            <input
+              id="order-phone"
+              type="tel"
+              placeholder="Enter contact phone number..."
+              class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+              >Delivery Address *</label
+            >
+            <input
+              id="order-address"
+              type="text"
+              placeholder="House number, street, ward, city..."
+              class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+              >Free Sample Note</label
+            >
+            <input
+              id="order-note"
+              type="text"
+              placeholder="E.g., Please include sample of DOCI YES SIR..."
+              class="w-full bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white"
+            />
+          </div>
+
+          <div>
+            <label
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block"
+              >Payment Method *</label
+            >
+            <select
+              id="payment-method-select"
+              required
+              class="w-full bg-[#111111] border border-white/10 rounded px-4 py-2.5 text-xs text-white"
+              onchange="togglePaymentMethod(this.value)"
+            >
+              <option value="cod">Cash On Delivery (COD)</option>
+              <option value="bank">Bank Transfer (VietQR)</option>
+            </select>
+          </div>
+
+          <!-- COD Info -->
+          <div
+            id="payment-info-cod"
+            class="p-3 bg-white/5 border border-white/10 rounded text-[11px] text-gray-300 font-light mt-2"
+          >
+            <i class="fa-solid fa-circle-info text-gold mr-1"></i>
+            <span
+              >You selected <strong>Cash On Delivery (COD)</strong>. DOCI provides free delivery for all orders today. You will pay cash upon receiving the parcel.</span
+            >
+          </div>
+
+          <!-- Bank Transfer Info -->
+          <div
+            id="payment-info-bank"
+            class="hidden mt-4 space-y-4"
+          >
+            <div class="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#1c1c1c] to-[#0a0a0a] p-5 shadow-2xl">
+              <div class="absolute -right-10 -bottom-10 w-28 h-28 bg-gold/10 rounded-full blur-2xl"></div>
+              
+              <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-credit-card text-gold text-sm animate-pulse"></i>
+                  <span class="text-[9px] text-gray-400 font-semibold uppercase tracking-wider">VietQR Payment</span>
+                </div>
+                <span class="text-xs font-bold text-white tracking-widest font-title">Vietcombank</span>
+              </div>
+              
+              <div class="space-y-3">
+                <div>
+                  <span class="text-[8px] text-gray-400 uppercase block">Account Number</span>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-semibold text-white tracking-wider">1041618870</span>
+                    <button type="button" class="text-gold hover:text-white transition-colors p-1" onclick="copyToClipboard('1041618870', 'Account number copied!')" title="Copy account number">
+                      <i class="fa-regular fa-copy text-xs"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <span class="text-[8px] text-gray-400 uppercase block">Account Holder</span>
+                    <span class="text-xs font-medium text-gray-200">QUANG DUY KHANH</span>
+                  </div>
+                  <div>
+                    <span class="text-[8px] text-gray-400 uppercase block">Amount</span>
+                    <div id="payment-bank-amount" class="flex items-center gap-1">
+                      <span class="text-xs font-bold text-gold">0 VND</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex flex-col items-center bg-white/5 border border-white/10 rounded-xl p-4 text-center gap-3">
+              <div class="flex items-center gap-2 text-gold text-xs font-bold">
+                <i class="fa-solid fa-qrcode"></i>
+                <span>Scan VietQR code for instant payment</span>
+              </div>
+              
+              <div class="relative rounded-2xl shadow-xl border border-gold/40 hover:border-gold/80 transition-colors duration-300 overflow-hidden w-full max-w-[260px] bg-white p-2">
+                <img id="vietqr-preview-img" src="https://vietqr.app/img?bank=Vietcombank&acc=1041618870&template=compact&amount=0&des=DOCI" alt="Vietcombank VietQR" class="w-full h-auto object-contain rounded-xl block" />
+              </div>
+
+              <div class="w-full bg-black/40 border border-gold/30 rounded-lg p-3 text-left space-y-2">
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="text-gray-400">Transfer Description:</span>
+                  <button type="button" class="text-gold font-bold hover:underline text-[11px] flex items-center gap-1" onclick="copyToClipboard(document.getElementById('vietqr-preview-content').innerText, 'Transfer note copied!')">
+                    <i class="fa-regular fa-copy text-xs"></i> Copy
+                  </button>
+                </div>
+                <div id="vietqr-preview-content" class="text-xs font-bold text-gold bg-gold/10 px-3 py-1.5 rounded border border-gold/20 text-center tracking-wider font-mono">
+                  DH...
+                </div>
+              </div>
+              
+              <div id="payment-checking-status" class="flex items-center justify-center gap-2 text-[11px] text-gold bg-gold/10 px-3 py-2 rounded-lg border border-gold/20 w-full">
+                <i class="fa-solid fa-circle-notch fa-spin text-xs"></i>
+                <span>Hệ thống SePay tự động duyệt đơn khi tiền về</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full btn-luxury btn-luxury-solid py-3 text-xs mt-2"
+          >
+            XÁC NHẬN ĐẶT HÀNG
+          </button>
+        </form>
+        </div><!-- end scrollable body -->
+      </div>
+    </div>
+
+
+<!-- 18. PRODUCT DETAIL POPUP MODAL -->
+    <div id="detail-modal" class="detail-modal">
+      <div class="detail-modal-bg"></div>
+      <div class="detail-modal-container p-6 md:p-10">
+        <button
+          id="close-detail-modal"
+          class="absolute top-5 right-5 text-gray-400 hover:text-white text-3xl z-10"
+        >
+          &times;
+        </button>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div
+            class="lg:col-span-5 flex justify-center bg-black/10 rounded-xl p-6 border border-white/5"
+          >
+            <img
+              id="modal-img"
+              src=""
+              alt=""
+              class="object-contain max-h-[350px] w-auto"
+            />
+          </div>
+
+          <div class="lg:col-span-7">
+            <span
+              id="modal-category"
+              class="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wide block"
+            ></span>
+            <h2
+              id="modal-name"
+              class="font-title text-3xl font-bold text-white mt-1 mb-1"
+            ></h2>
+            <p
+              id="modal-inspired"
+              class="text-xs text-gray-400 italic mb-4"
+            ></p>
+
+            <div class="flex items-baseline gap-3 mb-6">
+              <span
+                id="modal-price"
+                class="text-2xl font-bold text-[#D4AF37]"
+              ></span>
+              <span
+                id="modal-original-price"
+                class="text-sm text-gray-500 line-through"
+              ></span>
+            </div>
+
+            <h4
+              class="text-xs font-bold uppercase tracking-wide mb-2 text-white"
+            >
+              Fragrance Description
+            </h4>
+            <p
+              id="modal-description"
+              class="text-xs text-gray-300 font-light leading-relaxed mb-6"
+            ></p>
+
+            <!-- Fragrance Pyramid -->
+            <h4
+              class="text-xs font-bold uppercase tracking-wide mb-3 text-white"
+            >
+              Fragrance Pyramid
+            </h4>
+            <div class="fragrance-pyramid-container flex flex-col gap-2.5 mb-6">
+              <div class="pyramid-level">
+                <span
+                  class="text-[10px] text-[#D4AF37] font-bold uppercase block"
+                  >Top Notes</span
+                >
+                <span id="note-top" class="text-xs text-white"></span>
+              </div>
+              <div class="pyramid-level">
+                <span
+                  class="text-[10px] text-[#D4AF37] font-bold uppercase block"
+                  >Middle Notes</span
+                >
+                <span id="note-middle" class="text-xs text-white"></span>
+              </div>
+              <div class="pyramid-level">
+                <span
+                  class="text-[10px] text-[#D4AF37] font-bold uppercase block"
+                  >Base Notes</span
+                >
+                <span id="note-base" class="text-xs text-white"></span>
+              </div>
+            </div>
+
+            <!-- Specifications -->
+            <h4
+              class="text-xs font-bold uppercase tracking-wide mb-3 text-white"
+            >
+              Specifications
+            </h4>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="p-3 bg-white/5 border border-white/5 rounded">
+                <span
+                  class="text-[9px] text-gray-500 uppercase tracking-wide block"
+                  >Longevity</span
+                >
+                <span
+                  id="spec-longevity"
+                  class="text-xs font-semibold text-white"
+                ></span>
+              </div>
+              <div class="p-3 bg-white/5 border border-white/5 rounded">
+                <span
+                  class="text-[9px] text-gray-500 uppercase tracking-wide block"
+                  >Projection</span
+                >
+                <span
+                  id="spec-projection"
+                  class="text-xs font-semibold text-white"
+                ></span>
+              </div>
+              <div class="p-3 bg-white/5 border border-white/5 rounded">
+                <span
+                  class="text-[9px] text-gray-500 uppercase tracking-wide block"
+                  >Best Season</span
+                >
+                <span
+                  id="spec-season"
+                  class="text-xs font-semibold text-white"
+                ></span>
+              </div>
+              <div class="p-3 bg-white/5 border border-white/5 rounded">
+                <span
+                  class="text-[9px] text-gray-500 uppercase tracking-wide block"
+                  >Recommended Occasion</span
+                >
+                <span
+                  id="spec-occasion"
+                  class="text-xs font-semibold text-white"
+                ></span>
+              </div>
+            </div>
+
+            <button
+              id="modal-buy-btn"
+              class="w-full btn-luxury btn-luxury-solid py-3 text-xs"
+            >
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Reviews Section -->
+        <div class="mt-12 pt-8 border-t border-white/10">
+          <h3 class="font-title text-xl font-bold text-white mb-6">Product Reviews</h3>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-4 bg-white/5 border border-white/5 rounded-xl p-6 flex flex-col items-center justify-center text-center">
+              <span id="reviews-avg-rating" class="text-4xl font-bold text-[#D4AF37] font-title mb-1">0.0</span>
+              <div id="reviews-stars-summary" class="flex text-[#D4AF37] text-sm mb-2">
+                <!-- Rendered by JS -->
+              </div>
+              <span id="reviews-total-count" class="text-xs text-gray-400">0 reviews</span>
+              
+              <div class="w-full mt-6 space-y-2">
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                  <span class="w-3">5</span>
+                  <i class="fa-solid fa-star text-[#D4AF37] text-[9px]"></i>
+                  <div class="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div id="star-bar-5" class="h-full bg-[#D4AF37]" style="width: 0%"></div>
+                  </div>
+                  <span id="star-pct-5" class="w-8 text-right">0%</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                  <span class="w-3">4</span>
+                  <i class="fa-solid fa-star text-[#D4AF37] text-[9px]"></i>
+                  <div class="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div id="star-bar-4" class="h-full bg-[#D4AF37]" style="width: 0%"></div>
+                  </div>
+                  <span id="star-pct-4" class="w-8 text-right">0%</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                  <span class="w-3">3</span>
+                  <i class="fa-solid fa-star text-[#D4AF37] text-[9px]"></i>
+                  <div class="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div id="star-bar-3" class="h-full bg-[#D4AF37]" style="width: 0%"></div>
+                  </div>
+                  <span id="star-pct-3" class="w-8 text-right">0%</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                  <span class="w-3">2</span>
+                  <i class="fa-solid fa-star text-[#D4AF37] text-[9px]"></i>
+                  <div class="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div id="star-bar-2" class="h-full bg-[#D4AF37]" style="width: 0%"></div>
+                  </div>
+                  <span id="star-pct-2" class="w-8 text-right">0%</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                  <span class="w-3">1</span>
+                  <i class="fa-solid fa-star text-[#D4AF37] text-[9px]"></i>
+                  <div class="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div id="star-bar-1" class="h-full bg-[#D4AF37]" style="width: 0%"></div>
+                  </div>
+                  <span id="star-pct-1" class="w-8 text-right">0%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="lg:col-span-8 flex flex-col gap-6">
+              <div id="reviews-list-container" class="space-y-4 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Rendered by JS -->
+              </div>
+              
+              <div class="bg-white/5 border border-white/5 rounded-xl p-5 mt-2">
+                <h4 class="text-xs font-bold uppercase tracking-wide text-white mb-4">Write Your Review</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Your Name *</label>
+                    <input type="text" id="review-user-name" required placeholder="Enter your name..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white" />
+                  </div>
+                  <div>
+                    <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Star Rating *</label>
+                    <div class="flex items-center gap-1 mt-1 text-gray-400 text-lg cursor-pointer select-none" id="star-rating-selector">
+                      <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="1"></i>
+                      <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="2"></i>
+                      <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="3"></i>
+                      <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="4"></i>
+                      <i class="fa-regular fa-star hover:text-[#D4AF37] transition-colors" data-value="5"></i>
+                      <input type="hidden" id="review-stars-value" value="0" />
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <label class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1 block">Review Content *</label>
+                  <textarea id="review-content" required rows="3" placeholder="Share your experience about scent, longevity, packaging..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none"></textarea>
+                </div>
+                
+                <button type="button" id="submit-review-btn" class="btn-luxury btn-luxury-solid py-2 px-6 text-[10px] font-semibold tracking-wider self-start">
+                  SUBMIT REVIEW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- AUTH MODAL (LOGIN / REGISTER / FORGOT PASSWORD) -->
+    <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+      <div class="auth-modal-container relative w-full max-w-md bg-[#161616] border border-gold/30 rounded-2xl p-6 md:p-8 shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300">
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <button id="close-auth-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl transition-colors w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 z-10">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="text-center mb-6">
+          <span class="font-title text-2xl font-bold tracking-[5px] text-white">DOCI</span>
+          <span class="text-[9px] uppercase tracking-[4px] text-gold font-semibold block -mt-1">PERFUME</span>
+          <p id="auth-modal-subtitle" class="text-xs text-gray-400 mt-2 font-light">Welcome to the world of luxury fragrances</p>
+        </div>
+
+        <div class="flex border-b border-white/10 mb-6 font-semibold text-xs uppercase tracking-wider">
+          <button id="auth-tab-login-btn" class="auth-tab-btn active flex-1 py-2.5 text-center transition-all border-b-2 border-gold text-gold" onclick="switchAuthTab('login')">
+            Sign In
+          </button>
+          <button id="auth-tab-register-btn" class="auth-tab-btn flex-1 py-2.5 text-center transition-all border-b-2 border-transparent text-gray-400 hover:text-white" onclick="switchAuthTab('register')">
+            Register
+          </button>
+        </div>
+
+        <!-- TAB 1: LOGIN FORM -->
+        <form id="login-form" class="auth-tab-content space-y-4">
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Email or Phone Number *</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="text" id="login-email" required placeholder="name@example.com" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide">Password *</label>
+              <button type="button" class="text-[10px] text-gold hover:underline" onclick="switchAuthTab('forgot')">Forgot password?</button>
+            </div>
+            <div class="relative">
+              <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+              <button type="button" class="toggle-password-btn absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300" onclick="togglePasswordVisibility('login-password', this)">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-gray-400 pt-1">
+            <label class="flex items-center gap-2 cursor-pointer select-none">
+              <input type="checkbox" id="login-remember" checked class="rounded border-gray-700 bg-black text-gold focus:ring-gold accent-[#D4AF37]" />
+              <span class="text-[11px]">Remember me</span>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full btn-luxury btn-luxury-solid py-3 text-xs uppercase tracking-wider font-semibold rounded-xl mt-2">
+            Sign In Now
+          </button>
+
+          <div class="p-3 bg-gold/10 border border-gold/20 rounded-xl text-[11px] text-gray-300 text-center">
+            <span class="text-gold font-bold">Try Demo Account:</span><br/>
+            Email: <code class="text-white font-mono bg-black/40 px-1.5 py-0.5 rounded cursor-pointer hover:text-gold" onclick="fillDemoAccount()">khachhang@gmail.com</code> | Pass: <code class="text-white font-mono bg-black/40 px-1.5 py-0.5 rounded">123456</code>
+          </div>
+        </form>
+
+        <!-- TAB 2: REGISTER FORM -->
+        <form id="register-form" class="auth-tab-content space-y-3 hidden">
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Full Name *</label>
+            <div class="relative">
+              <i class="fa-solid fa-user absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="text" id="reg-name" required placeholder="John Doe" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Email *</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="email" id="reg-email" required placeholder="email@example.com" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Phone Number *</label>
+            <div class="relative">
+              <i class="fa-solid fa-phone absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="tel" id="reg-phone" required placeholder="+123456789" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Password *</label>
+            <div class="relative">
+              <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="password" id="reg-password" required placeholder="Minimum 6 characters" minlength="6" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+              <button type="button" class="toggle-password-btn absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300" onclick="togglePasswordVisibility('reg-password', this)">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Confirm Password *</label>
+            <div class="relative">
+              <i class="fa-solid fa-shield-halved absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="password" id="reg-confirm-password" required placeholder="Re-enter password" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <label class="flex items-center gap-2 cursor-pointer select-none pt-1">
+            <input type="checkbox" required checked class="rounded border-gray-700 bg-black text-gold focus:ring-gold accent-[#D4AF37]" />
+            <span class="text-[10px] text-gray-400">I agree to the <a href="#" class="text-gold underline">Terms of Service</a> and <a href="#" class="text-gold underline">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="w-full btn-luxury btn-luxury-solid py-3 text-xs uppercase tracking-wider font-semibold rounded-xl mt-2">
+            Create Account
+          </button>
+        </form>
+
+        <!-- TAB 3: FORGOT PASSWORD FORM -->
+        <form id="forgot-form" class="auth-tab-content space-y-4 hidden">
+          <div class="text-center p-3 bg-white/5 border border-white/10 rounded-xl text-xs text-gray-300">
+            <i class="fa-solid fa-key text-gold text-xl mb-1 block"></i>
+            Enter your registered email or phone number to receive reset instructions.
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Registered Email / Phone *</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+              <input type="text" id="forgot-email" required placeholder="name@example.com" class="w-full bg-black/40 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <button type="submit" class="w-full btn-luxury btn-luxury-solid py-3 text-xs uppercase tracking-wider font-semibold rounded-xl">
+            Send Reset Request
+          </button>
+
+          <div class="text-center pt-2">
+            <button type="button" class="text-xs text-gold hover:underline" onclick="switchAuthTab('login')">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back to Sign In
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- CUSTOMER DASHBOARD MODAL -->
+    <div id="account-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+      <div class="account-modal-container relative w-full max-w-2xl bg-[#161616] border border-gold/30 rounded-2xl p-6 md:p-8 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col transform scale-95 transition-transform duration-300">
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <button id="close-account-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl transition-colors w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 z-10">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- User Profile Header -->
+        <div class="flex items-center gap-4 pb-6 border-b border-white/10">
+          <div class="w-14 h-14 rounded-full border-2 border-gold bg-gold/10 flex items-center justify-center text-gold text-2xl font-bold shadow-lg">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <h3 id="account-user-name" class="font-title text-xl font-bold text-white">DOCI Customer</h3>
+            <p id="account-user-email" class="text-xs text-gold font-light">khachhang@gmail.com</p>
+            <span class="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[9px] font-semibold uppercase tracking-wider bg-gold/20 text-gold border border-gold/30">
+              <i class="fa-solid fa-crown mr-1"></i>VIP Member
+            </span>
+          </div>
+        </div>
+
+        <!-- Dashboard Tabs -->
+        <div class="flex overflow-x-auto custom-scrollbar border-b border-white/10 my-4 text-xs font-semibold uppercase tracking-wide gap-2">
+          <button id="account-tab-profile-btn" class="account-tab-btn active px-4 py-2.5 text-gold border-b-2 border-gold whitespace-nowrap transition-all" onclick="switchAccountTab('profile')">
+            <i class="fa-regular fa-id-card mr-1.5"></i>Personal Info
+          </button>
+          <button id="account-tab-orders-btn" class="account-tab-btn px-4 py-2.5 text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchAccountTab('orders')">
+            <i class="fa-solid fa-box-open mr-1.5"></i>My Orders (<span id="account-order-count">0</span>)
+          </button>
+          <button id="account-tab-password-btn" class="account-tab-btn px-4 py-2.5 text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchAccountTab('password')">
+            <i class="fa-solid fa-key mr-1.5"></i>Change Password
+          </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="flex-1 overflow-y-auto pr-1 custom-scrollbar space-y-4">
+          <!-- TAB 1: PROFILE INFO -->
+          <form id="account-profile-form" class="account-tab-content space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Full Name</label>
+                <input type="text" id="acc-profile-name" required class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Phone Number</label>
+                <input type="tel" id="acc-profile-phone" required class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Email Address (Cannot be changed)</label>
+              <input type="email" id="acc-profile-email" disabled class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-gray-400 cursor-not-allowed" />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Default Shipping Address</label>
+              <textarea id="acc-profile-address" rows="3" placeholder="Enter house number, street, city..." class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none resize-none"></textarea>
+            </div>
+
+            <div class="flex justify-end pt-2">
+              <button type="submit" class="btn-luxury btn-luxury-solid px-6 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xl">
+                <i class="fa-regular fa-floppy-disk mr-1.5"></i>Save Changes
+              </button>
+            </div>
+          </form>
+
+          <!-- TAB 2: MY ORDERS -->
+          <div id="account-orders-container" class="account-tab-content hidden space-y-4">
+            <div id="user-orders-list" class="space-y-3">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- TAB 3: CHANGE PASSWORD -->
+          <form id="account-password-form" class="account-tab-content hidden space-y-4">
+            <div>
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Current Password *</label>
+              <input type="password" id="acc-old-pass" required placeholder="••••••••" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">New Password *</label>
+              <input type="password" id="acc-new-pass" required placeholder="Minimum 6 characters" minlength="6" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide mb-1">Confirm New Password *</label>
+              <input type="password" id="acc-confirm-new-pass" required placeholder="Re-enter new password" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold focus:outline-none" />
+            </div>
+
+            <div class="flex justify-end pt-2">
+              <button type="submit" class="btn-luxury btn-luxury-solid px-6 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xl">
+                Update Password
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
+          <button type="button" onclick="handleLogout()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 rounded-xl text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+          </button>
+          <span class="text-[10px] text-gray-500">DOCI Perfume Customer Care</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CÁC BIỂU TƯỢNG CHAT NỔI (FLOATING WIDGETS) -->
+    <div class="floating-widget select-none">
+      <a
+        href="https://zalo.me/0328595037"
+        target="_blank"
+        class="floating-btn floating-zalo"
+        title="Chat Zalo"
+        ><i class="fa-solid fa-comment-dots text-xl"></i
+      ></a>
+      <a
+        href="https://m.me/Q.D.Khanh.One"
+        target="_blank"
+        class="floating-btn floating-messenger"
+        title="Chat Messenger"
+        ><i class="fa-brands fa-facebook-messenger text-xl"></i
+      ></a>
+    </div>
+
+    <div class="back-to-top" title="Cuộn lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Các thư viện Script CDN -->
+    <!-- Cuộn trang mượt mà Lenis Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Thư viện hoạt ảnh GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Thư viện hiệu ứng cuộn trang AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Thư viện bộ slide SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- File Script tùy chỉnh của dự án -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Mobile Menu Script is handled in assets/js/app.js -->
+  </body>
+</html>
+

@@ -1,0 +1,49 @@
+<!-- Phần Tin Nhắn Liên Hệ (Contacts Section) -->
+<div id="section-contacts" class="hidden">
+  <!-- Thống kê tin nhắn (Contact Stats) -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Tổng số tin nhắn</span>
+      <h3 id="stat-total-contacts" class="text-2xl font-bold text-white">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Tin nhắn của khách hàng từ Form liên hệ</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-red-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope-open-text"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Tin chưa đọc</span>
+      <h3 id="stat-unread-contacts" class="text-2xl font-bold text-red-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Cần xem và phản hồi sớm</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-check-double"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Tin đã đọc</span>
+      <h3 id="stat-read-contacts" class="text-2xl font-bold text-green-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Đã xử lý thông tin</p>
+    </div>
+  </div>
+
+  <!-- Control Bar Liên Hệ -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div class="flex flex-wrap gap-2">
+      <button id="tab-c-all" onclick="setContactFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">Tất Cả (<span id="count-c-all">0</span>)</button>
+      <button id="tab-c-unread" onclick="setContactFilter('unread')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Chưa Đọc (<span id="count-c-unread">0</span>)</button>
+      <button id="tab-c-read" onclick="setContactFilter('read')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Đã Đọc (<span id="count-c-read">0</span>)</button>
+    </div>
+
+    <div class="flex items-center gap-3 self-end md:self-auto">
+      <button onclick="clearAllContacts()" class="bg-red-950/40 hover:bg-red-900/50 border border-red-500/20 hover:border-red-500/50 text-red-400 text-xs font-semibold px-4 py-2 rounded-md transition-all flex items-center gap-2">
+        <i class="fa-solid fa-trash-can"></i> Xóa Sạch Tin Nhắn
+      </button>
+    </div>
+  </div>
+
+  <!-- Danh sách tin nhắn liên hệ -->
+  <div id="contacts-list-container" class="space-y-4">
+    <!-- Khung trống khi không có tin nhắn -->
+    <div id="no-contacts-msg" class="glass-card rounded-xl p-12 text-center flex flex-col items-center justify-center gap-4">
+      <i class="fa-solid fa-inbox text-gray-600 text-5xl"></i>
+      <h4 class="text-sm font-bold text-gray-300">Chưa có tin nhắn liên hệ nào</h4>
+      <p class="text-xs text-gray-500">Các tin nhắn gửi từ form Liên hệ ở trang chủ sẽ tự động hiển thị tại đây.</p>
+    </div>
+  </div>
+</div>

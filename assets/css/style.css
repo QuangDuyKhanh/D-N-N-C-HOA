@@ -1,0 +1,1469 @@
+/* Custom CSS for DOCI Perfume - Luxury & Minimalist Theme */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* =============================================
+   CSS VARIABLES & DESIGN TOKENS
+   ============================================= */
+:root {
+  /* Colors */
+  --primary-gold: #d4af37;
+  --primary-gold-hover: #aa8c2c;
+  --primary-gold-rgb: 212, 175, 55;
+  --dark-bg: #0a0a0a;
+  --dark-surface: #111111;
+  --dark-card: rgba(20, 20, 20, 0.6);
+  --text-light: #ffffff;
+  --text-cream: #f9f6f0;
+  --text-muted: #a0a0a0;
+  --gold-gradient: linear-gradient(135deg, #ffe89c 0%, #d4af37 50%, #9f7b18 100%);
+  --dark-gradient: linear-gradient(180deg, #161616 0%, #050505 100%);
+  --border-gold: rgba(212, 175, 55, 0.25);
+  --border-gold-focus: rgba(212, 175, 55, 0.6);
+  --glass-bg: rgba(17, 17, 17, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Fonts */
+  --font-title: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+
+  /* Fluid Typography (360px → 1440px) */
+  --text-xs:    clamp(0.75rem,  0.70rem + 0.28vw, 0.875rem);
+  --text-sm:    clamp(0.875rem, 0.82rem + 0.39vw, 1.0rem);
+  --text-base:  clamp(1rem,     0.94rem + 0.50vw, 1.125rem);
+  --text-lg:    clamp(1.125rem, 1.05rem + 0.61vw, 1.313rem);
+  --text-xl:    clamp(1.25rem,  1.15rem + 0.78vw, 1.563rem);
+  --text-2xl:   clamp(1.5rem,   1.35rem + 1.11vw, 2rem);
+  --text-3xl:   clamp(1.875rem, 1.65rem + 1.67vw, 2.625rem);
+  --text-4xl:   clamp(2.25rem,  1.9rem  + 2.22vw, 3.375rem);
+  --text-5xl:   clamp(2.75rem,  2.2rem  + 3.33vw, 4.5rem);
+
+  /* Line Heights (Vietnamese needs more room) */
+  --lh-tight:   1.25;
+  --lh-snug:    1.45;
+  --lh-normal:  1.80;
+  --lh-relaxed: 2.0;
+  --lh-loose:   2.2;
+
+  /* Letter Spacing (keep small for Vietnamese diacritics) */
+  --ls-none:    0em;
+  --ls-tight:   0em;
+  --ls-normal:  0.01em;
+  --ls-wide:    0.03em;
+  --ls-wider:   0.06em;
+  --ls-widest:  0.12em;
+
+  /* Fluid Spacing */
+  --space-xs:   clamp(0.5rem,   0.4rem  + 0.44vw, 0.75rem);
+  --space-sm:   clamp(0.75rem,  0.65rem + 0.56vw, 1.063rem);
+  --space-md:   clamp(1.25rem,  1.05rem + 0.89vw, 1.875rem);
+  --space-lg:   clamp(2rem,     1.6rem  + 1.78vw, 3.25rem);
+  --space-xl:   clamp(3rem,     2.3rem  + 2.78vw, 5rem);
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  --dark-bg: #f9f6f0;
+  --dark-surface: #ffffff;
+  --dark-card: rgba(255, 255, 255, 0.75);
+  --text-light: #111111;
+  --text-cream: #1a1a1a;
+  --text-muted: #666666;
+  --dark-gradient: linear-gradient(180deg, #ffffff 0%, #f5f0e6 100%);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(17, 17, 17, 0.08);
+  --border-gold: rgba(212, 175, 55, 0.4);
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: initial; /* Lenis handles smooth scroll */ }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  overflow-x: hidden;
+  font-size: var(--text-base);       /* 16px → 18px fluid */
+  font-weight: 400;
+  line-height: var(--lh-normal);     /* 1.8 — tiếng Việt cần */
+  letter-spacing: var(--ls-normal);  /* 0.01em — rất nhẹ */
+  word-spacing: 0.06em;              /* Giúp tách từ rõ hơn */
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ---- TIÊU ĐỀ: Fluid + Đậm + Thoáng dòng ---- */
+h1 {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-wide);
+}
+h2 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-wide);
+}
+h3 {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-normal);
+}
+h4 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-normal);
+}
+h5 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-normal);
+}
+h6 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-normal);
+}
+
+/* Font title heading */
+.font-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: var(--ls-wide);
+}
+
+/* Paragraph: thoáng dòng, rõ ràng */
+p {
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--lh-relaxed);   /* 2.0 — đọc thoải mái */
+  letter-spacing: var(--ls-normal);
+}
+
+/* Input, select, textarea: đủ lớn, không bị nhỏ */
+input, select, textarea, button {
+  font-family: var(--font-body);
+  font-size: var(--text-sm) !important;  /* 14px → 16px */
+  font-weight: 400;
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-normal);
+}
+
+/* Placeholder: rõ, không bị quá nhỏ hay dính */
+::placeholder {
+  font-size: var(--text-sm) !important;
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-normal);
+  opacity: 0.5;
+}
+
+/* Label: đậm hơn, dễ đọc */
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--ls-wider);  /* Label ALL-CAPS: cách rộng hơn */
+  line-height: var(--lh-normal);
+}
+
+/* Nhãn nhỏ (badge, tag, hint text) */
+small, .text-xs-fluid {
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--ls-wide);
+  line-height: var(--lh-relaxed);
+}
+
+/* Lenis smooth scroll */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+  overflow-y: auto;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-gold-hover);
+}
+
+/* Typography Utilities */
+.text-gold {
+  color: var(--primary-gold);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.border-gold-glow {
+  border: 1px solid var(--primary-gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* Shimmer Animation Button */
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--primary-gold);
+  padding: clamp(0.6rem, 0.5rem + 0.44vw, 0.875rem) clamp(1.25rem, 1rem + 1.11vw, 2.25rem);
+  letter-spacing: var(--ls-widest);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  z-index: 1;
+}
+.btn-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+  transition: 0.6s;
+  z-index: -1;
+}
+.btn-luxury:hover::before {
+  left: 100%;
+}
+.btn-luxury:hover {
+  background: var(--primary-gold);
+  color: #111111 !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-luxury-solid {
+  background: var(--gold-gradient);
+  color: #111111 !important;
+  border: none;
+  font-weight: 600;
+}
+.btn-luxury-solid:hover {
+  background: #ffffff;
+  color: #111111 !important;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--dark-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.glass-card:hover {
+  border-color: var(--primary-gold);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(212, 175, 55, 0.2);
+  transform: translateY(-8px);
+}
+
+/* Product Card Vertical Image Wrapper */
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3; /* Custom 2:3 vertical aspect ratio for high-end catalog feel */
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire area */
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover .product-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Action Buttons Hover Overlay */
+.product-hover-actions {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+}
+
+.glass-card:hover .product-hover-actions {
+  opacity: 1;
+}
+
+/* Text & Pricing Container below Image */
+.glass-card-info {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(20, 20, 20, 0.25);
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Ultra Slide Tester Section Styles */
+.tester-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+.tester-card:hover {
+  box-shadow: 0 15px 50px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Particle Canvas */
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gold-gradient);
+  z-index: 9999;
+  width: 0%;
+}
+
+/* Hero Section */
+.hero-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    transparent 70%
+  );
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating Image */
+.float-element {
+  animation: floatAnim 6s ease-in-out infinite;
+}
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Product Category Tab active indicator */
+.tab-btn.active {
+  color: var(--primary-gold);
+  border-bottom: 2px solid var(--primary-gold);
+}
+
+/* Product Card Spec details */
+.product-spec-item {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+body.light-mode .product-spec-item {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Custom Ribbon */
+.ribbon-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--gold-gradient);
+  color: #111111;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+/* Infographic Fragrance Timeline */
+.timeline-dot {
+  position: relative;
+}
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--primary-gold);
+}
+.timeline-line {
+  position: relative;
+}
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(212, 175, 55, 0.2);
+  transform: translateX(-50%);
+}
+
+/* Flash Sale Countdown Timer */
+.countdown-box {
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 70px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+body.light-mode .countdown-box {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Slide-out Cart Panel */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  background: var(--dark-surface);
+  border-left: 1px solid var(--glass-border);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+.cart-drawer.open {
+  right: 0;
+}
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.cart-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Interactive Quiz Modal */
+.quiz-option-card {
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+.quiz-option-card:hover {
+  border-color: var(--primary-gold);
+  background: rgba(212, 175, 55, 0.05);
+}
+.quiz-option-card.selected {
+  border-color: var(--primary-gold);
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Product Detail Modal */
+.detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.detail-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.detail-modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+}
+.detail-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  background: var(--dark-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  overflow-y: auto;
+  z-index: 1001;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.detail-modal.open .detail-modal-container {
+  transform: scale(1);
+}
+
+/* Pyramids of fragrance notes */
+.fragrance-pyramid-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.pyramid-level {
+  position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--primary-gold);
+  transition: var(--transition-fast);
+}
+.pyramid-level:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Preloader Screen */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader-logo {
+  font-family: var(--font-title);
+  letter-spacing: 8px;
+  color: var(--primary-gold);
+  animation: pulseGold 2s infinite ease-in-out;
+}
+.preloader-bar {
+  width: 150px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.preloader-progress {
+  width: 0%;
+  height: 100%;
+  background: var(--gold-gradient);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loadProgress 2.5s forwards ease-out;
+}
+
+@keyframes loadProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes pulseGold {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Floating widgets */
+.floating-widget {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-smooth);
+}
+.floating-btn:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+.floating-zalo {
+  background: #0068ff;
+}
+.floating-messenger {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--border-gold);
+  color: var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover {
+  background: var(--primary-gold);
+  color: #111111;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85%;
+  border: 2px solid var(--primary-gold);
+  border-radius: 4px;
+}
+
+/* Form validation styling */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-gold) !important;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+/* Quick View Wishlist Hearts */
+.wishlist-btn.active i {
+  color: #ef4444;
+  font-weight: 900;
+}
+
+/* =============================================
+   MOBILE RESPONSIVE - DOCI PERFUME
+   Tối ưu toàn bộ cho điện thoại (≤768px)
+   ============================================= */
+
+/* --- Touch targets: tất cả button/link dễ bấm hơn --- */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Tắt animation AOS trên mobile để tránh giật */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Ngăn overflow ngang */
+  body, html {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* ---- NAVBAR ---- */
+  header {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  header .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ---- HERO SECTION ---- */
+  #hero-section {
+    min-height: 100svh;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+  }
+  #hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  /* Video hero: hiển thị trước text trên mobile */
+  #hero-section .order-1 {
+    order: 1 !important;
+    width: 100%;
+  }
+  #hero-section .order-2 {
+    order: 2 !important;
+    width: 100%;
+  }
+  /* Video kích thước đẹp trên mobile */
+  #hero-section video {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  #hero-section .float-element {
+    animation: none; /* Tắt floating trên mobile */
+    max-width: 100%;
+    aspect-ratio: 4/3;
+  }
+  /* Text hero */
+  #hero-section h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    text-align: center;
+  }
+  #hero-section p {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  #hero-section .btn-luxury {
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* ---- SECTIONS - padding thu gọn ---- */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  section .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* ---- SECTION HEADINGS ---- */
+  h2.font-title {
+    font-size: 1.75rem !important;
+  }
+  h3.font-title {
+    font-size: 1.25rem !important;
+  }
+
+  /* ---- BRAND STORY (About section) ---- */
+  #about-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  #about-section img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  #about-section .grid.grid-cols-2.sm\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem;
+  }
+
+  /* ---- BEST SELLERS SWIPER ---- */
+  #best-sellers .swiper-slide {
+    width: 260px !important;
+  }
+
+  /* ---- PRODUCT GRID ---- */
+  #collections-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  .glass-card-info {
+    padding: 0.75rem !important;
+  }
+  .glass-card-info h3 {
+    font-size: 0.75rem !important;
+  }
+  .glass-card-info p {
+    font-size: 0.7rem !important;
+  }
+  /* Ẩn spec items trên mobile để gọn */
+  .product-spec-item {
+    display: none;
+  }
+  .ribbon-badge {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.5rem;
+    top: 8px;
+    left: 8px;
+  }
+  /* Hover actions: luôn hiện trên mobile (tap) */
+  .product-hover-actions {
+    opacity: 0;
+    /* Giữ nguyên - user tap để xem */
+  }
+
+  /* ---- TESTER BOX SECTION ---- */
+  .tester-card .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+  .tester-card img {
+    max-height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* ---- TABS bộ sưu tập ---- */
+  .tab-btn {
+    font-size: 0.7rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+  /* Tabs cuộn ngang không wrap */
+  [id="collections-section"] > div > div:first-child {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap !important;
+    padding-bottom: 0.5rem;
+  }
+
+  /* ---- CART DRAWER ---- */
+  .cart-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-left: none;
+  }
+
+  /* ---- DETAIL MODAL ---- */
+  .detail-modal {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+  .detail-modal-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 92dvh !important;
+    border-radius: 16px 16px 0 0 !important;
+    transform: translateY(100%) !important;
+  }
+  .detail-modal.open .detail-modal-container {
+    transform: translateY(0) !important;
+  }
+  /* Grid trong modal: stack dọc */
+  .detail-modal-container .grid {
+    grid-template-columns: 1fr !important;
+  }
+  .detail-modal-container img {
+    max-height: 220px;
+    object-fit: contain;
+  }
+
+  /* ---- QUIZ SECTION ---- */
+  #quiz-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem;
+  }
+  .quiz-option-card {
+    padding: 0.75rem !important;
+  }
+  .quiz-option-card p {
+    font-size: 0.75rem !important;
+  }
+
+  /* ---- FAQ SECTION ---- */
+  #faq-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---- REVIEWS SECTION ---- */
+  #reviews-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* ---- CONTACT FORM ---- */
+  #contact-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  #contact-section input,
+  #contact-section textarea,
+  #contact-section select {
+    font-size: 16px !important; /* Ngăn iOS zoom khi focus */
+  }
+
+  /* ---- FLASH SALE ---- */
+  .countdown-box {
+    min-width: 55px;
+    padding: 0.5rem 0.25rem;
+  }
+  .countdown-box .text-3xl {
+    font-size: 1.5rem !important;
+  }
+
+  /* ---- VIDEO REVIEW SECTION ---- */
+  #video-section video,
+  #video-section iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 9/16;
+    border-radius: 12px;
+  }
+
+  /* ---- FOOTER ---- */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  footer {
+    text-align: center;
+  }
+
+  /* ---- FLOATING WIDGET ---- */
+  .floating-widget {
+    bottom: 15px;
+    left: 15px;
+    gap: 8px;
+  }
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .back-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ---- LIGHTBOX ---- */
+  .lightbox-img {
+    max-width: 96%;
+    max-height: 80%;
+  }
+
+  /* ---- COUNTER stats ---- */
+  .counter-val {
+    font-size: 1.5rem !important;
+  }
+
+  /* ---- FRAGRANCE PYRAMID ---- */
+  .fragrance-pyramid-container {
+    padding: 1rem;
+  }
+  .pyramid-level {
+    padding: 0.75rem;
+  }
+
+  /* ---- SWIPER navigation buttons ---- */
+  .swiper-button-prev-best,
+  .swiper-button-next-best {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* ---- CHECKOUT MODAL MOBILE ---- */
+  #checkout-modal .detail-modal-container {
+    max-height: 95dvh !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+  #checkout-modal .checkout-scroll-body {
+    max-height: calc(95dvh - 72px);
+  }
+
+  /* Input lớn hơn để dễ bấm trên điện thoại */
+  #order-form input,
+  #order-form select,
+  #order-form textarea {
+    font-size: 16px !important;  /* Ngăn iOS zoom khi focus */
+    padding: 0.875rem 1rem !important;
+    min-height: 48px;
+  }
+
+  /* Select phương thức thanh toán */
+  #payment-method-select {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 0.875rem 1rem !important;
+  }
+
+  /* Thẻ ngân hàng layout mobile */
+  #payment-info-bank .grid.grid-cols-2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem;
+  }
+
+  /* QR Code: hiển thị full width trên mobile */
+  #payment-info-bank img[alt="Vietcombank VietQR"] {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Nút Xác nhận đặt hàng: lớn, dễ bấm */
+  #order-form button[type="submit"] {
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+    min-height: 52px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Copy buttons: tap target lớn hơn */
+  #payment-info-bank button[onclick*="copyToClipboard"] {
+    padding: 0.5rem !important;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  /* Scroll indicator hint */
+  #payment-info-bank::after {
+    content: '';
+    display: block;
+    height: 1rem;
+  }
+}
+
+/* --- Màn hình rất nhỏ (< 380px như iPhone SE) --- */
+@media (max-width: 380px) {
+  #hero-section h1 {
+    font-size: 1.6rem !important;
+  }
+  #collections-section .grid {
+    grid-template-columns: 1fr !important; /* 1 cột thay vì 2 */
+  }
+  .glass-card-info h3 {
+    font-size: 0.7rem !important;
+  }
+  #quiz-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- Tablet (768px - 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero-section h1 {
+    font-size: 2.75rem !important;
+  }
+  #collections-section .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .detail-modal-container {
+    max-height: 92vh;
+    max-width: 90% !important;
+  }
+}
+
+/* --- PRODUCT REVIEWS CUSTOM STYLES --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-gold);
+}
+
+#star-rating-selector i,
+#homepage-star-selector i {
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+#star-rating-selector i:hover,
+#homepage-star-selector i:hover {
+  transform: scale(1.2);
+}
+#star-rating-selector i.active,
+#homepage-star-selector i.active {
+  color: #D4AF37;
+}
+
+/* ===== CHECKOUT MODAL SCROLLABLE BODY ===== */
+#checkout-modal .detail-modal-container {
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+}
+#checkout-modal .checkout-scroll-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  flex: 1;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 rgba(255,255,255,0.05);
+}
+#checkout-modal .checkout-scroll-body::-webkit-scrollbar {
+  width: 4px;
+}
+#checkout-modal .checkout-scroll-body::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03);
+}
+#checkout-modal .checkout-scroll-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4AF37, #8B6914);
+  border-radius: 4px;
+}
+
+/* ===== QR CODE ENLARGED ===== */
+#payment-info-bank img[alt="Vietcombank VietQR"] {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+}
+
+/* ===== AI ASSISTANT CHATBOT ===== */
+#doci-bot-messages::-webkit-scrollbar {
+  width: 4px;
+}
+#doci-bot-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+#doci-bot-messages::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 4px;
+}
+#doci-bot-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.55);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sparkles pulse & bounce effects */
+@keyframes bot-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+}
+
+/* Glassmorphism styling overrides */
+#doci-bot-window {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Specific stagger for list items */
+.reveal-on-scroll.delay-100 { transition-delay: 100ms; }
+.reveal-on-scroll.delay-200 { transition-delay: 200ms; }
+.reveal-on-scroll.delay-300 { transition-delay: 300ms; }
+
+/* ===== PREMIUM HOVER INTERACTIONS ===== */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Sticky header glassmorphism boost */
+header.sticky-scrolled {
+  background: rgba(17, 17, 17, 0.82) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* ===== CERTIFICATE SWIPER NAVIGATION ARROW BUTTONS ===== */
+.cert-next::after,
+.cert-prev::after {
+  display: none !important;
+}
+
+.cert-next,
+.cert-prev {
+  width: 44px !important;
+  height: 44px !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.7) !important;
+  border-radius: 50% !important;
+  color: #d4af37 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(212, 175, 55, 0.3) !important;
+  z-index: 30 !important;
+  cursor: pointer !important;
+  margin-top: -22px !important;
+}
+
+.cert-next:hover,
+.cert-prev:hover {
+  background-color: #d4af37 !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.8) !important;
+}
+
+.cert-prev {
+  left: 12px !important;
+}
+
+.cert-next {
+  right: 12px !important;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  background: rgba(17, 17, 17, 0.85);
+  border: 1.5px solid rgba(212, 175, 55, 0.6);
+  color: #D4AF37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: #D4AF37;
+  color: #0A0A0A;
+  border-color: #FFFFFF;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+/* ===== DOCI CUSTOMER AUTH & ACCOUNT DASHBOARD MODALS ===== */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.8);
+}
+
+.auth-modal-container, .account-modal-container {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+@media (max-width: 640px) {
+  .auth-modal-container, .account-modal-container {
+    padding: 1.25rem !important;
+    max-height: 92vh !important;
+  }
+}
+
+

@@ -1,0 +1,8 @@
+# Robots.txt for DOCI Perfume
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /backend/
+
+Sitemap: https://doci-perfume.vercel.app/sitemap.xml

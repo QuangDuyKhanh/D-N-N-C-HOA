@@ -1,0 +1,36 @@
+<!-- Màn hình Đăng nhập (Login Screen) -->
+<div id="login-container" class="flex items-center justify-center min-h-screen px-4 py-12 bg-darkBg">
+  <div class="glass-card max-w-md w-full p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden">
+    <!-- Decorates -->
+    <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+    <div class="absolute -left-10 -top-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+    
+    <div class="text-center mb-8">
+      <h1 class="font-title text-3xl font-bold tracking-[6px] text-white">DOCI</h1>
+      <p class="text-[9px] uppercase tracking-[4px] text-gold font-semibold -mt-1">ADMIN PORTAL</p>
+      <div class="h-[1px] w-20 bg-gold/30 mx-auto mt-4"></div>
+    </div>
+
+    <form id="login-form" onsubmit="handleLogin(event)" class="space-y-6">
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Gmail Quản Trị *</label>
+        <div class="relative">
+          <i class="fa-regular fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+          <input type="email" id="login-email" required placeholder="example@gmail.com" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Mật khẩu *</label>
+        <div class="relative">
+          <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+          <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded-lg tracking-widest transition-all duration-300 transform active:scale-95">
+        ĐĂNG NHẬP
+      </button>
+    </form>
+  </div>
+</div>
