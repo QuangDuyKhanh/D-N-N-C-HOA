@@ -2681,15 +2681,42 @@ window.fillDemoAccount = function() {
   const passInput = document.getElementById("login-password");
   if (emailInput) emailInput.value = "khachhang@gmail.com";
   if (passInput) passInput.value = "123456";
-  showNotification("Automatically filled demo account!", "info");
+  handleLogin("khachhang@gmail.com", "123456");
 };
 
 function handleLogin(emailOrPhone, password) {
-  const users = window.getAllUsers();
-  const foundUser = users.find(u => 
-    (u.email.toLowerCase() === emailOrPhone.toLowerCase() || u.phone === emailOrPhone) && 
-    u.password === password
-  );
+  if (!emailOrPhone || !password) {
+    showNotification("Please enter your email or phone number and password!", "warning");
+    return;
+  }
+
+  let users = window.getAllUsers();
+  const inputClean = emailOrPhone.trim().toLowerCase();
+  const passClean = password.trim();
+
+  // Search user with safe null/undefined checks
+  let foundUser = users.find(u => {
+    if (!u) return false;
+    const uEmail = (u.email || "").trim().toLowerCase();
+    const uPhone = (u.phone || "").trim();
+    const matchesEmailOrPhone = (uEmail && uEmail === inputClean) || (uPhone && uPhone === inputClean) || (uPhone && uPhone === emailOrPhone.trim());
+    return matchesEmailOrPhone && (u.password === passClean || u.password === password);
+  });
+
+  // Auto-create/recover demo account if missing
+  if (!foundUser && (inputClean === "khachhang@gmail.com" || inputClean === "0901234567") && passClean === "123456") {
+    foundUser = {
+      id: "USR001",
+      name: "DOCI Customer",
+      email: "khachhang@gmail.com",
+      phone: "0901234567",
+      address: "123 Nguyen Trai, District 1, Ho Chi Minh City",
+      password: "123456",
+      created_at: new Date().toISOString()
+    };
+    users.push(foundUser);
+    localStorage.setItem("doci_users", JSON.stringify(users));
+  }
 
   if (foundUser) {
     localStorage.setItem("doci_current_user", JSON.stringify(foundUser));
@@ -2707,13 +2734,26 @@ function handleLogin(emailOrPhone, password) {
 }
 
 function handleRegister(name, email, phone, password, confirmPassword) {
+  if (!name || !email || !phone || !password) {
+    showNotification("Please fill in all required fields!", "warning");
+    return;
+  }
+
   if (password !== confirmPassword) {
     showNotification("Confirmation password does not match!", "error");
     return;
   }
 
   const users = window.getAllUsers();
-  const existingUser = users.find(u => u.email.toLowerCase() === email.toLowerCase() || u.phone === phone);
+  const cleanEmail = email.trim().toLowerCase();
+  const cleanPhone = phone.trim();
+
+  const existingUser = users.find(u => {
+    if (!u) return false;
+    const uEmail = (u.email || "").trim().toLowerCase();
+    const uPhone = (u.phone || "").trim();
+    return (uEmail && uEmail === cleanEmail) || (uPhone && uPhone === cleanPhone);
+  });
   
   if (existingUser) {
     showNotification("This email or phone number is already registered!", "error");
@@ -2722,9 +2762,9 @@ function handleRegister(name, email, phone, password, confirmPassword) {
 
   const newUser = {
     id: "USR" + Date.now(),
-    name,
-    email,
-    phone,
+    name: name.trim(),
+    email: cleanEmail,
+    phone: cleanPhone,
     address: "",
     password,
     created_at: new Date().toISOString()
@@ -2740,18 +2780,32 @@ function handleRegister(name, email, phone, password, confirmPassword) {
 
   renderUserHeaderUI();
   window.closeAuthModal();
-  showNotification(`Account registered successfully! Welcome ${name} to DOCI Perfume.`, "success");
+  showNotification(`Account registered successfully! Welcome ${newUser.name} to DOCI Perfume.`, "success");
 }
 
 function handleForgotPassword(emailOrPhone) {
+  if (!emailOrPhone) {
+    showNotification("Please enter your registered email or phone number!", "warning");
+    return;
+  }
+
   const users = window.getAllUsers();
-  const foundUser = users.find(u => u.email.toLowerCase() === emailOrPhone.toLowerCase() || u.phone === emailOrPhone);
+  const cleanInput = emailOrPhone.trim().toLowerCase();
+  
+  const foundUser = users.find(u => {
+    if (!u) return false;
+    const uEmail = (u.email || "").trim().toLowerCase();
+    const uPhone = (u.phone || "").trim();
+    return (uEmail && uEmail === cleanInput) || (uPhone && uPhone === cleanInput) || (uPhone && uPhone === emailOrPhone.trim());
+  });
 
   if (foundUser) {
-    showNotification(`Your account password is: ${foundUser.password}`, "info");
+    showNotification(`Your password is: ${foundUser.password}`, "info");
     window.switchAuthTab('login');
     const loginEmail = document.getElementById("login-email");
+    const loginPass = document.getElementById("login-password");
     if (loginEmail) loginEmail.value = foundUser.email;
+    if (loginPass) loginPass.value = foundUser.password;
   } else {
     showNotification("No account found with the provided information!", "error");
   }
