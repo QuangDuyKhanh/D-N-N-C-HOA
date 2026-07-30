@@ -2397,6 +2397,30 @@ function initScrollReveal() {
    CUSTOMER REGISTRATION / LOGIN & ACCOUNT MANAGEMENT SYSTEM (DOCI AUTH)
    ========================================================================== */
 
+// ── Phát hiện môi trường: Laragon (localhost) dùng MySQL API, Vercel dùng localStorage ──
+const DOCI_IS_LOCAL = (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname.endsWith('.test') ||
+  window.location.hostname.endsWith('.local')
+);
+const DOCI_API_BASE = DOCI_IS_LOCAL ? 'backend/customers-api.php' : null;
+
+// Gọi Customers API (chỉ hoạt động khi chạy Laragon)
+async function callCustomersAPI(payload) {
+  if (!DOCI_API_BASE) return { success: false, offline: true };
+  try {
+    const res = await fetch(DOCI_API_BASE, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return await res.json();
+  } catch (err) {
+    return { success: false, offline: true, error: err.message };
+  }
+}
+
 window.getCurrentUser = function() {
   try {
     const userStr = localStorage.getItem("doci_current_user");
@@ -2679,17 +2703,39 @@ window.fillDemoAccount = function() {
   showNotification("Filled demo account credentials into form!", "info");
 };
 
-function handleLogin(emailOrPhone, password) {
+async function handleLogin(emailOrPhone, password) {
   if (!emailOrPhone || !password) {
     showNotification("Please enter your email or phone number and password!", "warning");
     return;
   }
 
-  let users = window.getAllUsers();
   const inputClean = emailOrPhone.trim().toLowerCase();
   const passClean = password.trim();
 
-  // Search user with safe null/undefined checks
+  // ── Laragon: Gọi MySQL API ──
+  if (DOCI_IS_LOCAL) {
+    const result = await callCustomersAPI({ action: 'login', emailOrPhone: inputClean, password: passClean });
+    if (!result.offline && result.success && result.user) {
+      const user = result.user;
+      localStorage.setItem("doci_current_user", JSON.stringify(user));
+      window.isForcedAuth = false;
+      const closeBtn = document.getElementById("close-auth-modal");
+      if (closeBtn) closeBtn.classList.remove("hidden");
+      renderUserHeaderUI();
+      window.closeAuthModal();
+      showNotification(`Login successful! Welcome ${user.name}.`, "success");
+      window.autoFillCheckoutForm();
+      return;
+    } else if (!result.offline) {
+      showNotification(result.message || "Incorrect email/phone or password!", "error");
+      return;
+    }
+    // Nếu API offline → fallback localStorage bên dưới
+  }
+
+  // ── Vercel / localStorage Fallback ──
+  let users = window.getAllUsers();
+
   let foundUser = users.find(u => {
     if (!u) return false;
     const uEmail = (u.email || "").trim().toLowerCase();
@@ -2718,7 +2764,6 @@ function handleLogin(emailOrPhone, password) {
     window.isForcedAuth = false;
     const closeBtn = document.getElementById("close-auth-modal");
     if (closeBtn) closeBtn.classList.remove("hidden");
-    
     renderUserHeaderUI();
     window.closeAuthModal();
     showNotification(`Login successful! Welcome ${foundUser.name}.`, "success");
@@ -2728,7 +2773,7 @@ function handleLogin(emailOrPhone, password) {
   }
 }
 
-function handleRegister(name, email, phone, password, confirmPassword) {
+async function handleRegister(name, email, phone, password, confirmPassword) {
   if (!name || !email || !phone || !password) {
     showNotification("Please fill in all required fields!", "warning");
     return;
@@ -2739,10 +2784,38 @@ function handleRegister(name, email, phone, password, confirmPassword) {
     return;
   }
 
-  const users = window.getAllUsers();
   const cleanEmail = email.trim().toLowerCase();
   const cleanPhone = phone.trim();
+  const cleanName = name.trim();
 
+  // ── Laragon: Gọi MySQL API ──
+  if (DOCI_IS_LOCAL) {
+    const result = await callCustomersAPI({
+      action: 'register',
+      name: cleanName,
+      email: cleanEmail,
+      phone: cleanPhone,
+      password
+    });
+    if (!result.offline && result.success && result.user) {
+      const user = result.user;
+      localStorage.setItem("doci_current_user", JSON.stringify(user));
+      window.isForcedAuth = false;
+      const closeBtn = document.getElementById("close-auth-modal");
+      if (closeBtn) closeBtn.classList.remove("hidden");
+      renderUserHeaderUI();
+      window.closeAuthModal();
+      showNotification(`Account registered successfully! Welcome ${user.name} to DOCI Perfume.`, "success");
+      return;
+    } else if (!result.offline) {
+      showNotification(result.message || "Registration failed!", "error");
+      return;
+    }
+    // Nếu API offline → fallback localStorage bên dưới
+  }
+
+  // ── Vercel / localStorage Fallback ──
+  const users = window.getAllUsers();
   const existingUser = users.find(u => {
     if (!u) return false;
     const uEmail = (u.email || "").trim().toLowerCase();
@@ -2757,7 +2830,7 @@ function handleRegister(name, email, phone, password, confirmPassword) {
 
   const newUser = {
     id: "USR" + Date.now(),
-    name: name.trim(),
+    name: cleanName,
     email: cleanEmail,
     phone: cleanPhone,
     address: "",
@@ -2891,7 +2964,7 @@ function fillProfileFormData() {
   if (addressInput) addressInput.value = currentUser.address || "";
 }
 
-function handleUpdateProfile() {
+async function handleUpdateProfile() {
   const currentUser = window.getCurrentUser();
   if (!currentUser) return;
 
@@ -2904,6 +2977,25 @@ function handleUpdateProfile() {
     return;
   }
 
+  // ── Laragon: Gọi MySQL API ──
+  if (DOCI_IS_LOCAL) {
+    const result = await callCustomersAPI({ action: 'update_profile', id: currentUser.id, name, phone, address });
+    if (!result.offline && result.success) {
+      const updatedUser = { ...currentUser, name, phone, address };
+      localStorage.setItem("doci_current_user", JSON.stringify(updatedUser));
+      const nameEl = document.getElementById("account-user-name");
+      if (nameEl) nameEl.textContent = name;
+      renderUserHeaderUI();
+      showNotification("Personal profile updated successfully!", "success");
+      window.autoFillCheckoutForm();
+      return;
+    } else if (!result.offline) {
+      showNotification(result.message || "Update failed!", "error");
+      return;
+    }
+  }
+
+  // ── Vercel / localStorage Fallback ──
   const users = window.getAllUsers();
   const userIdx = users.findIndex(u => u.email === currentUser.email);
 
@@ -2921,7 +3013,7 @@ function handleUpdateProfile() {
   }
 }
 
-function handleChangePassword() {
+async function handleChangePassword() {
   const currentUser = window.getCurrentUser();
   if (!currentUser) return;
 
@@ -2929,13 +3021,32 @@ function handleChangePassword() {
   const newPass = document.getElementById("acc-new-pass").value;
   const confirmNewPass = document.getElementById("acc-confirm-new-pass").value;
 
-  if (oldPass !== currentUser.password) {
-    showNotification("Current password is incorrect!", "error");
+  if (!oldPass || !newPass || !confirmNewPass) {
+    showNotification("Please fill in all password fields!", "warning");
     return;
   }
 
   if (newPass !== confirmNewPass) {
     showNotification("New password confirmation does not match!", "error");
+    return;
+  }
+
+  // ── Laragon: Gọi MySQL API ──
+  if (DOCI_IS_LOCAL) {
+    const result = await callCustomersAPI({ action: 'change_password', id: currentUser.id, oldPassword: oldPass, newPassword: newPass });
+    if (!result.offline && result.success) {
+      document.getElementById("account-password-form")?.reset();
+      showNotification("Password changed successfully!", "success");
+      return;
+    } else if (!result.offline) {
+      showNotification(result.message || "Password change failed!", "error");
+      return;
+    }
+  }
+
+  // ── Vercel / localStorage Fallback ──
+  if (oldPass !== currentUser.password) {
+    showNotification("Current password is incorrect!", "error");
     return;
   }
 
@@ -2952,7 +3063,7 @@ function handleChangePassword() {
   }
 }
 
-function renderUserOrdersList() {
+async function renderUserOrdersList() {
   const currentUser = window.getCurrentUser();
   const container = document.getElementById("user-orders-list");
   const countBadge = document.getElementById("account-order-count");
@@ -2963,12 +3074,33 @@ function renderUserOrdersList() {
     return;
   }
 
-  const allOrders = JSON.parse(localStorage.getItem("doci_orders") || "[]");
-  const userOrders = allOrders.filter(o => 
-    (o.userEmail && o.userEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
-    (o.customerEmail && o.customerEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
-    (o.customerPhone === currentUser.phone)
-  );
+  container.innerHTML = `<div class="flex justify-center py-6"><div class="w-6 h-6 border-2 border-gold border-t-transparent rounded-full animate-spin"></div></div>`;
+
+  let userOrders = [];
+
+  // ── Laragon: Tải từ MySQL ──
+  if (DOCI_IS_LOCAL) {
+    const result = await callCustomersAPI({ action: 'get_my_orders', email: currentUser.email, phone: currentUser.phone });
+    if (!result.offline && result.success) {
+      userOrders = result.orders || [];
+    } else {
+      // Fallback localStorage
+      const allOrders = JSON.parse(localStorage.getItem("doci_orders") || "[]");
+      userOrders = allOrders.filter(o =>
+        (o.userEmail && o.userEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
+        (o.customerEmail && o.customerEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
+        (o.customerPhone === currentUser.phone)
+      );
+    }
+  } else {
+    // ── Vercel / localStorage Fallback ──
+    const allOrders = JSON.parse(localStorage.getItem("doci_orders") || "[]");
+    userOrders = allOrders.filter(o =>
+      (o.userEmail && o.userEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
+      (o.customerEmail && o.customerEmail.toLowerCase() === currentUser.email.toLowerCase()) ||
+      (o.customerPhone === currentUser.phone)
+    );
+  }
 
   if (countBadge) countBadge.textContent = userOrders.length;
 

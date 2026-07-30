@@ -129,8 +129,10 @@ if ($method === 'POST') {
     $status = $conn->real_escape_string(isset($data['status']) ? $data['status'] : 'pending');
     $created_at = date('Y-m-d H:i:s');
     
-    $sql = "INSERT INTO `orders` (`id`, `customer_name`, `customer_phone`, `customer_address`, `customer_note`, `payment_method`, `items`, `total_price`, `status`, `created_at`) 
-            VALUES ('$id', '$name', '$phone', '$address', '$note', '$payment', '$items', $total, '$status', '$created_at')";
+    $userEmail = $conn->real_escape_string(strtolower($data['userEmail'] ?? $data['customerEmail'] ?? ''));
+    
+    $sql = "INSERT INTO `orders` (`id`, `customer_name`, `customer_phone`, `customer_address`, `customer_note`, `user_email`, `payment_method`, `items`, `total_price`, `status`, `created_at`) 
+            VALUES ('$id', '$name', '$phone', '$address', '$note', '$userEmail', '$payment', '$items', $total, '$status', '$created_at')";
             
     if ($conn->query($sql)) {
         // Đồng thời lưu vào bảng tb_orders chuẩn SePay
