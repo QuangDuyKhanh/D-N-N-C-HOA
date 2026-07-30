@@ -1,5 +1,10 @@
-# Local deployment build output
+# Vercel deployment cache
 .vercel
 
-# Local Netlify folder
-.netlify
+# Node modules
+node_modules/
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.log
