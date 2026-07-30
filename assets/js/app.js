@@ -2587,16 +2587,13 @@ window.openAuthModal = function(tab = 'login', forced = false) {
   const subtitle = document.getElementById("auth-modal-subtitle");
   const currentUser = window.getCurrentUser();
 
-  if (forced || !currentUser) {
-    window.isForcedAuth = true;
-    if (closeBtn) closeBtn.classList.add("hidden");
-    if (subtitle) {
-      subtitle.innerHTML = `<span class="text-gold font-bold"><i class="fa-solid fa-lock mr-1"></i> Please Sign In or Register to experience DOCI</span>`;
-    }
-  } else {
-    window.isForcedAuth = false;
-    if (closeBtn) closeBtn.classList.remove("hidden");
-    if (subtitle) {
+  // Always show close button so Chrome users are never locked out
+  if (closeBtn) closeBtn.classList.remove("hidden");
+  
+  if (subtitle) {
+    if (!currentUser) {
+      subtitle.innerHTML = `<span class="text-gold font-bold"><i class="fa-solid fa-user-lock mr-1"></i> Sign In or Register to experience DOCI Perfume</span>`;
+    } else {
       subtitle.textContent = "Welcome to the world of luxury fragrances";
     }
   }
@@ -2607,24 +2604,22 @@ window.openAuthModal = function(tab = 'login', forced = false) {
     const container = authModal.querySelector(".auth-modal-container");
     if (container) container.classList.remove("scale-95");
     document.body.style.overflow = "hidden";
-    if (window.lenis) window.lenis.stop();
+    if (window.lenis && typeof window.lenis.stop === 'function') {
+      window.lenis.stop();
+    }
   }
 };
 
 window.closeAuthModal = function() {
-  const currentUser = window.getCurrentUser();
-  if (window.isForcedAuth && !currentUser) {
-    showNotification("You must Sign In or Register an account to access the website!", "warning");
-    return;
-  }
-
   const authModal = document.getElementById("auth-modal");
   if (authModal) {
     authModal.classList.add("opacity-0", "pointer-events-none");
     const container = authModal.querySelector(".auth-modal-container");
     if (container) container.classList.add("scale-95");
     document.body.style.overflow = "";
-    if (window.lenis) window.lenis.start();
+    if (window.lenis && typeof window.lenis.start === 'function') {
+      window.lenis.start();
+    }
   }
 };
 
