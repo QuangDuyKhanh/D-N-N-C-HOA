@@ -85,6 +85,9 @@
             <i class="fa-solid fa-envelope"></i> CONTACT MESSAGES
             <span id="contacts-badge" class="hidden bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-1.5">0</span>
           </button>
+          <button id="nav-products-btn" onclick="switchSection('products')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-transparent text-gray-400 hover:text-white flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-boxes-stacked"></i> PRODUCTS & INVENTORY
+          </button>
           <button id="nav-dashboard-btn" onclick="switchSection('dashboard')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-transparent text-gray-400 hover:text-white flex items-center gap-2 transition-all">
             <i class="fa-solid fa-chart-line"></i> REVENUE REPORTS
           </button>
@@ -96,7 +99,10 @@
         <!-- Section 2: Tin Nhắn Liên Hệ -->
         <?php include 'components/admin/contacts.html'; ?>
 
-        <!-- Section 3: Thống Kê Doanh Thu -->
+        <!-- Section 3: Quản Lý Sản Phẩm -->
+        <?php include 'components/admin/products.html'; ?>
+
+        <!-- Section 4: Thống Kê Doanh Thu -->
         <?php include 'components/admin/dashboard.html'; ?>
       </main>
     </div>
@@ -104,13 +110,18 @@
     <!-- Modal Edit Order -->
     <?php include 'components/admin/edit-modal.html'; ?>
 
+    <!-- Modal Edit / Add Product -->
+    <?php include 'components/admin/product-modal.html'; ?>
+
     <!-- Toast Container -->
     <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-3 pointer-events-none"></div>
 
     <!-- Modules JavaScript Tách Riêng -->
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/admin/admin-core.js"></script>
     <script src="assets/js/admin/admin-orders.js"></script>
     <script src="assets/js/admin/admin-contacts.js"></script>
+    <script src="assets/js/admin/admin-products.js"></script>
     <script src="assets/js/admin/admin-dashboard.js"></script>
   </body>
 </html>

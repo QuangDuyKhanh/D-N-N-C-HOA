@@ -58,68 +58,72 @@
     </style>
   </head>
   <body class="text-gray-100 min-h-screen pb-12">
-    <!-- 1. Login Screen -->
-    <div id="login-container" class="flex items-center justify-center min-h-screen px-4 py-12 bg-darkBg">
-      <div class="glass-card max-w-md w-full p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden">
-        <!-- Decorates -->
-        <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
-        <div class="absolute -left-10 -top-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
-        
-        <div class="text-center mb-8">
-          <h1 class="font-title text-3xl font-bold tracking-[6px] text-white">DOCI</h1>
-          <p class="text-[9px] uppercase tracking-[4px] text-gold font-semibold -mt-1">ADMIN PORTAL</p>
-          <div class="h-[1px] w-20 bg-gold/30 mx-auto mt-4"></div>
-        </div>
-
-        <form id="login-form" onsubmit="handleLogin(event)" class="space-y-6">
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Admin Email *</label>
-            <div class="relative">
-              <i class="fa-regular fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-              <input type="email" id="login-email" required placeholder="example@gmail.com" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Password *</label>
-            <div class="relative">
-              <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-              <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-
-          <button type="submit" class="w-full py-3 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded-lg tracking-widest transition-all duration-300 transform active:scale-95">
-            SIGN IN
-          </button>
-        </form>
-      </div>
+    <!-- 1. Màn hình Đăng nhập -->
+    <!-- Login Screen -->
+<div id="login-container" class="flex items-center justify-center min-h-screen px-4 py-12 bg-darkBg">
+  <div class="glass-card max-w-md w-full p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden">
+    <!-- Decorates -->
+    <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+    <div class="absolute -left-10 -top-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+    
+    <div class="text-center mb-8">
+      <h1 class="font-title text-3xl font-bold tracking-[6px] text-white">DOCI</h1>
+      <p class="text-[9px] uppercase tracking-[4px] text-gold font-semibold -mt-1">ADMIN PORTAL</p>
+      <div class="h-[1px] w-20 bg-gold/30 mx-auto mt-4"></div>
     </div>
 
-    <!-- 2. Admin Dashboard Content -->
-    <div id="dashboard-content" class="hidden">
-      <!-- Admin Header -->
-      <header class="border-b border-white/10 py-5 bg-black/60 sticky top-0 z-40 backdrop-blur-md">
-        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
-          <a href="#" class="flex flex-col items-start">
-            <span class="font-title text-xl font-bold tracking-[4px] text-white">DOCI</span>
-            <span class="text-[7px] uppercase tracking-[3px] text-gold font-semibold -mt-1">ADMIN PORTAL</span>
-          </a>
-          <div class="flex items-center gap-4">
-            <button id="sound-toggle-btn" onclick="toggleSound()" class="w-10 h-10 rounded-full border border-white/10 hover:border-gold/50 flex items-center justify-center text-gray-400 hover:text-gold transition-colors" title="Toggle new order notification sound">
-              <i id="sound-icon" class="fa-solid fa-volume-high text-sm"></i>
-            </button>
-            <button onclick="refreshOrders(true)" class="bg-gold/10 hover:bg-gold/20 border border-gold/30 hover:border-gold/60 text-gold text-xs font-semibold px-4 py-2 rounded-md flex items-center gap-2 transition-all">
-              <i class="fa-solid fa-arrows-rotate"></i> Refresh
-            </button>
-            <button onclick="handleLogout()" class="border border-red-500/20 hover:border-red-500/50 bg-red-950/20 hover:bg-red-950/40 text-red-400 text-xs font-semibold px-4 py-2 rounded-md flex items-center gap-1.5 transition-all" title="Sign Out">
-              <i class="fa-solid fa-right-from-bracket"></i> Sign Out
-            </button>
-          </div>
+    <form id="login-form" onsubmit="handleLogin(event)" class="space-y-6">
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Admin Email *</label>
+        <div class="relative">
+          <i class="fa-regular fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+          <input type="email" id="login-email" required placeholder="example@gmail.com" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
         </div>
-      </header>
+      </div>
+
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2 block">Password *</label>
+        <div class="relative">
+          <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+          <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded-lg tracking-widest transition-all duration-300 transform active:scale-95">
+        SIGN IN
+      </button>
+    </form>
+  </div>
+</div>
+
+
+    <!-- 2. Nội dung Dashboard Quản trị -->
+    <div id="dashboard-content" class="hidden">
+      <!-- Header Admin -->
+      <!-- Header Quản Trị -->
+<header class="border-b border-white/10 py-5 bg-black/60 sticky top-0 z-40 backdrop-blur-md">
+  <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+    <a href="#" class="flex flex-col items-start">
+      <span class="font-title text-xl font-bold tracking-[4px] text-white">DOCI</span>
+      <span class="text-[7px] uppercase tracking-[3px] text-gold font-semibold -mt-1">ADMIN PORTAL</span>
+    </a>
+    <div class="flex items-center gap-4">
+      <button id="sound-toggle-btn" onclick="toggleSound()" class="w-10 h-10 rounded-full border border-white/10 hover:border-gold/50 flex items-center justify-center text-gray-400 hover:text-gold transition-colors" title="Toggle new order notification sound">
+        <i id="sound-icon" class="fa-solid fa-volume-high text-sm"></i>
+      </button>
+      <button onclick="refreshOrders(true)" class="bg-gold/10 hover:bg-gold/20 border border-gold/30 hover:border-gold/60 text-gold text-xs font-semibold px-4 py-2 rounded-md flex items-center gap-2 transition-all">
+        <i class="fa-solid fa-arrows-rotate"></i> Refresh
+      </button>
+      <button onclick="handleLogout()" class="border border-red-500/20 hover:border-red-500/50 bg-red-950/20 hover:bg-red-950/40 text-red-400 text-xs font-semibold px-4 py-2 rounded-md flex items-center gap-1.5 transition-all" title="Sign Out">
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+      </button>
+    </div>
+  </div>
+</header>
+
 
       <main class="container mx-auto px-4 md:px-8 mt-8">
-        <!-- Audio Consent Banner -->
+        <!-- Banner thông báo âm thanh -->
         <div id="audio-consent-banner" class="hidden glass-card border-gold/30 p-4 rounded-xl mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-center gap-3">
             <i class="fa-solid fa-circle-info text-gold text-lg"></i>
@@ -128,7 +132,7 @@
           <button onclick="enableAudio()" class="bg-gold text-black font-bold text-xs px-4 py-2 rounded hover:bg-gold/80 transition-colors whitespace-nowrap">Enable Audio</button>
         </div>
 
-        <!-- Main Tab Navigation -->
+        <!-- Thanh điều hướng Tab chính -->
         <div class="flex border-b border-white/10 mb-8 gap-2">
           <button id="nav-orders-btn" onclick="switchSection('orders')" class="pb-3 px-4 text-xs md:text-sm font-bold tracking-wider border-b-2 border-gold text-white flex items-center gap-2 transition-all">
             <i class="fa-solid fa-cart-shopping"></i> ORDER MANAGEMENT
@@ -145,395 +149,406 @@
           </button>
         </div>
 
+        <!-- Section 1: Quản Lý Đơn Hàng -->
         <!-- Section 1: Order Management -->
-        <div id="section-orders">
-          <!-- Stats -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-wallet"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Expected Revenue</span>
-              <h3 id="stat-revenue" class="text-2xl font-bold text-gold">0 VND</h3>
-              <p class="text-[9px] text-gray-500 mt-1">* Calculated from Pending & Confirmed orders</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-cart-shopping"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Orders</span>
-              <h3 id="stat-total-orders" class="text-2xl font-bold text-white">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Includes cancelled orders</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl border-l-4 border-yellow-500 relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-clock"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Pending Orders</span>
-              <h3 id="stat-pending" class="text-2xl font-bold text-yellow-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Confirmation required</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-check"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Confirmed Orders</span>
-              <h3 id="stat-confirmed" class="text-2xl font-bold text-green-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Ready for packing & shipping</p>
-            </div>
-          </div>
+<div id="section-orders">
+  <!-- Stats -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-wallet"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Expected Revenue</span>
+      <h3 id="stat-revenue" class="text-2xl font-bold text-gold">0 VND</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Calculated from Pending & Confirmed orders</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-cart-shopping"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Orders</span>
+      <h3 id="stat-total-orders" class="text-2xl font-bold text-white">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Includes cancelled orders</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-yellow-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-clock"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Pending Orders</span>
+      <h3 id="stat-pending" class="text-2xl font-bold text-yellow-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Confirmation required</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-check"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Confirmed Orders</span>
+      <h3 id="stat-confirmed" class="text-2xl font-bold text-green-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Ready for packing & shipping</p>
+    </div>
+  </div>
 
-          <!-- Control Bar -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <!-- Filter Tabs -->
-            <div class="flex flex-wrap gap-2">
-              <button id="tab-all" onclick="setFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">All (<span id="count-all">0</span>)</button>
-              <button id="tab-pending" onclick="setFilter('pending')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Pending (<span id="count-pending">0</span>)</button>
-              <button id="tab-confirmed" onclick="setFilter('confirmed')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Confirmed (<span id="count-confirmed">0</span>)</button>
-              <button id="tab-cancelled" onclick="setFilter('cancelled')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Cancelled (<span id="count-cancelled">0</span>)</button>
-            </div>
+  <!-- Control Bar -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-2">
+      <button id="tab-all" onclick="setFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">All (<span id="count-all">0</span>)</button>
+      <button id="tab-pending" onclick="setFilter('pending')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Pending (<span id="count-pending">0</span>)</button>
+      <button id="tab-confirmed" onclick="setFilter('confirmed')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Confirmed (<span id="count-confirmed">0</span>)</button>
+      <button id="tab-cancelled" onclick="setFilter('cancelled')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Cancelled (<span id="count-cancelled">0</span>)</button>
+    </div>
 
-            <!-- Search & Actions -->
-            <div class="flex items-center gap-3 w-full md:w-auto self-end md:self-auto">
-              <div class="relative flex-grow md:flex-grow-0">
-                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-                <input type="text" id="order-search-input" oninput="handleOrderSearch()" placeholder="Search order code, item, phone..." class="w-full md:w-64 bg-white/5 border border-white/10 rounded-lg pl-9 pr-4 py-2 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
-              </div>
-              <button onclick="clearAllOrders()" class="bg-red-950/40 hover:bg-red-900/50 border border-red-500/20 hover:border-red-500/50 text-red-400 text-xs font-semibold px-4 py-2 rounded-md transition-all flex items-center gap-2 whitespace-nowrap">
-                <i class="fa-solid fa-trash-can"></i> Clear Order History
-              </button>
-            </div>
-          </div>
+    <!-- Search & Actions -->
+    <div class="flex items-center gap-3 w-full md:w-auto self-end md:self-auto">
+      <div class="relative flex-grow md:flex-grow-0">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+        <input type="text" id="order-search-input" oninput="handleOrderSearch()" placeholder="Search order code, item, phone..." class="w-full md:w-64 bg-white/5 border border-white/10 rounded-lg pl-9 pr-4 py-2 text-xs text-white placeholder-gray-600 focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+      <button onclick="clearAllOrders()" class="bg-red-950/40 hover:bg-red-900/50 border border-red-500/20 hover:border-red-500/50 text-red-400 text-xs font-semibold px-4 py-2 rounded-md transition-all flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-trash-can"></i> Clear Order History
+      </button>
+    </div>
+  </div>
 
-          <!-- Orders List Container -->
-          <div id="orders-list-container" class="space-y-4">
-            <div id="no-orders-msg" class="glass-card rounded-xl p-12 text-center flex flex-col items-center justify-center gap-4">
-              <i class="fa-solid fa-receipt text-gray-600 text-5xl"></i>
-              <h4 class="text-sm font-bold text-gray-300">No orders recorded yet</h4>
-              <p class="text-xs text-gray-500">New customer orders will appear directly here.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Orders List Container -->
+  <div id="orders-list-container" class="space-y-4">
+    <div id="no-orders-msg" class="glass-card rounded-xl p-12 text-center flex flex-col items-center justify-center gap-4">
+      <i class="fa-solid fa-receipt text-gray-600 text-5xl"></i>
+      <h4 class="text-sm font-bold text-gray-300">No orders recorded yet</h4>
+      <p class="text-xs text-gray-500">New customer orders will appear directly here.</p>
+    </div>
+  </div>
+</div>
 
+
+        <!-- Section 2: Tin Nhắn Liên Hệ -->
         <!-- Section 2: Contact Messages -->
-        <div id="section-contacts" class="hidden">
-          <!-- Contact Stats -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Messages</span>
-              <h3 id="stat-total-contacts" class="text-2xl font-bold text-white">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Customer messages from Contact Form</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl border-l-4 border-red-500 relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope-open-text"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Unread Messages</span>
-              <h3 id="stat-unread-contacts" class="text-2xl font-bold text-red-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Requires review and response</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-check-double"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Read Messages</span>
-              <h3 id="stat-read-contacts" class="text-2xl font-bold text-green-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Processed messages</p>
-            </div>
-          </div>
+<div id="section-contacts" class="hidden">
+  <!-- Contact Stats -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Messages</span>
+      <h3 id="stat-total-contacts" class="text-2xl font-bold text-white">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Customer messages from Contact Form</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-red-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-envelope-open-text"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Unread Messages</span>
+      <h3 id="stat-unread-contacts" class="text-2xl font-bold text-red-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Requires review and response</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl border-l-4 border-green-500 relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-check-double"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Read Messages</span>
+      <h3 id="stat-read-contacts" class="text-2xl font-bold text-green-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Processed messages</p>
+    </div>
+  </div>
 
-          <!-- Contact Control Bar -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div class="flex flex-wrap gap-2">
-              <button id="tab-c-all" onclick="setContactFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">All (<span id="count-c-all">0</span>)</button>
-              <button id="tab-c-unread" onclick="setContactFilter('unread')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Unread (<span id="count-c-unread">0</span>)</button>
-              <button id="tab-c-read" onclick="setContactFilter('read')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Read (<span id="count-c-read">0</span>)</button>
-            </div>
+  <!-- Contact Control Bar -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div class="flex flex-wrap gap-2">
+      <button id="tab-c-all" onclick="setContactFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">All (<span id="count-c-all">0</span>)</button>
+      <button id="tab-c-unread" onclick="setContactFilter('unread')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Unread (<span id="count-c-unread">0</span>)</button>
+      <button id="tab-c-read" onclick="setContactFilter('read')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">Read (<span id="count-c-read">0</span>)</button>
+    </div>
 
-            <div class="flex items-center gap-3 self-end md:self-auto">
-              <button onclick="clearAllContacts()" class="bg-red-950/40 hover:bg-red-900/50 border border-red-500/20 hover:border-red-500/50 text-red-400 text-xs font-semibold px-4 py-2 rounded-md transition-all flex items-center gap-2">
-                <i class="fa-solid fa-trash-can"></i> Clear All Messages
-              </button>
-            </div>
-          </div>
+    <div class="flex items-center gap-3 self-end md:self-auto">
+      <button onclick="clearAllContacts()" class="bg-red-950/40 hover:bg-red-900/50 border border-red-500/20 hover:border-red-500/50 text-red-400 text-xs font-semibold px-4 py-2 rounded-md transition-all flex items-center gap-2">
+        <i class="fa-solid fa-trash-can"></i> Clear All Messages
+      </button>
+    </div>
+  </div>
 
-          <!-- Contacts List Container -->
-          <div id="contacts-list-container" class="space-y-4">
-            <div id="no-contacts-msg" class="glass-card rounded-xl p-12 text-center flex flex-col items-center justify-center gap-4">
-              <i class="fa-solid fa-inbox text-gray-600 text-5xl"></i>
-              <h4 class="text-sm font-bold text-gray-300">No contact messages yet</h4>
-              <p class="text-xs text-gray-500">Messages submitted via the home page Contact form will appear here.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Contacts List Container -->
+  <div id="contacts-list-container" class="space-y-4">
+    <div id="no-contacts-msg" class="glass-card rounded-xl p-12 text-center flex flex-col items-center justify-center gap-4">
+      <i class="fa-solid fa-inbox text-gray-600 text-5xl"></i>
+      <h4 class="text-sm font-bold text-gray-300">No contact messages yet</h4>
+      <p class="text-xs text-gray-500">Messages submitted via the home page Contact form will appear here.</p>
+    </div>
+  </div>
+</div>
 
-        <!-- Section 3: Product & Inventory Management -->
-        <div id="section-products" class="hidden">
-          <!-- Stats -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-boxes-stacked"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Products</span>
-              <h3 id="stat-total-products" class="text-2xl font-bold text-white">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Active items in catalog</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-warehouse"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Stock Units</span>
-              <h3 id="stat-total-stock" class="text-2xl font-bold text-gold">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">Available bottles in store</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-triangle-exclamation"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Low Stock Items</span>
-              <h3 id="stat-low-stock" class="text-2xl font-bold text-amber-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">&le; 10 units remaining</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-ban"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Out of Stock</span>
-              <h3 id="stat-out-stock" class="text-2xl font-bold text-red-500">0</h3>
-              <p class="text-[9px] text-gray-500 mt-1">0 units remaining</p>
-            </div>
-          </div>
 
-          <!-- Controls -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
-              <button id="tab-p-all" onclick="setProductFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">
-                All Products (<span id="count-p-all">0</span>)
-              </button>
-              <button id="tab-p-men" onclick="setProductFilter('men')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">
-                Men (<span id="count-p-men">0</span>)
-              </button>
-              <button id="tab-p-women" onclick="setProductFilter('women')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">
-                Women (<span id="count-p-women">0</span>)
-              </button>
-            </div>
+        <!-- Section 3: Quản Lý Sản Phẩm -->
+        <!-- Section: Products & Inventory -->
+<div id="section-products" class="hidden">
+  <!-- Stats -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-boxes-stacked"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Products</span>
+      <h3 id="stat-total-products" class="text-2xl font-bold text-white">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Active items in catalog</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-warehouse"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Total Stock Units</span>
+      <h3 id="stat-total-stock" class="text-2xl font-bold text-gold">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">Available bottles in store</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Low Stock Items</span>
+      <h3 id="stat-low-stock" class="text-2xl font-bold text-amber-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">&le; 10 units remaining</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-ban"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Out of Stock</span>
+      <h3 id="stat-out-stock" class="text-2xl font-bold text-red-500">0</h3>
+      <p class="text-[9px] text-gray-500 mt-1">0 units remaining</p>
+    </div>
+  </div>
 
-            <div class="flex items-center gap-3 w-full md:w-auto">
-              <div class="relative flex-grow md:flex-grow-0 md:w-64">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
-                <input type="text" id="product-search-input" onkeyup="handleProductSearch()" placeholder="Search perfume..." class="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-3 py-2 text-xs text-white placeholder-gray-500 focus:border-gold/55 focus:outline-none transition-colors" />
-              </div>
-              <button onclick="openProductModal()" class="bg-gold hover:bg-gold/85 text-black font-bold text-xs px-4 py-2 rounded-lg flex items-center gap-2 transition-all whitespace-nowrap">
-                <i class="fa-solid fa-plus-circle"></i> Add Product
-              </button>
-            </div>
-          </div>
+  <!-- Controls -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+      <button id="tab-p-all" onclick="setProductFilter('all')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-gold text-black">
+        All Products (<span id="count-p-all">0</span>)
+      </button>
+      <button id="tab-p-men" onclick="setProductFilter('men')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">
+        Men (<span id="count-p-men">0</span>)
+      </button>
+      <button id="tab-p-women" onclick="setProductFilter('women')" class="px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-all bg-white/5 text-gray-400 hover:text-white">
+        Women (<span id="count-p-women">0</span>)
+      </button>
+    </div>
 
-          <!-- Product Catalog List -->
-          <div id="products-list-container" class="space-y-4"></div>
+    <div class="flex items-center gap-3 w-full md:w-auto">
+      <div class="relative flex-grow md:flex-grow-0 md:w-64">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+        <input type="text" id="product-search-input" onkeyup="handleProductSearch()" placeholder="Search perfume..." class="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-3 py-2 text-xs text-white placeholder-gray-500 focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+      <button onclick="openProductModal()" class="bg-gold hover:bg-gold/85 text-black font-bold text-xs px-4 py-2 rounded-lg flex items-center gap-2 transition-all whitespace-nowrap">
+        <i class="fa-solid fa-plus-circle"></i> Add Product
+      </button>
+    </div>
+  </div>
 
-          <!-- No Products -->
-          <div id="no-products-msg" class="hidden glass-card p-12 text-center rounded-xl border border-white/5">
-            <i class="fa-solid fa-box-open text-4xl text-gray-600 mb-3"></i>
-            <p class="text-sm font-semibold text-gray-400">No products found</p>
-            <p class="text-xs text-gray-600 mt-1">Try resetting search or add a new perfume item.</p>
-          </div>
-        </div>
+  <!-- Product Catalog List -->
+  <div id="products-list-container" class="space-y-4"></div>
 
+  <!-- No Products -->
+  <div id="no-products-msg" class="hidden glass-card p-12 text-center rounded-xl border border-white/5">
+    <i class="fa-solid fa-box-open text-4xl text-gray-600 mb-3"></i>
+    <p class="text-sm font-semibold text-gray-400">No products found</p>
+    <p class="text-xs text-gray-600 mt-1">Try resetting search or add a new perfume item.</p>
+  </div>
+</div>
+
+
+        <!-- Section 4: Thống Kê Doanh Thu -->
         <!-- Section 4: Revenue Reports -->
-        <div id="section-dashboard" class="hidden">
-          <!-- Revenue Control Bar -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-              <h2 class="font-title text-2xl font-bold text-white mb-1">Revenue Reports</h2>
-              <p class="text-xs text-gray-400">Track cash flow revenue and business growth.</p>
-            </div>
-            
-            <!-- Time Filter -->
-            <div class="flex flex-wrap items-center gap-3">
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Filter by:</label>
-              <select id="revenue-time-filter" onchange="handleTimeFilterChange()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-2 focus:border-gold/55 focus:outline-none transition-colors">
-                <option value="today" class="bg-darkBg">Today</option>
-                <option value="week" class="bg-darkBg">This Week</option>
-                <option value="month" class="bg-darkBg" selected>This Month</option>
-                <option value="quarter" class="bg-darkBg">This Quarter</option>
-                <option value="year" class="bg-darkBg">This Year</option>
-                <option value="custom" class="bg-darkBg">Custom Range</option>
-              </select>
-              <div id="custom-date-inputs" class="hidden flex items-center gap-2">
-                <input type="date" id="revenue-start-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
-                <span class="text-xs text-gray-500">to</span>
-                <input type="date" id="revenue-end-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
-              </div>
-            </div>
-          </div>
+<div id="section-dashboard" class="hidden">
+  <!-- Revenue Control Bar -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div>
+      <h2 class="font-title text-2xl font-bold text-white mb-1">Revenue Reports</h2>
+      <p class="text-xs text-gray-400">Track cash flow revenue and business growth.</p>
+    </div>
+    
+    <!-- Time Filter -->
+    <div class="flex flex-wrap items-center gap-3">
+      <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Filter by:</label>
+      <select id="revenue-time-filter" onchange="handleTimeFilterChange()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-2 focus:border-gold/55 focus:outline-none transition-colors">
+        <option value="today" class="bg-darkBg">Today</option>
+        <option value="week" class="bg-darkBg">This Week</option>
+        <option value="month" class="bg-darkBg" selected>This Month</option>
+        <option value="quarter" class="bg-darkBg">This Quarter</option>
+        <option value="year" class="bg-darkBg">This Year</option>
+        <option value="custom" class="bg-darkBg">Custom Range</option>
+      </select>
+      <div id="custom-date-inputs" class="hidden flex items-center gap-2">
+        <input type="date" id="revenue-start-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
+        <span class="text-xs text-gray-500">to</span>
+        <input type="date" id="revenue-end-date" onchange="calculateRevenueStats()" class="bg-white/5 border border-white/10 text-xs text-white rounded-md px-3 py-1.5 focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+    </div>
+  </div>
 
-          <!-- KPI Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-coins"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Actual Revenue (Confirmed)</span>
-              <h3 id="stat-revenue-confirmed" class="text-2xl font-bold text-green-500">0 VND</h3>
-              <p class="text-[9px] text-gray-500 mt-1">* Confirmed orders only</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-clock-rotate-left"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Pending Revenue</span>
-              <h3 id="stat-revenue-pending" class="text-2xl font-bold text-yellow-500">0 VND</h3>
-              <p class="text-[9px] text-gray-500 mt-1">* Calculated from Pending orders</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-ban"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Cancelled Revenue</span>
-              <h3 id="stat-revenue-cancelled" class="text-2xl font-bold text-red-500">0 VND</h3>
-              <p class="text-[9px] text-gray-500 mt-1">* Total amount from Cancelled orders</p>
-            </div>
-            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
-              <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-scale-balanced"></i></div>
-              <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Compared to Last Month</span>
-              <h3 id="stat-revenue-compare" class="text-2xl font-bold text-white">0%</h3>
-              <p id="stat-revenue-compare-desc" class="text-[9px] text-gray-500 mt-1">Calculating comparison data...</p>
-            </div>
-          </div>
+  <!-- KPI Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-coins"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Actual Revenue (Confirmed)</span>
+      <h3 id="stat-revenue-confirmed" class="text-2xl font-bold text-green-500">0 VND</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Confirmed orders only</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Pending Revenue</span>
+      <h3 id="stat-revenue-pending" class="text-2xl font-bold text-yellow-500">0 VND</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Calculated from Pending orders</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-ban"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Cancelled Revenue</span>
+      <h3 id="stat-revenue-cancelled" class="text-2xl font-bold text-red-500">0 VND</h3>
+      <p class="text-[9px] text-gray-500 mt-1">* Total amount from Cancelled orders</p>
+    </div>
+    <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+      <div class="absolute -right-6 -bottom-6 text-white/5 text-7xl"><i class="fa-solid fa-scale-balanced"></i></div>
+      <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block mb-1">Compared to Last Month</span>
+      <h3 id="stat-revenue-compare" class="text-2xl font-bold text-white">0%</h3>
+      <p id="stat-revenue-compare-desc" class="text-[9px] text-gray-500 mt-1">Calculating comparison data...</p>
+    </div>
+  </div>
 
-          <!-- Chart Area -->
-          <div class="grid grid-cols-1 gap-6 mb-8">
-            <div class="glass-card p-6 rounded-xl">
-              <h3 class="font-title text-lg font-bold text-white mb-4"><i class="fa-solid fa-chart-area text-gold mr-2"></i>Revenue Trend Chart</h3>
-              <div class="w-full h-80 relative">
-                <canvas id="revenue-chart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Chart Area -->
+  <div class="grid grid-cols-1 gap-6 mb-8">
+    <div class="glass-card p-6 rounded-xl">
+      <h3 class="font-title text-lg font-bold text-white mb-4"><i class="fa-solid fa-chart-area text-gold mr-2"></i>Revenue Trend Chart</h3>
+      <div class="w-full h-80 relative">
+        <canvas id="revenue-chart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
 
       </main>
     </div>
 
+    <!-- Modal Edit Order -->
     <!-- Edit Order Modal -->
-    <div id="edit-order-modal" class="detail-modal opacity-0 pointer-events-none transition-opacity duration-300 fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div class="detail-modal-bg absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div class="detail-modal-container max-w-lg w-full bg-darkSurface border border-gold/30 rounded-2xl p-6 md:p-8 z-10 relative overflow-y-auto max-h-[90vh]">
-        <button onclick="closeEditOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10">&times;</button>
-        
-        <h3 class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Order <span id="edit-modal-order-id" class="text-white text-sm font-body font-normal"></span></h3>
-        
-        <form id="edit-order-form" onsubmit="handleSaveEditedOrder(event)" class="space-y-4">
-          <input type="hidden" id="edit-order-id" />
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Customer Name *</label>
-            <input type="text" id="edit-customer-name" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-          </div>
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Phone Number *</label>
-            <input type="text" id="edit-customer-phone" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-          </div>
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Delivery Address *</label>
-            <textarea id="edit-customer-address" required rows="2" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none focus:border-gold/55 focus:outline-none transition-colors"></textarea>
-          </div>
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Order Notes</label>
-            <input type="text" id="edit-customer-note" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-          </div>
-          
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Total Amount (VND) *</label>
-              <input type="number" id="edit-order-total" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Status *</label>
-              <select id="edit-order-status" class="w-full bg-[#111111] border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors">
-                <option value="pending" class="bg-darkBg text-yellow-500">Pending</option>
-                <option value="confirmed" class="bg-darkBg text-green-500">Confirmed</option>
-                <option value="cancelled" class="bg-darkBg text-red-500">Cancelled</option>
-              </select>
-            </div>
-          </div>
-          
-          <div class="pt-4 flex gap-3">
-            <button type="button" onclick="closeEditOrderModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">CANCEL</button>
-            <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">SAVE CHANGES</button>
-          </div>
-        </form>
+<div id="edit-order-modal" class="detail-modal opacity-0 pointer-events-none transition-opacity duration-300 fixed inset-0 z-50 flex items-center justify-center p-4">
+  <div class="detail-modal-bg absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
+  <div class="detail-modal-container max-w-lg w-full bg-darkSurface border border-gold/30 rounded-2xl p-6 md:p-8 z-10 relative overflow-y-auto max-h-[90vh]">
+    <button onclick="closeEditOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10">&times;</button>
+    
+    <h3 class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Order <span id="edit-modal-order-id" class="text-white text-sm font-body font-normal"></span></h3>
+    
+    <form id="edit-order-form" onsubmit="handleSaveEditedOrder(event)" class="space-y-4">
+      <input type="hidden" id="edit-order-id" />
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Customer Name *</label>
+        <input type="text" id="edit-customer-name" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
       </div>
-    </div>
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Phone Number *</label>
+        <input type="text" id="edit-customer-phone" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Delivery Address *</label>
+        <textarea id="edit-customer-address" required rows="2" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none focus:border-gold/55 focus:outline-none transition-colors"></textarea>
+      </div>
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Order Notes</label>
+        <input type="text" id="edit-customer-note" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Total Amount (VND) *</label>
+          <input type="number" id="edit-order-total" required class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Status *</label>
+          <select id="edit-order-status" class="w-full bg-[#111111] border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors">
+            <option value="pending" class="bg-darkBg text-yellow-500">Pending</option>
+            <option value="confirmed" class="bg-darkBg text-green-500">Confirmed</option>
+            <option value="cancelled" class="bg-darkBg text-red-500">Cancelled</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="pt-4 flex gap-3">
+        <button type="button" onclick="closeEditOrderModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">CANCEL</button>
+        <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">SAVE CHANGES</button>
+      </div>
+    </form>
+  </div>
+</div>
 
+
+    <!-- Modal Edit / Add Product -->
     <!-- Product Edit / Add Modal -->
-    <div id="product-modal" class="modal-backdrop fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-      <div class="glass-card max-w-xl w-full p-6 md:p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
-        <button onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10">&times;</button>
-        
-        <h3 id="product-modal-title" class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-plus-circle mr-2"></i>Add New Product</h3>
-        
-        <form id="product-form" onsubmit="handleSaveProduct(event)" class="space-y-4">
-          <input type="hidden" id="prod-modal-id" />
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product SKU / ID *</label>
-              <input type="text" id="prod-sku" required placeholder="men-ves-sir" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product Name *</label>
-              <input type="text" id="prod-name" required placeholder="DOCI YES SIR" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Gender *</label>
-              <select id="prod-gender" class="w-full bg-[#111111] border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors">
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-                <option value="unisex">Unisex</option>
-              </select>
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Category *</label>
-              <input type="text" id="prod-category" required placeholder="Fresh & Crisp" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Inspired By *</label>
-              <input type="text" id="prod-inspired" required placeholder="YSL Y EDP" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Sale Price (VND) *</label>
-              <input type="number" id="prod-price" required min="0" step="1000" placeholder="319000" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Original Price (VND)</label>
-              <input type="number" id="prod-original-price" min="0" step="1000" placeholder="450000" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Inventory Stock *</label>
-              <input type="number" id="prod-stock" required min="0" step="1" placeholder="50" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Longevity</label>
-              <input type="text" id="prod-longevity" placeholder="6 - 8 Hours" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-            <div>
-              <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Projection</label>
-              <input type="text" id="prod-projection" placeholder="1 - 2 Meters" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-            </div>
-          </div>
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product Image Path / URL *</label>
-            <input type="text" id="prod-image" required placeholder="assets/images/..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
-          </div>
-          
-          <div>
-            <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Description</label>
-            <textarea id="prod-description" rows="3" placeholder="Enter perfume description..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none focus:border-gold/55 focus:outline-none transition-colors"></textarea>
-          </div>
-          
-          <div class="pt-4 flex gap-3">
-            <button type="button" onclick="closeProductModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">CANCEL</button>
-            <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">SAVE PRODUCT</button>
-          </div>
-        </form>
+<div id="product-modal" class="modal-backdrop fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="glass-card max-w-xl w-full p-6 md:p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
+    <button onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl z-10">&times;</button>
+    
+    <h3 id="product-modal-title" class="font-title text-xl font-bold text-gold mb-6"><i class="fa-solid fa-plus-circle mr-2"></i>Add New Product</h3>
+    
+    <form id="product-form" onsubmit="handleSaveProduct(event)" class="space-y-4">
+      <input type="hidden" id="prod-modal-id" />
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product SKU / ID *</label>
+          <input type="text" id="prod-sku" required placeholder="men-ves-sir" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product Name *</label>
+          <input type="text" id="prod-name" required placeholder="DOCI YES SIR" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
       </div>
-    </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Gender *</label>
+          <select id="prod-gender" class="w-full bg-[#111111] border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors">
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="unisex">Unisex</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Category *</label>
+          <input type="text" id="prod-category" required placeholder="Fresh & Crisp" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Inspired By *</label>
+          <input type="text" id="prod-inspired" required placeholder="YSL Y EDP" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Sale Price (VND) *</label>
+          <input type="number" id="prod-price" required min="0" step="1000" placeholder="319000" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Original Price (VND)</label>
+          <input type="number" id="prod-original-price" min="0" step="1000" placeholder="450000" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Inventory Stock *</label>
+          <input type="number" id="prod-stock" required min="0" step="1" placeholder="50" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Longevity</label>
+          <input type="text" id="prod-longevity" placeholder="6 - 8 Hours" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Projection</label>
+          <input type="text" id="prod-projection" placeholder="1 - 2 Meters" class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+        </div>
+      </div>
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Product Image Path / URL *</label>
+        <input type="text" id="prod-image" required placeholder="assets/images/..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white focus:border-gold/55 focus:outline-none transition-colors" />
+      </div>
+      
+      <div>
+        <label class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1 block">Description</label>
+        <textarea id="prod-description" rows="3" placeholder="Enter perfume description..." class="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white resize-none focus:border-gold/55 focus:outline-none transition-colors"></textarea>
+      </div>
+      
+      <div class="pt-4 flex gap-3">
+        <button type="button" onclick="closeProductModal()" class="flex-1 py-2.5 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white font-bold text-xs rounded transition-all">CANCEL</button>
+        <button type="submit" class="flex-1 py-2.5 bg-gold hover:bg-gold/85 text-black font-bold text-xs rounded tracking-widest transition-all">SAVE PRODUCT</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 
     <!-- Toast Container -->
     <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-3 pointer-events-none"></div>
 
-    <!-- JavaScript Modules -->
+    <!-- Modules JavaScript Tách Riêng -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/admin/admin-core.js"></script>
     <script src="assets/js/admin/admin-orders.js"></script>

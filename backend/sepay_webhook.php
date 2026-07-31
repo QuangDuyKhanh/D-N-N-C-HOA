@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // 1. Khởi tạo kết nối CSDL
-require_once('db_connect.php');
+require_once('db.php');
 
 // 2. Xác thực webhook bằng API Key
 $api_key = 'AC513M3WHKFZB9TPF6GMRQXCJLZSI2ZBANVYPJW4L0PKBFICDGQPIYVNULJO2U59'; // Lấy API Key từ SePay

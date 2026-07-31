@@ -648,6 +648,14 @@ function initCart() {
         showNotification("Your cart is empty!", "error");
         return;
       }
+      // Kiểm tra đăng nhập trước khi cho phép thanh toán
+      const loggedUser = typeof window.getCurrentUser === "function" ? window.getCurrentUser() : null;
+      if (!loggedUser) {
+        closeCartPanel();
+        showNotification("Vui lòng đăng nhập để tiếp tục đặt hàng!", "error");
+        setTimeout(() => window.openAuthModal('login', true), 300);
+        return;
+      }
       closeCartPanel();
       
       window.currentCheckoutOrderId = "DH" + Math.floor(100000 + Math.random() * 900000);
@@ -827,6 +835,14 @@ function closeCartPanel() {
 }
 
 function addToCart(id) {
+  // Bắt buộc đăng nhập mới được thêm vào giỏ hàng
+  const currentUser = typeof window.getCurrentUser === "function" ? window.getCurrentUser() : null;
+  if (!currentUser) {
+    showNotification("Vui lòng đăng nhập để mua hàng tại DOCI!", "error");
+    setTimeout(() => window.openAuthModal('login', true), 300);
+    return;
+  }
+
   const item = perfumeData.find((p) => p.id === id);
   if (!item) return;
 
@@ -2563,12 +2579,8 @@ function initUserAuth() {
     });
   }
 
-  const currentUser = window.getCurrentUser();
-  if (!currentUser) {
-    setTimeout(() => {
-      window.openAuthModal('login', true);
-    }, 400);
-  }
+  // Không bắt buộc đăng nhập khi load trang - khách có thể xem trang tự do
+  // Modal đăng nhập chỉ mở khi click vào icon tài khoản hoặc khi thêm vào giỏ hàng
 }
 
 function renderUserHeaderUI() {
@@ -2617,18 +2629,30 @@ window.openAuthModal = function(tab = 'login', forced = false) {
   const subtitle = document.getElementById("auth-modal-subtitle");
   const currentUser = window.getCurrentUser();
 
-  // Always show close button so Chrome users are never locked out
-  if (closeBtn) closeBtn.classList.remove("hidden");
+  // Nếu forced = true (bắt buộc đăng nhập) → ẩn nút đóng
+  if (closeBtn) {
+    if (forced) {
+      closeBtn.classList.add("hidden");
+    } else {
+      closeBtn.classList.remove("hidden");
+    }
+  }
   
   if (subtitle) {
     if (!currentUser) {
-      subtitle.innerHTML = `<span class="text-gold font-bold"><i class="fa-solid fa-user-lock mr-1"></i> Sign In or Register to experience DOCI Perfume</span>`;
+      if (forced) {
+        subtitle.innerHTML = `<span class="text-gold font-bold"><i class="fa-solid fa-user-lock mr-1"></i> Vui lòng đăng ký / đăng nhập để mua hàng tại DOCI Perfume</span>`;
+      } else {
+        subtitle.innerHTML = `<span class="text-gold font-bold"><i class="fa-solid fa-user-lock mr-1"></i> Sign In or Register to experience DOCI Perfume</span>`;
+      }
     } else {
       subtitle.textContent = "Welcome to the world of luxury fragrances";
     }
   }
 
   if (authModal) {
+    // Nếu forced, không cho click bên ngoài đóng modal
+    authModal._forced = forced;
     window.switchAuthTab(tab);
     authModal.classList.remove("opacity-0", "pointer-events-none");
     const container = authModal.querySelector(".auth-modal-container");
@@ -2642,7 +2666,12 @@ window.openAuthModal = function(tab = 'login', forced = false) {
 
 window.closeAuthModal = function() {
   const authModal = document.getElementById("auth-modal");
+  // Không cho đóng nếu đang forced (chưa đăng nhập)
+  if (authModal && authModal._forced && !window.getCurrentUser()) {
+    return;
+  }
   if (authModal) {
+    authModal._forced = false;
     authModal.classList.add("opacity-0", "pointer-events-none");
     const container = authModal.querySelector(".auth-modal-container");
     if (container) container.classList.add("scale-95");

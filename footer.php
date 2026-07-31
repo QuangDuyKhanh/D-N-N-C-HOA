@@ -1,3 +1,6 @@
+    <!-- 19. AUTH & ACCOUNT MODALS -->
+    <?php include 'components/home/auth-modal.php'; ?>
+
     <!-- CÁC BIỂU TƯỢNG CHAT NỔI (FLOATING WIDGETS) -->
     <div class="floating-widget select-none">
       <a
@@ -29,6 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Thư viện bộ slide SwiperJS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 
     <!-- File Script tùy chỉnh của dự án -->
     <script src="assets/js/data.js"></script>

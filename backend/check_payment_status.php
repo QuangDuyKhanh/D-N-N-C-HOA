@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
 
-// Include file db_connect.php
-require_once('db_connect.php');
+// Include file db.php
+require_once('db.php');
 
 // Nhận tham số order_id từ POST, GET hoặc JSON Payload
 $order_id = $_POST['order_id'] ?? $_GET['order_id'] ?? $_POST['orderId'] ?? $_GET['orderId'] ?? null;
